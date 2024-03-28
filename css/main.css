@@ -1,0 +1,65 @@
+:root {
+  --sh-primary: #01014f;
+}
+
+.text-sh-primary {
+  color: var(--sh-primary) !important;
+}
+
+.bg-sh-primary {
+  background-color: var(--sh-primary) !important;
+}
+
+section {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+/* Hero */
+
+.hero {
+  background-image: url("/images/hero.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--sh-primary);
+  height: 100vh;
+}
+
+/* Description */
+
+.description {
+  background-image: url("/images/description.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--sh-primary);
+  height: 30rem;
+}
+
+/* Services */
+.service {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: 4rem;
+  font-size: 2rem;
+  margin-top: -1.5rem !important;
+}
+
+/* Technologies */
+.tech {
+  height: 6rem;
+  width: 6rem;
+}
+
+/* Contact */
+.contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  font-size: 2rem;
+}
