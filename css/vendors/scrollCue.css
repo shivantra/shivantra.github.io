@@ -26,8 +26,8 @@
 }
 
 /**  ---------------
-       slideInLeft
-  */
+     slideInLeft
+*/
 [data-cue="slideInLeft"],
 [data-cues="slideInLeft"] > * {
   opacity: 0;
@@ -45,8 +45,8 @@
 }
 
 /**  ---------------
-       slideInRight
-  */
+     slideInRight
+*/
 [data-cue="slideInRight"],
 [data-cues="slideInRight"] > * {
   opacity: 0;
@@ -64,8 +64,8 @@
 }
 
 /**  ---------------
-       slideInDown
-  */
+     slideInDown
+*/
 [data-cue="slideInDown"],
 [data-cues="slideInDown"] > * {
   opacity: 0;
@@ -83,8 +83,8 @@
 }
 
 /**  ---------------
-       slideInUp
-  */
+     slideInUp
+*/
 [data-cue="slideInUp"],
 [data-cues="slideInUp"] > * {
   opacity: 0;
@@ -102,8 +102,8 @@
 }
 
 /**  ---------------
-       zoomIn
-  */
+     zoomIn
+*/
 [data-cue="zoomIn"],
 [data-cues="zoomIn"] > * {
   opacity: 0;
@@ -121,8 +121,8 @@
 }
 
 /**  ---------------
-       zoomOut
-  */
+     zoomOut
+*/
 [data-cue="zoomOut"],
 [data-cues="zoomOut"] > * {
   opacity: 0;
@@ -140,8 +140,8 @@
 }
 
 /**  ---------------
-       rotateIn
-  */
+     rotateIn
+*/
 [data-cue="rotateIn"],
 [data-cues="rotateIn"] > * {
   opacity: 0;
@@ -159,8 +159,8 @@
 }
 
 /**  ---------------
-       bounceIn
-  */
+     bounceIn
+*/
 [data-cue="bounceIn"],
 [data-cues="bounceIn"] > * {
   opacity: 0;
@@ -190,8 +190,8 @@
 }
 
 /**  ---------------
-       bounceInLeft
-  */
+     bounceInLeft
+*/
 [data-cue="bounceInLeft"],
 [data-cues="bounceInLeft"] > * {
   opacity: 0;
@@ -226,8 +226,8 @@
 }
 
 /**  ---------------
-       bounceInRight
-  */
+     bounceInRight
+*/
 [data-cue="bounceInRight"],
 [data-cues="bounceInRight"] > * {
   opacity: 0;
@@ -262,8 +262,8 @@
 }
 
 /**  ---------------
-       bounceInDown
-  */
+     bounceInDown
+*/
 [data-cue="bounceInDown"],
 [data-cues="bounceInDown"] > * {
   opacity: 0;
@@ -298,8 +298,8 @@
 }
 
 /**  ---------------
-       bounceInUp
-  */
+     bounceInUp
+*/
 [data-cue="bounceInUp"],
 [data-cues="bounceInUp"] > * {
   opacity: 0;
@@ -334,8 +334,8 @@
 }
 
 /**  ---------------
-       flipInX
-  */
+     flipInX
+*/
 [data-cue="flipInX"],
 [data-cues="flipInX"] > * {
   opacity: 0;
@@ -366,8 +366,8 @@
 }
 
 /**  ---------------
-       flipInY
-  */
+     flipInY
+*/
 [data-cue="flipInY"],
 [data-cues="flipInY"] > * {
   opacity: 0;

@@ -45,4 +45,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   particlesJS.load("description", "assets/particles.json", function () {
     console.log("callback - particles.js config loaded");
   });
+
+  // ScrollCue
+  scrollCue.init({ duration: 1200 });
 });
