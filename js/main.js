@@ -47,5 +47,5 @@ window.addEventListener("DOMContentLoaded", (event) => {
   });
 
   // ScrollCue
-  scrollCue.init({ duration: 1200 });
+  scrollCue.init();
 });
