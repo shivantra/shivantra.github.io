@@ -6,8 +6,16 @@
   color: var(--sh-primary) !important;
 }
 
+.justify-content {
+  text-align: justify;
+}
+
 .bg-sh-primary {
   background-color: var(--sh-primary) !important;
+}
+
+a {
+  color: var(--sh-primary) !important;
 }
 
 section {

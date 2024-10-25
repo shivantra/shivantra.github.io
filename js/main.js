@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   };
 
   // Toggle the logo
-  logoToggle();
+  enableLogoToggle && logoToggle();
 
   // Show the logo when page is scrolled
   document.addEventListener("scroll", logoToggle);
