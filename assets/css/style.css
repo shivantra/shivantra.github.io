@@ -67,6 +67,13 @@ h6 {
   max-width: 1140px;
 }
 
+@media (max-width: 767.98px) {
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
 .section {
   padding: 70px 0;
   scroll-margin-top: 60px;
@@ -769,6 +776,12 @@ h6 {
 }
 
 @media (max-width: 575.98px) {
+  .hero__v6 {
+    padding-bottom: 3rem !important;
+  }
+}
+
+@media (max-width: 767.98px) {
   .hero__v6 {
     padding-bottom: 3rem !important;
   }
