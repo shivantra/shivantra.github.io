@@ -840,8 +840,41 @@ footer .social-icon {
   color: color-mix(in srgb, var(--bs-primary), transparent 10%);
 }
 
-.hero__v6 .logos img {
-  width: 140px;
+.hero__v6 .logos .logo-carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+.hero__v6 .logos .logo-carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  width: max-content;
+  animation: logo-scroll 15s linear infinite;
+}
+
+.hero__v6 .logos .logo-carousel-track img {
+  height: 36px;
+  width: auto;
+  flex-shrink: 0;
+  opacity: 0.85;
+  transition: opacity 0.3s;
+}
+
+.hero__v6 .logos .logo-carousel-track img:hover {
+  opacity: 1;
+}
+
+@keyframes logo-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 .hero__v6 .hero-img {
   position: relative;
