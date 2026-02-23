@@ -46,7 +46,9 @@
 }
 
 body {
-  font: 400 1rem/1.65 "Inter", sans-serif;
+  font:
+    400 1rem/1.65 "Inter",
+    sans-serif;
   background-color: var(--bs-body-bg);
   color: var(--bs-body-color);
   -webkit-font-smoothing: antialiased;
@@ -204,7 +206,11 @@ footer .social-icon {
   border-radius: 7px;
   font-weight: 600;
   position: relative;
-  transition: transform 0.18s ease, color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  transition:
+    transform 0.18s ease,
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
 }
 .btn:hover,
 .btn:active,
@@ -405,7 +411,9 @@ footer .social-icon {
   -webkit-transition: -webkit-transform 0.35s ease-out;
   transition: -webkit-transform 0.35s ease-out;
   transition: transform 0.35s ease-out;
-  transition: transform 0.35s ease-out, -webkit-transform 0.35s ease-out;
+  transition:
+    transform 0.35s ease-out,
+    -webkit-transform 0.35s ease-out;
 }
 .fbs__net-navbar .navbar-nav > li > .nav-link:hover::before {
   -webkit-transform: scaleX(1);
@@ -744,19 +752,11 @@ footer .social-icon {
 .fbs__net-navbar.dark ul li a:hover {
   color: var(--inverse-color) !important;
 }
-.fbs__net-navbar
-  .offcanvas-header
-  .offcanvas-header-logo
-  .logo-link
-  .logo.dark {
+.fbs__net-navbar .offcanvas-header .offcanvas-header-logo .logo-link .logo.dark {
   display: block;
 }
 
-.fbs__net-navbar
-  .offcanvas-header
-  .offcanvas-header-logo
-  .logo-link
-  .logo.light {
+.fbs__net-navbar .offcanvas-header .offcanvas-header-logo .logo-link .logo.light {
   display: none;
 }
 
@@ -887,7 +887,13 @@ footer .social-icon {
   overflow: hidden;
   width: 100%;
   mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
 }
 
 .hero__v6 .logos .logo-carousel-track {
@@ -928,8 +934,13 @@ footer .social-icon {
 }
 
 @keyframes hero-float {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -979,7 +990,9 @@ footer .social-icon {
   background-color: var(--bs-white);
   border: 1px solid var(--bs-primary);
   color: var(--bs-primary);
-  transition: background-color 0.25s ease, transform 0.25s ease;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .features__v2 .col-sm-6:hover .icon {
@@ -1170,7 +1183,9 @@ footer .social-icon {
   height: 56px;
   border-radius: 14px;
   background-color: rgba(var(--bs-primary-rgb), 0.07);
-  transition: background-color 0.25s ease, transform 0.25s ease;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .services__v3 .icon svg {
@@ -1180,7 +1195,10 @@ footer .social-icon {
 
 .services__v3 .service-card {
   border: 1px solid rgba(var(--inverse-color-rgb), 0.2);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .services__v3 .service-card:hover {
@@ -1272,11 +1290,7 @@ footer .social-icon {
   outline: 2px solid var(--bs-primary);
   outline-offset: 2px;
 }
-.faq__v2
-  .custom-accordion
-  .accordion-item
-  .accordion-header
-  .accordion-button:not(.collapsed) {
+.faq__v2 .custom-accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
   background-color: transparent;
   color: var(--inverse-color);
   -webkit-box-shadow: 0 1px 1px rgba(var(--inverse-color-rgb), 0.05);
@@ -1456,7 +1470,9 @@ fieldset:disabled .btn {
 .trust-recognition .content {
   background-color: var(--bs-white);
   border: 1px solid var(--bs-primary);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .trust-recognition .content:hover {

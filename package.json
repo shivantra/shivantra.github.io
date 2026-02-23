@@ -1,0 +1,24 @@
+{
+  "name": "shivantra.com",
+  "version": "1.0.0",
+  "description": "Shivantra - Software Consultancy & Development",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"**/*.{html,css,js,json}\"",
+    "format:check": "prettier --check \"**/*.{html,css,js,json}\""
+  },
+  "keywords": [],
+  "author": {
+    "name": "Shivantra",
+    "email": "dev@shivantra.com"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shivantra/shivantra.github.io"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  },
+  "packageManager": "pnpm@10.15.0"
+}
