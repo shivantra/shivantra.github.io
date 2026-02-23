@@ -2,6 +2,25 @@
   --topbar-height: 40px;
 }
 
+/* Skip navigation link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  padding: 10px 20px;
+  background: var(--bs-primary);
+  color: #fff;
+  font-weight: 600;
+  z-index: 99999;
+  border-radius: 0 0 6px 0;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 0;
+  color: #fff;
+  text-decoration: none;
+}
+
 :root,
 [data-bs-theme="light"] {
   --bs-body-bg: #ffffff;
@@ -200,6 +219,10 @@ footer .social-icon {
 .btn:active {
   transform: translateY(0);
 }
+.btn:focus-visible {
+  outline: 2px solid var(--bs-primary);
+  outline-offset: 3px;
+}
 .btn.btn-white.hover-outline {
   background-color: var(--bs-white) !important;
   color: var(--bs-black) !important;
@@ -240,7 +263,8 @@ footer .social-icon {
 }
 
 .form-control:focus {
-  outline: none;
+  outline: 2px solid var(--bs-primary);
+  outline-offset: 2px;
   -webkit-box-shadow: none;
   box-shadow: none;
   border-color: var(--bs-primary);
@@ -583,11 +607,15 @@ footer .social-icon {
   left: 10px;
 }
 .fbs__net-navbar .navbar-toggler:hover,
-.fbs__net-navbar .navbar-toggler:focus,
+.fbs__net-navbar .navbar-toggler:focus:not(:focus-visible),
 .fbs__net-navbar .navbar-toggler:active {
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+.fbs__net-navbar .navbar-toggler:focus-visible {
+  outline: 2px solid var(--bs-primary);
+  outline-offset: 2px;
 }
 .fbs__net-navbar .header-social a {
   -webkit-transition: 0.3s all ease;
@@ -1227,7 +1255,6 @@ footer .social-icon {
   transition: 0.3s all ease-in-out;
 }
 .faq__v2 .custom-accordion .accordion-item .accordion-header .accordion-button {
-  outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
   font-size: 18px;
@@ -1236,6 +1263,14 @@ footer .social-icon {
   padding-top: 20px;
   padding-bottom: 20px;
   border: none;
+}
+.faq__v2 .custom-accordion .accordion-item .accordion-header .accordion-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+.faq__v2 .custom-accordion .accordion-item .accordion-header .accordion-button:focus-visible {
+  outline: 2px solid var(--bs-primary);
+  outline-offset: 2px;
 }
 .faq__v2
   .custom-accordion
@@ -1354,7 +1389,7 @@ fieldset:disabled .btn {
   margin: 0 0 10px 0;
 }
 .footer a {
-  color: rgba(var(--inverse-color-rgb), 0.6);
+  color: rgba(var(--inverse-color-rgb), 0.78);
   text-decoration: none;
 }
 .footer a:hover {
@@ -1412,6 +1447,10 @@ fieldset:disabled .btn {
 }
 #back-to-top:hover {
   transform: scale(1.12);
+}
+#back-to-top:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
 }
 
 .trust-recognition .content {
