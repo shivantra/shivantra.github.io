@@ -185,6 +185,7 @@ footer .social-icon {
   border-radius: 7px;
   font-weight: 600;
   position: relative;
+  transition: transform 0.18s ease, color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 .btn:hover,
 .btn:active,
@@ -192,6 +193,12 @@ footer .social-icon {
   color: var(--bs-white);
   background-color: var(--bs-primary-hover) !important;
   border: 1px solid var(--bs-primary-hover) !important;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn:active {
+  transform: translateY(0);
 }
 .btn.btn-white.hover-outline {
   background-color: var(--bs-white) !important;
@@ -889,6 +896,18 @@ footer .social-icon {
 .hero__v6 .hero-img .img-main {
   position: relative;
   z-index: 9;
+  animation: hero-float 5s ease-in-out infinite;
+}
+
+@keyframes hero-float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__v6 .hero-img .img-main {
+    animation: none;
+  }
 }
 .hero__v6 .hero-img .img-card {
   z-index: 10;
@@ -932,6 +951,12 @@ footer .social-icon {
   background-color: var(--bs-white);
   border: 1px solid var(--bs-primary);
   color: var(--bs-primary);
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.features__v2 .col-sm-6:hover .icon {
+  background-color: rgba(var(--bs-primary-rgb), 0.06);
+  transform: scale(1.1);
 }
 
 .features__v2 .content {
@@ -1058,7 +1083,13 @@ footer .social-icon {
 
 .howitworks__v1 .step-card {
   position: relative;
+  transition: transform 0.25s ease;
 }
+
+.howitworks__v1 .step-card:hover {
+  transform: translateY(-5px);
+}
+
 .howitworks__v1 .step-card .step-number {
   width: 60px;
   height: 60px;
@@ -1067,6 +1098,11 @@ footer .social-icon {
   color: var(--bs-white);
   background-color: var(--bs-primary);
   font-size: 18px;
+  transition: transform 0.25s ease;
+}
+
+.howitworks__v1 .step-card:hover .step-number {
+  transform: scale(1.08);
 }
 .howitworks__v1 .arch-line {
   position: absolute;
@@ -1098,28 +1134,36 @@ footer .social-icon {
 }
 
 .services__v3 .icon {
-  display: inline-block;
-  position: relative;
-  color: var(--bs-primary) !important;
-}
-
-.services__v3 .icon:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 40px;
-  height: 40px;
-  right: -10px;
-  bottom: 0px;
-  border-radius: 50%;
-  background-color: rgba(var(--bs-secondary-rgb), 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background-color: rgba(var(--bs-primary-rgb), 0.07);
+  transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
 .services__v3 .icon svg {
-  width: 50px;
+  width: 28px;
+  height: 28px;
 }
+
 .services__v3 .service-card {
   border: 1px solid rgba(var(--inverse-color-rgb), 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.services__v3 .service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(var(--bs-black-rgb), 0.08);
+  border-color: rgba(var(--bs-primary-rgb), 0.25);
+}
+
+.services__v3 .service-card:hover .icon {
+  background-color: rgba(var(--bs-primary-rgb), 0.14);
+  transform: scale(1.08);
 }
 
 .faq__v2 {
@@ -1366,10 +1410,19 @@ fieldset:disabled .btn {
   opacity: 1;
   visibility: visible;
 }
+#back-to-top:hover {
+  transform: scale(1.12);
+}
 
 .trust-recognition .content {
   background-color: var(--bs-white);
   border: 1px solid var(--bs-primary);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.trust-recognition .content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(var(--bs-black-rgb), 0.07);
 }
 
 .trust-recognition .subtitle {
