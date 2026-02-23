@@ -27,7 +27,7 @@
 }
 
 body {
-  font: 1rem/1.7 "Inter", sans-serif;
+  font: 400 1rem/1.65 "Inter", sans-serif;
   background-color: var(--bs-body-bg);
   color: var(--bs-body-color);
   -webkit-font-smoothing: antialiased;
@@ -65,6 +65,9 @@ h4,
 h5,
 h6 {
   color: var(--bs-heading-color);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
 }
 
 footer .social-link {
@@ -344,6 +347,7 @@ footer .social-icon {
   padding-left: 10px;
   padding-right: 10px;
   font-size: 0.9375rem;
+  font-weight: 500;
   color: rgba(var(--bs-white-rgb), 1);
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
@@ -823,6 +827,9 @@ footer .social-icon {
 
 .hero__v6 .hero-title {
   font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
 }
 @media (max-width: 1199.98px) {
   .hero__v6 .hero-title {
@@ -1007,6 +1014,8 @@ footer .social-icon {
 }
 .pricing__v2 .price-table .price strong {
   font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 .pricing__v2 .price-table .icon {
   -webkit-box-flex: 0;
@@ -1178,7 +1187,7 @@ footer .social-icon {
   -webkit-box-shadow: none;
   box-shadow: none;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--bs-heading-color);
   padding-top: 20px;
   padding-bottom: 20px;
@@ -1293,6 +1302,8 @@ fieldset:disabled .btn {
 .footer h3,
 .footer h4 {
   font-size: 16px;
+  font-weight: 600;
+  letter-spacing: normal;
 }
 .footer ul li {
   padding: 0;
