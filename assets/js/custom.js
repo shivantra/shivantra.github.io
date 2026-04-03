@@ -216,3 +216,8 @@ const handleResize = () => {
 
 window.addEventListener("resize", handleResize);
 handleNavbarEvents();
+
+// ======= AOS =======
+onReady(() => {
+  AOS.init({ duration: 800, easing: "ease", once: true });
+});
