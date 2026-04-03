@@ -916,12 +916,6 @@ footer .social-icon {
   opacity: 1;
 }
 
-.hero__v6 .logos .logo-carousel-track > span {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-}
-
 @keyframes logo-scroll {
   0% {
     transform: translateX(0);
