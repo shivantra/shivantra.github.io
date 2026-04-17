@@ -1,9 +1,18 @@
 "use client";
 
 import Link from "next/link";
+import { Button } from "./Typography";
 
 interface NavbarProps {
   activePage?: "home" | "careers" | "legal";
+}
+
+function closeOffcanvas() {
+  const el = document.getElementById("fbs__net-navbars");
+  if (!el) return;
+  const w = window as typeof window & { bootstrap?: { Offcanvas: { getInstance: (el: Element) => { hide: () => void } | null } } };
+  const instance = w.bootstrap?.Offcanvas.getInstance(el);
+  instance?.hide();
 }
 
 export default function Navbar({ activePage = "home" }: NavbarProps) {
@@ -63,23 +72,23 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
                   className={`nav-link scroll-link${isHome ? " active" : ""}`}
                   aria-current={isHome ? "page" : undefined}
                   href={isHome ? "#home" : "/#home"}
-                  data-bs-dismiss="offcanvas"
+                  onClick={closeOffcanvas}
                 >
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link scroll-link" href={isHome ? "#about" : "/#about"} data-bs-dismiss="offcanvas">
+                <a className="nav-link scroll-link" href={isHome ? "#about" : "/#about"} onClick={closeOffcanvas}>
                   About
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link scroll-link" href={isHome ? "#services" : "/#services"} data-bs-dismiss="offcanvas">
+                <a className="nav-link scroll-link" href={isHome ? "#services" : "/#services"} onClick={closeOffcanvas}>
                   Services
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link scroll-link" href={isHome ? "#contact" : "/#contact"} data-bs-dismiss="offcanvas">
+                <a className="nav-link scroll-link" href={isHome ? "#contact" : "/#contact"} onClick={closeOffcanvas}>
                   Contact
                 </a>
               </li>
@@ -88,7 +97,7 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
                   className={`nav-link scroll-link${activePage === "careers" ? " active" : ""}`}
                   aria-current={activePage === "careers" ? "page" : undefined}
                   href="/careers"
-                  data-bs-dismiss="offcanvas"
+                  onClick={closeOffcanvas}
                 >
                   Careers
                 </Link>
@@ -99,9 +108,9 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
 
         <div className="ms-auto w-auto">
           <div className="header-social d-flex align-items-center gap-1">
-            <a className="btn btn-primary py-2" href={isHome ? "#contact" : "/#contact"} data-bs-dismiss="offcanvas">
+            <Button href={isHome ? "#contact" : "/#contact"} className="btn-primary py-2" onClick={closeOffcanvas}>
               Contact Now
-            </a>
+            </Button>
 
             <button
               className="fbs__net-navbar-toggler justify-content-center align-items-center ms-auto"

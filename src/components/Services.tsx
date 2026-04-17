@@ -1,3 +1,5 @@
+import { SectionTitle, SubTitle, Description, ThirdTitle } from "./Typography";
+
 const services = [
   {
     title: "Custom Software Development",
@@ -169,12 +171,8 @@ export default function Services() {
       <div className="container">
         <div className="row mb-5">
           <div className="col-md-8 mx-auto text-center">
-            <span className="subtitle text-uppercase mb-3" data-aos="fade-up" data-aos-delay="0">
-              Our Services
-            </span>
-            <h2 className="mb-3" data-aos="fade-up" data-aos-delay="100">
-              Explore how our solutions can simplify complexities and unlock your full potential.
-            </h2>
+            <SubTitle marginBottom>Our Services</SubTitle>
+            <SectionTitle>Explore how our solutions can simplify complexities and unlock your full potential.</SectionTitle>
           </div>
         </div>
         <div className="row g-4">
@@ -188,8 +186,8 @@ export default function Services() {
               <div className="service-card p-4 rounded-4 h-100 d-flex flex-column justify-content-between gap-5">
                 <div>
                   <span className="icon mb-4">{service.icon}</span>
-                  <h3 className="fs-5 mb-3">{service.title}</h3>
-                  <p className="mb-4">{service.description}</p>
+                  <ThirdTitle className="fs-5 mb-3">{service.title}</ThirdTitle>
+                  <Description className="mb-4">{service.description}</Description>
                 </div>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button, ThirdTitle, Description, SocialLink } from "./Typography";
 
 export default function Footer() {
   return (
@@ -7,18 +8,18 @@ export default function Footer() {
         <div className="row mb-5 pb-4">
           <div className="col-md-7 text-center">
             <h2 className="fs-5">Join our newsletter</h2>
-            <p>Your weekly dose of tech insights and offers—join our newsletter today!</p>
+            <Description>Your weekly dose of tech insights and offers—join our newsletter today!</Description>
           </div>
           <div className="col-md-5 d-flex justify-content-center align-items-center">
-            <a
+            <Button
               href="https://shivantra.substack.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-primary fs-6 text-white"
-              aria-label="Subscribe to newsletter (opens in new tab)"
+              className="btn-primary fs-6 text-white"
+              ariaLabel="Subscribe to newsletter (opens in new tab)"
             >
               Subscribe
-            </a>
+            </Button>
           </div>
         </div>
         <div className="row justify-content-between mb-5 g-xl-5">
@@ -29,18 +30,18 @@ export default function Footer() {
               alt="Shivantra footer logo"
               height="40"
             />
-            <p className="mb-4">
+            <Description className="mb-4">
               <b>Shivantra Solutions Private Limited</b> is your trusted partner for world-class
               software development and IT consultancy. We leverage our expertise in custom software,
               mobile apps, web solutions, and strategic integrations to empower organizations and
               individuals. Our commitment to agility, innovation, and excellence ensures we deliver
               robust, scalable, and future-ready technology solutions that drive your success.
-            </p>
+            </Description>
           </div>
           <div className="col-md-7">
             <div className="row g-2">
               <div className="col-md-6 col-lg-4 mb-4 mb-lg-0">
-                <h3 className="mb-3">Company</h3>
+                <ThirdTitle className="mb-3">Company</ThirdTitle>
                 <ul className="list-unstyled">
                   <li>
                     <Link href="/careers">
@@ -59,97 +60,18 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="col-md-6 col-lg-4 mb-4 mb-lg-0">
-                <h3 className="mb-3">Follow Us</h3>
+                <ThirdTitle className="mb-3">Follow Us</ThirdTitle>
                 <ul className="list-unstyled">
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/company/shivantra"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="social-link"
-                    >
-                      <img
-                        src="/assets/images/linkedin.svg"
-                        alt="LinkedIn"
-                        className="social-icon"
-                      />
-                      LinkedIN
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.instagram.com/shivantra/#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="social-link"
-                    >
-                      <img
-                        src="/assets/images/instagram.svg"
-                        alt="Instagram"
-                        className="social-icon"
-                      />
-                      Instagram
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.threads.com/@shivantra"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="social-link"
-                    >
-                      <img
-                        src="/assets/images/threads.svg"
-                        alt="Threads"
-                        className="social-icon"
-                      />
-                      Threads
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://x.com/shivantra_"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="social-link"
-                    >
-                      <img src="/assets/images/x.svg" alt="X" className="social-icon" />X
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.facebook.com/people/Shivantra/61558501586792/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="social-link"
-                    >
-                      <img
-                        src="/assets/images/facebook.svg"
-                        alt="Facebook"
-                        className="social-icon"
-                      />
-                      Facebook
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://github.com/shivantra"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="social-link"
-                    >
-                      <img
-                        src="/assets/images/github.svg"
-                        alt="GitHub"
-                        className="social-icon"
-                      />
-                      GitHub
-                    </a>
-                  </li>
+                  <li><SocialLink href="https://www.linkedin.com/company/shivantra" icon="linkedin" alt="LinkedIn" label="LinkedIN" /></li>
+                  <li><SocialLink href="https://www.instagram.com/shivantra/#" icon="instagram" alt="Instagram" label="Instagram" /></li>
+                  <li><SocialLink href="https://www.threads.com/@shivantra" icon="threads" alt="Threads" label="Threads" /></li>
+                  <li><SocialLink href="https://x.com/shivantra_" icon="x" alt="X" label="X" /></li>
+                  <li><SocialLink href="https://www.facebook.com/people/Shivantra/61558501586792/" icon="facebook" alt="Facebook" label="Facebook" /></li>
+                  <li><SocialLink href="https://github.com/shivantra" icon="github" alt="GitHub" label="GitHub" /></li>
                 </ul>
               </div>
               <div className="col-md-6 col-lg-4 mb-4 mb-lg-0 quick-contact">
-                <h3 className="mb-3">Contact</h3>
+                <ThirdTitle className="mb-3">Contact</ThirdTitle>
                 <p className="d-flex mb-3">
                   <i className="bi bi-geo-alt-fill me-3" aria-hidden="true"></i>
                   <span>

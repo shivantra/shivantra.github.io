@@ -1,3 +1,5 @@
+import { SectionTitle, SubTitle, Description } from "./Typography";
+
 const faqs = [
   {
     id: "One",
@@ -63,15 +65,11 @@ export default function FAQ() {
       <div className="container">
         <div className="row mb-4">
           <div className="col-md-6 col-lg-7 mx-auto text-center">
-            <span className="subtitle text-uppercase mb-3" data-aos="fade-up" data-aos-delay="0">
-              FAQ
-            </span>
-            <h2 className="h2 fw-bold mb-3" data-aos="fade-up" data-aos-delay="0">
-              Frequently Asked Questions
-            </h2>
-            <p data-aos="fade-up" data-aos-delay="100">
+            <SubTitle marginBottom>FAQ</SubTitle>
+            <SectionTitle>Frequently Asked Questions</SectionTitle>
+            <Description aos="fade-up" delay={100}>
               Everything You Need to Know.
-            </p>
+            </Description>
           </div>
         </div>
         <div className="row">

@@ -1,3 +1,5 @@
+import { ThirdTitle } from "./Typography";
+
 export default function Stats() {
   return (
     <section className="stats__v3 section">
@@ -20,12 +22,12 @@ export default function Stats() {
                 data-aos-delay="100"
               >
                 <div className="stat-item">
-                  <h3 className="fs-3 fs-md-2 fw-bold text-white">
+                  <ThirdTitle className="fs-3 fs-md-2 fw-bold text-white">
                     <span>
                       Your Vision. Our Process. <br />
                       Together we succeed.
                     </span>
-                  </h3>
+                  </ThirdTitle>
                 </div>
               </div>
             </div>

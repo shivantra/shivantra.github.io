@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Button, SubTitle, Description } from "./Typography";
 
 const GOOGLE_FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSeUsJRCZVyWolcbIz4NLB4nsW_M88eVSfYzxt5T3HrI5Rz5AA/formResponse";
@@ -80,16 +81,10 @@ export default function Contact() {
       <div className="container">
         <div className="row mb-5">
           <div className="col-md-6 col-lg-7 mx-auto text-center">
-            <span
-              className="subtitle text-uppercase mb-3"
-              data-aos="fade-up"
-              data-aos-delay="0"
-            >
-              Contact Us
-            </span>
-            <p data-aos="fade-up" data-aos-delay="100">
+            <SubTitle marginBottom>Contact Us</SubTitle>
+            <Description aos="fade-up" delay={100}>
               Let&apos;s make something great together!
-            </p>
+            </Description>
           </div>
         </div>
         <div className="row">
@@ -101,7 +96,7 @@ export default function Contact() {
                 </div>
                 <span>
                   <span className="d-block">Phone</span>
-                  <strong>+91-9023364417</strong>
+                  <strong><a href="tel:+919023364417" className="text-body text-decoration-none">+91-9023364417</a></strong>
                 </span>
               </div>
               <div
@@ -114,7 +109,7 @@ export default function Contact() {
                 </div>
                 <span>
                   <span className="d-block">Email</span>
-                  <strong>contact@shivantra.com</strong>
+                  <strong><a href="mailto:contact@shivantra.com" className="text-body text-decoration-none">contact@shivantra.com</a></strong>
                 </span>
               </div>
               <div
@@ -222,14 +217,14 @@ export default function Contact() {
                   data-sitekey="6Lc406MrAAAAAO9xqeDSLJzcWFUx6rJLhJi7_Vb0"
                   data-callback="enableSubmitBtn"
                 ></div>
-                <button
-                  className="btn btn-primary fw-semibold"
+                <Button
+                  className="btn-primary fw-semibold"
                   id="submitBtn"
                   type="submit"
                   disabled={submitDisabled}
                 >
                   Send Message
-                </button>
+                </Button>
               </form>
               {notification && (
                 <div

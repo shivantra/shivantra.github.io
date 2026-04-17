@@ -1,3 +1,5 @@
+import { SubTitle, Description, ThirdTitle } from "./Typography";
+
 export default function Features() {
   return (
     <section className="section features__v2" id="features">
@@ -11,27 +13,21 @@ export default function Features() {
                     <div className="col-lg-11">
                       <div className="h-100 flex-column justify-content-between d-flex">
                         <div>
-                          <span
-                            className="subtitle text-uppercase mb-3"
-                            data-aos="fade-up"
-                            data-aos-delay="0"
-                          >
-                            Why Choose us ?
-                          </span>
-                          <p className="mb-5">
+                          <SubTitle marginBottom>Why Choose us?</SubTitle>
+                          <Description className="mb-5">
                             Our guiding principles are founded on three key pillars:{" "}
                             <b>agility, innovation, and excellence</b>. We pride ourselves on our
                             ability to execute swiftly, leveraging our technical expertise and
                             efficient processes to deliver results in a timely manner. Our commitment
                             to creativity drives us to think outside the box, constantly seeking
                             innovative solutions to meet the evolving needs of our clients.
-                          </p>
-                          <p>
+                          </Description>
+                          <Description>
                             Above all, we uphold the highest standards of quality in our work,
                             ensuring that every project we undertake is executed with precision and
                             attention to detail. By embodying these principles, we strive to exceed
                             expectations and drive success for our clients in every endeavor.
-                          </p>
+                          </Description>
                         </div>
                       </div>
                     </div>
@@ -45,46 +41,42 @@ export default function Features() {
                           <div className="icon text-center mb-4">
                             <i className="bi bi-briefcase-fill fs-4"></i>
                           </div>
-                          <h3 className="fs-6 fw-bold mb-3">Agile Expertise &amp; Rapid Response</h3>
-                          <p>
+                          <ThirdTitle className="fs-6 fw-bold mb-3">Agile Expertise &amp; Rapid Response</ThirdTitle>
+                          <Description>
                             We use agile methods, rapid responses, and proactive communication to
                             adapt quickly, work efficiently, and deliver on time
-                          </p>
+                          </Description>
                         </div>
                         <div className="col-sm-6" data-aos="fade-up" data-aos-delay="100">
                           <div className="icon text-center mb-4">
                             <i className="bi bi-buildings-fill fs-4"></i>
                           </div>
-                          <h3 className="fs-6 fw-bold mb-3">World-Class Technical Proficiency</h3>
-                          <p>
+                          <ThirdTitle className="fs-6 fw-bold mb-3">World-Class Technical Proficiency</ThirdTitle>
+                          <Description>
                             Our expert team combines deep technical mastery with innovation to tackle
                             complex challenges and deliver robust, future-proof digital products.
-                          </p>
+                          </Description>
                         </div>
                         <div className="col-sm-6" data-aos="fade-up" data-aos-delay="200">
                           <div className="icon text-center mb-4">
                             <i className="bi bi-speedometer fs-4"></i>
                           </div>
-                          <h3 className="fs-6 fw-bold mb-3">
-                            Strategic Partnership with Speed &amp; Professionalism
-                          </h3>
-                          <p>
+                          <ThirdTitle className="fs-6 fw-bold mb-3">Strategic Partnership with Speed &amp; Professionalism</ThirdTitle>
+                          <Description>
                             We match your business pace with top-tier professionalism, serving as
                             your dedicated, efficient, and reliable partner from concept to
                             deployment and beyond.
-                          </p>
+                          </Description>
                         </div>
                         <div className="col-sm-6" data-aos="fade-up" data-aos-delay="300">
                           <div className="icon text-center mb-4">
                             <i className="bi bi-sliders fs-4"></i>
                           </div>
-                          <h3 className="fs-6 fw-bold mb-3">
-                            Tailored Solutions for Tangible Impact
-                          </h3>
-                          <p>
+                          <ThirdTitle className="fs-6 fw-bold mb-3">Tailored Solutions for Tangible Impact</ThirdTitle>
+                          <Description>
                             We craft bespoke software tailored to your workflows and goals,
                             delivering measurable improvements and a clear competitive edge.
-                          </p>
+                          </Description>
                         </div>
                       </div>
                     </div>

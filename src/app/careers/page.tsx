@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Button, SubTitle, SectionTitle, ForthTitle, ThirdTitle, FeatureItem, Description } from "@/components/Typography";
 
 export const metadata: Metadata = {
   title: "Careers at Shivantra - Join Our Team",
@@ -41,27 +42,15 @@ export default function Careers() {
                 <div className="col-md-6 order-md-2">
                   <div className="row justify-content-end">
                     <div className="col-md-11 mb-4 mb-md-0">
-                      <span
-                        className="subtitle text-uppercase mb-3"
-                        data-aos="fade-up"
-                        data-aos-delay="0"
-                      >
-                        Careers at Shivantra
-                      </span>
-                      <div data-aos="fade-up" data-aos-delay="200">
-                        <p>
-                          Be part of a team that thrives on innovation, collaboration, and
-                          excellence. Together, we build solutions that empower businesses across
-                          the globe.
-                        </p>
-                      </div>
-                      <h4
-                        className="small fw-bold mt-4 mb-3"
-                        data-aos="fade-up"
-                        data-aos-delay="300"
-                      >
+                      <SubTitle marginBottom>Careers at Shivantra</SubTitle>
+                      <Description aos="fade-up" delay={200}>
+                        Be part of a team that thrives on innovation, collaboration, and
+                        excellence. Together, we build solutions that empower businesses across
+                        the globe.
+                      </Description>
+                      <ForthTitle className="small fw-bold mt-4 mb-3">
                         Why join Shivantra?
-                      </h4>
+                      </ForthTitle>
                       <ul
                         className="d-flex flex-column list-unstyled gap-3 features"
                         data-aos="fade-up"
@@ -74,18 +63,13 @@ export default function Careers() {
                           "Flexible work environment with a focus on work-life balance",
                           "Competitive compensation and benefits",
                         ].map((item) => (
-                          <li key={item} className="d-flex align-items-center gap-2">
-                            <span className="icon rounded-circle text-center">
-                              <i className="bi bi-check" aria-hidden="true"></i>
-                            </span>
-                            <span className="text">{item}</span>
-                          </li>
+                          <FeatureItem key={item}>{item}</FeatureItem>
                         ))}
                       </ul>
-                      <p data-aos="fade-up" data-aos-delay="100">
+                      <Description aos="fade-up" delay={100}>
                         Ready to shape the future with us? Submit your application below and
                         let&apos;s get started.
-                      </p>
+                      </Description>
                     </div>
                   </div>
                 </div>
@@ -124,13 +108,13 @@ export default function Careers() {
                       data-aos-delay="100"
                     >
                       <div className="stat-item">
-                        <h3 className="fs-3 fs-md-2 fw-bold text-white">
+                        <ThirdTitle className="fs-3 fs-md-2 fw-bold text-white">
                           <span>
                             Empowering people.
                             <br />
                             Transforming possibilities.
                           </span>
-                        </h3>
+                        </ThirdTitle>
                       </div>
                     </div>
                   </div>
@@ -143,30 +127,22 @@ export default function Careers() {
             <div className="container">
               <div className="row mb-5">
                 <div className="col-md-8 mx-auto text-center">
-                  <span
-                    className="subtitle text-uppercase mb-3"
-                    data-aos="fade-up"
-                    data-aos-delay="0"
-                  >
-                    Current openings
-                  </span>
-                  <h2 className="mb-3" data-aos="fade-up" data-aos-delay="100">
-                    Discover roles where your talent thrives.
-                  </h2>
+                  <SubTitle marginBottom>Current openings</SubTitle>
+                  <SectionTitle>Discover roles where your talent thrives.</SectionTitle>
                 </div>
               </div>
               <div className="row g-4">
                 <div className="col text-center" data-aos="fade-up" data-aos-delay="0">
-                  <a
-                    className="btn btn-primary py-2"
+                  <Button
+                    className="btn-primary py-2"
                     href="https://www.notion.so/shivantra/Careers-24dd744ec4ad803bac5ec34906ae0df3"
                     target="_blank"
                     rel="noopener noreferrer"
                     referrerPolicy="no-referrer"
-                    aria-label="Apply Now (opens in new tab)"
+                    ariaLabel="Apply Now (opens in new tab)"
                   >
                     Apply Now
-                  </a>
+                  </Button>
                 </div>
               </div>
             </div>

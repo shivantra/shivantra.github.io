@@ -1,17 +1,17 @@
+import { SubTitle, Description, ThirdTitle } from "./Typography";
+
 export default function HowItWorks() {
   return (
     <section className="section howitworks__v1" id="how-it-works">
       <div className="container">
         <div className="row mb-5">
           <div className="col-md-6 text-center mx-auto">
-            <span className="subtitle text-uppercase mb-3" data-aos="fade-up" data-aos-delay="0">
-              How it works
-            </span>
-            <p data-aos="fade-up" data-aos-delay="200">
+            <SubTitle marginBottom>How it works</SubTitle>
+            <Description aos="fade-up" delay={200}>
               At Shivantra, we transform your vision into a robust digital solution through a
               proven, client-centric process. Our agile methodology ensures a swift, collaborative,
               and professional journey from concept to deployment.
-            </p>
+            </Description>
           </div>
         </div>
         <div className="row g-md-5">
@@ -31,12 +31,12 @@ export default function HowItWorks() {
               </div>
               <span className="step-number rounded-circle text-center fw-bold mb-5 mx-auto">1</span>
               <div>
-                <h3 className="fs-5 mb-4">Strategize &amp; Define</h3>
-                <p>
+                <ThirdTitle className="fs-5 mb-4">Strategize &amp; Define</ThirdTitle>
+                <Description>
                   We start with an in-depth consultation to understand your business and goals. Our
                   experts then craft a detailed roadmap, defining project scope, technology stack,
                   and a strategic plan to build a solution that meets your needs.
-                </p>
+                </Description>
               </div>
             </div>
           </div>
@@ -51,12 +51,12 @@ export default function HowItWorks() {
                 />
               </div>
               <span className="step-number rounded-circle text-center fw-bold mb-5 mx-auto">2</span>
-              <h3 className="fs-5 mb-4">Innovate &amp; Develop</h3>
-              <p>
+              <ThirdTitle className="fs-5 mb-4">Innovate &amp; Develop</ThirdTitle>
+              <Description>
                 Leveraging our agile approach, we begin development with a focus on speed and
                 quality. We work collaboratively, providing regular updates and incorporating your
                 feedback to ensure the final product is perfectly aligned with your vision.
-              </p>
+              </Description>
             </div>
           </div>
           <div className="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="1200">
@@ -70,24 +70,24 @@ export default function HowItWorks() {
                 />
               </div>
               <span className="step-number rounded-circle text-center fw-bold mb-5 mx-auto">3</span>
-              <h3 className="fs-5 mb-4">Test &amp; Deliver</h3>
-              <p>
+              <ThirdTitle className="fs-5 mb-4">Test &amp; Deliver</ThirdTitle>
+              <Description>
                 Before launch, every solution undergoes rigorous quality assurance and testing to
                 ensure it&apos;s robust, secure, and performs flawlessly. We handle the seamless
                 deployment of your solution, getting it into your hands swiftly.
-              </p>
+              </Description>
             </div>
           </div>
           <div className="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="1800">
             <div className="step-card last text-center h-100 d-flex flex-column justify-content-start position-relative">
               <span className="step-number rounded-circle text-center fw-bold mb-5 mx-auto">4</span>
               <div>
-                <h3 className="fs-5 mb-4">Support &amp; Evolve</h3>
-                <p>
+                <ThirdTitle className="fs-5 mb-4">Support &amp; Evolve</ThirdTitle>
+                <Description>
                   Our commitment extends beyond the launch. We provide ongoing support and
                   maintenance to ensure your software remains relevant and performs optimally,
                   helping your business adapt and grow.
-                </p>
+                </Description>
               </div>
             </div>
           </div>

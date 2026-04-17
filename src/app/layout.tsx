@@ -88,6 +88,7 @@ export default function RootLayout({
         {children}
         <Script src="/assets/vendors/bootstrap/bootstrap.bundle.min.js" strategy="afterInteractive" />
         <Script src="/assets/vendors/aos/aos.js" strategy="afterInteractive" />
+        <Script src="/assets/vendors/gsap/gsap.min.js" strategy="afterInteractive" />
         <Script src="/assets/js/custom.js" strategy="afterInteractive" />
         <Script src="/assets/js/form.js" strategy="afterInteractive" />
       </body>
