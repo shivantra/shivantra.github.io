@@ -1,11 +1,11 @@
 import "./Footer.css";
 import Link from "next/link";
-import { Button, CardTitle, Description, SocialLink } from "./Typography";
+import { Button, Container, CardTitle, Description, SocialLink } from "./Typography";
 
 export default function Footer() {
   return (
     <footer className="footer pt-5 pb-5">
-      <div className="container">
+      <Container>
         <div className="row mb-5 pb-4">
           <div className="col-md-7 text-center">
             <h2 className="fs-5">Join our newsletter</h2>
@@ -108,7 +108,7 @@ export default function Footer() {
           </div>
           <div className="col-xl-4 justify-content-start justify-content-xl-end quick-links d-flex flex-column flex-xl-row text-center text-xl-start gap-1"></div>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }

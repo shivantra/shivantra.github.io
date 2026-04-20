@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "../legal.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { SubTitle, Description } from "@/components/Typography";
+import { Section, Container, SubHeading, Description } from "@/components/Typography";
 
 export const metadata: Metadata = {
   title: "Terms and Conditions | Shivantra - Software Consultancy & Development",
@@ -19,8 +19,8 @@ export default function TermsConditions() {
       <div className="site-wrap">
         <Navbar activePage="legal" />
         <main id="main-content">
-          <section className="terms section">
-            <div className="container" data-aos="fade-up" data-aos-delay="200">
+          <Section className="terms">
+            <Container>
               <h1 className="tag text-uppercase" data-aos="fade-up">
                 Terms and Conditions
               </h1>
@@ -33,7 +33,7 @@ export default function TermsConditions() {
                 Effective: <strong className="text-primary">25th October 2024</strong>
               </small>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Overview</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Overview</SubHeading>
               <Description className="justify-content">
                 Shivantra Solutions Private Limited (&quot;we&quot;, &quot;us&quot;,
                 &quot;our&quot;) is a software consultancy and development organization dedicated
@@ -45,7 +45,7 @@ export default function TermsConditions() {
                 services.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Section 1 - Online Services Terms</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Section 1 - Online Services Terms</SubHeading>
               <Description className="justify-content">
                 By using our services, you represent that you are at least the age of majority in
                 your jurisdiction and have the legal capacity to enter into this agreement. You may
@@ -53,7 +53,7 @@ export default function TermsConditions() {
                 all applicable laws and regulations.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Section 2 - General Conditions</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Section 2 - General Conditions</SubHeading>
               <Description className="justify-content">
                 We reserve the right to refuse service to anyone for any reason at any time. You
                 understand that your data may be transferred unencrypted and may involve
@@ -62,7 +62,7 @@ export default function TermsConditions() {
                 permission.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Section 3 - User Personal Information</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Section 3 - User Personal Information</SubHeading>
               <Description className="justify-content">
                 We take all reasonable measures to protect your personal information from
                 unauthorized access, alteration, or destruction; maintain data accuracy; and
@@ -80,23 +80,23 @@ export default function TermsConditions() {
                 control of your personal information.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>
                 Section 4 - Accuracy, Completeness, and Timeliness of Information
-              </SubTitle>
+              </SubHeading>
               <Description className="justify-content">
                 While we strive to provide accurate and timely information, we make no guarantees
                 about the accuracy, completeness, or timeliness of any information on our website
                 or services. Any reliance on this information is at your own risk.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Section 5 - Modifications to Services and Prices</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Section 5 - Modifications to Services and Prices</SubHeading>
               <Description className="justify-content">
                 Prices for our services are subject to change without notice. We reserve the right
                 to modify or discontinue any service at any time without notice. We are not liable
                 for any modification or discontinuance of the services.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Section 6 - Warranties and Disclaimers</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Section 6 - Warranties and Disclaimers</SubHeading>
               <Description className="justify-content">
                 We provide our services using a commercially reasonable level of skill and care.
                 However, we provide the services on an &quot;as is&quot; basis and make no
@@ -108,7 +108,7 @@ export default function TermsConditions() {
                 profits, or business interruption.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Section 7 - Services Offered</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Section 7 - Services Offered</SubHeading>
               <Description className="justify-content">Our services include, but are not limited to:</Description>
               <ul className="justify-content text-dark">
                 <li>Customized Software Development</li>
@@ -130,85 +130,85 @@ export default function TermsConditions() {
                 and exceed your expectations.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Section 8 - Billing and Account Information</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Section 8 - Billing and Account Information</SubHeading>
               <Description className="justify-content">
                 You agree to provide accurate billing information and to promptly update your
                 account details to ensure we can process your orders effectively. We reserve the
                 right to refuse any order or limit quantities for any reason.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Section 9 - Third-Party Tools and Links</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Section 9 - Third-Party Tools and Links</SubHeading>
               <Description className="justify-content">
                 We may provide access to third-party tools that we do not monitor or control. Your
                 use of these tools is at your own risk. We are not responsible for any issues
                 arising from your use of third-party tools or websites.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Section 10 - User Comments and Feedback</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Section 10 - User Comments and Feedback</SubHeading>
               <Description className="justify-content">
                 If you submit comments, suggestions, or other materials, you grant us the right to
                 use them without any obligation to maintain confidentiality, provide compensation,
                 or respond. You are responsible for the accuracy of your comments.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Section 11 - Errors and Omissions</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Section 11 - Errors and Omissions</SubHeading>
               <Description className="justify-content">
                 Occasionally, information on our site may contain typographical errors or
                 inaccuracies. We reserve the right to correct these errors at any time and do not
                 have an obligation to update information on our site.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Section 12 - Prohibited Uses</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Section 12 - Prohibited Uses</SubHeading>
               <Description className="justify-content">
                 You are prohibited from using our services to engage in unlawful acts, violate any
                 laws, or infringe upon the rights of others. We reserve the right to terminate
                 your access for any violations.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Section 13 - Indemnification</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Section 13 - Indemnification</SubHeading>
               <Description className="justify-content">
                 You agree to indemnify and hold harmless Shivantra Solutions Private Limited and
                 its affiliates from any claims arising from your violation of these Terms.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Section 14 - Severability</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Section 14 - Severability</SubHeading>
               <Description className="justify-content">
                 If any provision of these Terms is deemed unlawful or unenforceable, the remaining
                 provisions shall remain in effect.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Section 15 - Termination</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Section 15 - Termination</SubHeading>
               <Description className="justify-content">
                 These Terms are effective until terminated by either party. We may terminate these
                 Terms if you fail to comply with any provision.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Section 16 - Entire Agreement</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Section 16 - Entire Agreement</SubHeading>
               <Description className="justify-content">
                 These Terms constitute the entire agreement between you and us regarding your use
                 of our services, superseding any prior agreements.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Section 17 - Governing Law</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Section 17 - Governing Law</SubHeading>
               <Description className="justify-content">
                 These Terms are governed by the laws of India. Any disputes shall be resolved in
                 the courts of Bharuch, Gujarat, India.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Section 18 - Changes to Terms of Service</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Section 18 - Changes to Terms of Service</SubHeading>
               <Description className="justify-content">
                 We may update these Terms at any time. If we make any material changes, we will
                 notify you by email or via notice on our website. Your continued use of our
                 services following the posting of changes constitutes acceptance of those changes.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Section 19 - Contact Information</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Section 19 - Contact Information</SubHeading>
               <Description className="justify-content">
                 Questions about these Terms should be directed to us at{" "}
                 <a href="mailto:contact@shivantra.com">contact@shivantra.com</a>.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Section 20 - Company Information</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Section 20 - Company Information</SubHeading>
               <Description className="justify-content">
                 <b>Company Name:</b> Shivantra Solutions Private Limited
                 <br />
@@ -220,8 +220,8 @@ export default function TermsConditions() {
                 <br />
                 <b>Contact Number:</b> +91-9023364417
               </Description>
-            </div>
-          </section>
+            </Container>
+          </Section>
           <Footer />
         </main>
       </div>

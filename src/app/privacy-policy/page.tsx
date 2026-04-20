@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "../legal.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { SubTitle, SmallHeading, Description } from "@/components/Typography";
+import { Section, Container, SubHeading, Caption, Description } from "@/components/Typography";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Shivantra - Software Consultancy & Development",
@@ -19,8 +19,8 @@ export default function PrivacyPolicy() {
       <div className="site-wrap">
         <Navbar activePage="legal" />
         <main id="main-content">
-          <section className="terms section">
-            <div className="container" data-aos="fade-up" data-aos-delay="200">
+          <Section className="terms">
+            <Container>
               <h1 className="tag text-uppercase" data-aos="fade-up">
                 Privacy Policy
               </h1>
@@ -33,7 +33,7 @@ export default function PrivacyPolicy() {
                 Effective: <strong className="text-primary">25th October 2024</strong>
               </small>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Introduction</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Introduction</SubHeading>
               <Description className="justify-content">
                 Our privacy page informs you of our policies regarding the collection, use, and
                 disclosure of personal data when you use our services and the choices you have
@@ -51,13 +51,13 @@ export default function PrivacyPolicy() {
                 <a href="http://www.shivantra.com">www.shivantra.com</a>.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Information Collection and Use</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Information Collection and Use</SubHeading>
               <Description className="justify-content">
                 We collect various types of information for different purposes to provide and
                 improve our services to you.
               </Description>
 
-              <SmallHeading className="fw-semibold" noAnimation>Cookie &amp; Usage Data</SmallHeading>
+              <Caption className="fw-semibold" noAnimation>Cookie &amp; Usage Data</Caption>
               <Description className="justify-content">
                 We may collect information about how the Service is accessed and used
                 (&quot;Usage Data&quot;). This Usage Data may include details such as your
@@ -66,7 +66,7 @@ export default function PrivacyPolicy() {
                 the time spent on those pages, unique device identifiers, and other diagnostic data.
               </Description>
 
-              <SmallHeading className="fw-semibold" noAnimation>Tracking &amp; Cookies Data</SmallHeading>
+              <Caption className="fw-semibold" noAnimation>Tracking &amp; Cookies Data</Caption>
               <Description className="justify-content">
                 We use cookies and similar tracking technologies to monitor activity on our Service
                 and store certain information. Cookies are small files containing data that may
@@ -74,7 +74,7 @@ export default function PrivacyPolicy() {
                 website and stored on your device.
               </Description>
 
-              <SmallHeading className="fw-semibold" noAnimation>Types of Cookies:</SmallHeading>
+              <Caption className="fw-semibold" noAnimation>Types of Cookies:</Caption>
               <ul className="justify-content">
                 <li>
                   <strong>Persistent Cookies:</strong> These remain on your device for a specified
@@ -97,7 +97,7 @@ export default function PrivacyPolicy() {
                 </li>
               </ul>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Use of Data</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Use of Data</SubHeading>
               <Description className="justify-content">
                 Shivantra Solutions Private Limited uses the collected data for various purposes,
                 including:
@@ -109,7 +109,7 @@ export default function PrivacyPolicy() {
                 <li>To address technical issues</li>
               </ul>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Transfer of Data</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Transfer of Data</SubHeading>
               <Description className="justify-content">
                 Your information, including Personal Data, may be transferred to — and maintained
                 on — computers located outside of your state, province, country, or other
@@ -117,8 +117,8 @@ export default function PrivacyPolicy() {
                 jurisdiction.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Disclosure of Data</SubTitle>
-              <SmallHeading className="fw-semibold" noAnimation>Legal Requirements</SmallHeading>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Disclosure of Data</SubHeading>
+              <Caption className="fw-semibold" noAnimation>Legal Requirements</Caption>
               <Description className="justify-content">
                 Shivantra Solutions Private Limited may disclose your Personal Data in good faith
                 belief that such action is necessary to:
@@ -133,46 +133,46 @@ export default function PrivacyPolicy() {
                 <li>Protect against legal liability</li>
               </ul>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Security of Data</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Security of Data</SubHeading>
               <Description className="justify-content">
                 The security of your data is important to us. However, please remember that no
                 method of transmission over the Internet, or method of electronic storage, is 100%
                 secure.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Analytics</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Analytics</SubHeading>
               <Description className="justify-content">
                 We may use third-party Service Providers to monitor and analyze the use of our
                 Services.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Links to Other Sites</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Links to Other Sites</SubHeading>
               <Description className="justify-content">
                 Our Services may contain links to other websites that are not operated by us. If
                 you click on a third-party link, you will be directed to that third party&apos;s
                 site. We strongly recommend reviewing the Privacy Policy of every site you visit.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Children&apos;s Policy</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Children&apos;s Policy</SubHeading>
               <Description className="justify-content">
                 Our Services do not address anyone under the age of 18 (&quot;Children&quot;). We
                 do not knowingly collect personally identifiable information from anyone under the
                 age of 18.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Changes to This Privacy Policy</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Changes to This Privacy Policy</SubHeading>
               <Description className="justify-content">
                 We may update our Privacy Policy from time to time. We will notify you of any
                 changes by posting the new Privacy Policy on this page.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Contact Us</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Contact Us</SubHeading>
               <Description className="justify-content">
                 Questions about the policy should be directed to us at{" "}
                 <a href="mailto:contact@shivantra.com">contact@shivantra.com</a>.
               </Description>
-            </div>
-          </section>
+            </Container>
+          </Section>
           <Footer />
         </main>
       </div>

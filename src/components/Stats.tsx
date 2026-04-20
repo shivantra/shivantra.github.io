@@ -1,10 +1,10 @@
 import "./Stats.css";
-import { CardTitle } from "./Typography";
+import { Section, Container, CardTitle } from "./Typography";
 
 export default function Stats() {
   return (
-    <section className="stats__v3 section">
-      <div className="container">
+    <Section className="stats__v3">
+      <Container>
         <div className="row">
           <div className="col-12">
             <div
@@ -34,7 +34,7 @@ export default function Stats() {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

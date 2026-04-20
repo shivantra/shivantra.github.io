@@ -1,15 +1,15 @@
 import "./About.css";
-import { Description, FeatureItem, SubHeading, SectionTag, CardTitle } from "./Typography";
+import { Section, Container, Description, FeatureItem, Heading, Tag, CardTitle } from "./Typography";
 
 export default function About() {
   return (
-    <section className="about__v4 section" id="about">
-      <div className="container">
+    <Section className="about__v4" id="about">
+      <Container>
         <div className="row">
           <div className="col-md-6 order-md-2">
             <div className="row justify-content-end">
               <div className="col-md-11 mb-4 mb-md-0">
-                <SectionTag marginBottom>About us</SectionTag>
+                <Tag marginBottom>About us</Tag>
                 <div data-aos="fade-up" data-aos-delay="200">
                   <Description><b>Shivantra Solutions Private Limited</b> is a software consultancy and
                     development organisation, delivering customised software development and
@@ -21,7 +21,7 @@ export default function About() {
                     expertise and resources to deliver results. From simple websites to complex
                     applications, we have the skills and experience to bring your ideas to life.</Description>
                 </div>
-                <SubHeading className="small fw-bold mt-4 mb-3">Key Values and Vision</SubHeading>
+                <Heading className="small fw-bold mt-4 mb-3">Key Values and Vision</Heading>
                 <ul
                   className="d-flex flex-row flex-wrap list-unstyled gap-3 features"
                   data-aos="fade-up"
@@ -70,7 +70,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

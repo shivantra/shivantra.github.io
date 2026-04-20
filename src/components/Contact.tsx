@@ -2,7 +2,7 @@
 
 import "./Contact.css";
 import { useState } from "react";
-import { Button, SectionTag, Description } from "./Typography";
+import { Section, Container, Button, SectionHeader, Description } from "./Typography";
 
 const GOOGLE_FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSeUsJRCZVyWolcbIz4NLB4nsW_M88eVSfYzxt5T3HrI5Rz5AA/formResponse";
@@ -78,16 +78,13 @@ export default function Contact() {
   }
 
   return (
-    <section className="section contact__v2" id="contact">
-      <div className="container">
-        <div className="row mb-5">
-          <div className="col-md-6 col-lg-7 mx-auto text-center">
-            <SectionTag marginBottom>Contact Us</SectionTag>
-            <Description aos="fade-up" delay={100}>
-              Let&apos;s make something great together!
-            </Description>
-          </div>
-        </div>
+    <Section className="contact__v2" id="contact">
+      <Container>
+        <SectionHeader tag="Contact Us" colClass="col-md-6 col-lg-7 mx-auto text-center">
+          <Description aos="fade-up" delay={100}>
+            Let&apos;s make something great together!
+          </Description>
+        </SectionHeader>
         <div className="row">
           <div className="col-md-6">
             <div className="d-flex gap-5 flex-column">
@@ -237,7 +234,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

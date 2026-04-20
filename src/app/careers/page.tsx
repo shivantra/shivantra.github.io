@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./careers.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Button, SectionTag, SectionTitle, SubHeading, CardTitle, FeatureItem, Description } from "@/components/Typography";
+import { Button, Section, Container, Tag, SectionHeader, Heading, CardTitle, FeatureItem, Description } from "@/components/Typography";
 
 export const metadata: Metadata = {
   title: "Careers at Shivantra - Join Our Team",
@@ -37,21 +37,21 @@ export default function Careers() {
       <div className="site-wrap">
         <Navbar activePage="careers" />
         <main id="main-content">
-          <section className="careers section" id="about">
-            <div className="container">
+          <Section className="careers" id="about">
+            <Container>
               <div className="row">
                 <div className="col-md-6 order-md-2">
                   <div className="row justify-content-end">
                     <div className="col-md-11 mb-4 mb-md-0">
-                      <SectionTag marginBottom>Careers at Shivantra</SectionTag>
+                      <Tag marginBottom>Careers at Shivantra</Tag>
                       <Description aos="fade-up" delay={200}>
                         Be part of a team that thrives on innovation, collaboration, and
                         excellence. Together, we build solutions that empower businesses across
                         the globe.
                       </Description>
-                      <SubHeading className="small fw-bold mt-4 mb-3">
+                      <Heading className="small fw-bold mt-4 mb-3">
                         Why join Shivantra?
-                      </SubHeading>
+                      </Heading>
                       <ul
                         className="d-flex flex-column list-unstyled gap-3 features"
                         data-aos="fade-up"
@@ -86,11 +86,11 @@ export default function Careers() {
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
+            </Container>
+          </Section>
 
-          <section className="stats__v3 section">
-            <div className="container">
+          <Section className="stats__v3">
+            <Container>
               <div className="row">
                 <div className="col-12">
                   <div
@@ -121,17 +121,12 @@ export default function Careers() {
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
+            </Container>
+          </Section>
 
-          <section className="section openings" id="openings">
-            <div className="container">
-              <div className="row mb-5">
-                <div className="col-md-8 mx-auto text-center">
-                  <SectionTag marginBottom>Current openings</SectionTag>
-                  <SectionTitle>Discover roles where your talent thrives.</SectionTitle>
-                </div>
-              </div>
+          <Section className="openings" id="openings">
+            <Container>
+              <SectionHeader tag="Current openings" title="Discover roles where your talent thrives." />
               <div className="row g-4">
                 <div className="col text-center" data-aos="fade-up" data-aos-delay="0">
                   <Button
@@ -146,8 +141,8 @@ export default function Careers() {
                   </Button>
                 </div>
               </div>
-            </div>
-          </section>
+            </Container>
+          </Section>
 
           <Footer />
         </main>

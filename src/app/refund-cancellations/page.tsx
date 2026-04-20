@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "../legal.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { SubTitle, SmallHeading, Description } from "@/components/Typography";
+import { Section, Container, SubHeading, Caption, Description } from "@/components/Typography";
 
 export const metadata: Metadata = {
   title: "Refund and Cancellations | Shivantra - Software Consultancy & Development",
@@ -19,8 +19,8 @@ export default function RefundCancellations() {
       <div className="site-wrap">
         <Navbar activePage="legal" />
         <main id="main-content">
-          <section className="terms section">
-            <div className="container" data-aos="fade-up" data-aos-delay="200">
+          <Section className="terms">
+            <Container>
               <span className="tag text-uppercase" data-aos="fade-up">
                 Refund and Cancellation Policy
               </span>
@@ -33,7 +33,7 @@ export default function RefundCancellations() {
                 Effective: <strong className="text-primary">25th October 2024</strong>
               </small>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Introduction</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Introduction</SubHeading>
               <Description className="justify-content">
                 At Shivantra Solutions Private Limited (&quot;we&quot;, &quot;us&quot;,
                 &quot;our&quot;), we strive to provide the highest quality software consultancy
@@ -42,8 +42,8 @@ export default function RefundCancellations() {
                 terms regarding refunds and cancellations.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Cancellation Policy</SubTitle>
-              <SmallHeading className="fw-semibold" noAnimation>Service Cancellation</SmallHeading>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Cancellation Policy</SubHeading>
+              <Caption className="fw-semibold" noAnimation>Service Cancellation</Caption>
               <Description className="justify-content">
                 You may cancel a service at any time prior to its commencement. To initiate a
                 cancellation, please contact us via email at{" "}
@@ -51,15 +51,15 @@ export default function RefundCancellations() {
                 service before work has commenced, you will not incur any charges.
               </Description>
 
-              <SmallHeading className="fw-semibold" noAnimation>Post-Commencement Cancellation</SmallHeading>
+              <Caption className="fw-semibold" noAnimation>Post-Commencement Cancellation</Caption>
               <Description className="justify-content">
                 If you wish to cancel a service after work has started, please note that charges
                 may apply based on the work completed up to the cancellation date. We will provide
                 a detailed invoice outlining the services rendered and applicable fees.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Refund Policy</SubTitle>
-              <SmallHeading className="fw-semibold" noAnimation>Eligibility for Refunds</SmallHeading>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Refund Policy</SubHeading>
+              <Caption className="fw-semibold" noAnimation>Eligibility for Refunds</Caption>
               <Description className="justify-content">
                 Refunds may be granted under specific circumstances, including but not limited to:
               </Description>
@@ -68,21 +68,21 @@ export default function RefundCancellations() {
                 <li>Significant delays in project delivery without prior communication.</li>
               </ul>
 
-              <SmallHeading className="fw-semibold" noAnimation>Requesting a Refund</SmallHeading>
+              <Caption className="fw-semibold" noAnimation>Requesting a Refund</Caption>
               <Description className="justify-content">
                 To request a refund, please submit a written request to{" "}
                 <a href="mailto:contact@shivantra.com">contact@shivantra.com</a> within 14 days
                 of the service completion date, clearly outlining the reason for your request.
               </Description>
 
-              <SmallHeading className="fw-semibold" noAnimation>Refund Process</SmallHeading>
+              <Caption className="fw-semibold" noAnimation>Refund Process</Caption>
               <Description className="justify-content">
                 Upon receiving your request, we will review it and respond within 10 business
                 days. If approved, refunds will be processed using the original payment method
                 within 14 business days.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Non-Refundable Services</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Non-Refundable Services</SubHeading>
               <Description className="justify-content">
                 Certain services may be non-refundable, including:
               </Description>
@@ -95,14 +95,14 @@ export default function RefundCancellations() {
                 </li>
               </ul>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Changes to the Policy</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Changes to the Policy</SubHeading>
               <Description className="justify-content">
                 We reserve the right to modify this Refund and Cancellation Policy at any time.
                 Any changes will be effective immediately upon posting on our website. We encourage
                 you to review this policy periodically.
               </Description>
 
-              <SubTitle className="mt-5 fw-semibold" noAnimation>Contact Us</SubTitle>
+              <SubHeading className="mt-5 fw-semibold" noAnimation>Contact Us</SubHeading>
               <Description className="justify-content">
                 For any questions regarding this policy or to initiate a cancellation or refund
                 request, please contact us at:
@@ -113,8 +113,8 @@ export default function RefundCancellations() {
                 <br />
                 <b>Phone:</b> +91-9023364417
               </Description>
-            </div>
-          </section>
+            </Container>
+          </Section>
           <Footer />
         </main>
       </div>

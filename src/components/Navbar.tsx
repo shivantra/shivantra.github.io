@@ -2,7 +2,7 @@
 
 import "./Navbar.css";
 import Link from "next/link";
-import { Button } from "./Typography";
+import { Button, Container } from "./Typography";
 
 interface NavbarProps {
   activePage?: "home" | "careers" | "legal";
@@ -24,7 +24,7 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
       className="fbs__net-navbar navbar navbar-expand-lg dark"
       aria-label="shivantra.com navbar"
     >
-      <div className="container d-flex align-items-center justify-content-between">
+      <Container className="d-flex align-items-center justify-content-between">
         <Link className="navbar-brand w-auto" href="/">
           <img
             className="logo dark img-fluid"
@@ -157,7 +157,7 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
             </button>
           </div>
         </div>
-      </div>
+      </Container>
     </header>
   );
 }

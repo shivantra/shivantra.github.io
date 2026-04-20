@@ -1,6 +1,51 @@
 import React from "react";
 
-export function SectionTag({
+export function SectionHeader({
+  tag,
+  title,
+  children,
+  colClass = "col-md-8 mx-auto text-center",
+  tight,
+}: {
+  tag: string;
+  title?: string;
+  children?: React.ReactNode;
+  colClass?: string;
+  tight?: boolean;
+}) {
+  return (
+    <div className={`row ${tight ? "mb-4" : "mb-5"}`}>
+      <div className={colClass}>
+        <Tag marginBottom>{tag}</Tag>
+        {title && <SectionTitle>{title}</SectionTitle>}
+        {children}
+      </div>
+    </div>
+  );
+}
+
+export function Section({
+  children,
+  className,
+  id,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
+}) {
+  return (
+    <section className={["section", className].filter(Boolean).join(" ")} id={id}>
+      {children}
+    </section>
+  );
+}
+
+export function Container({ children, className }: { children: React.ReactNode; className?: string }) {
+  const combined = ["container", className].filter(Boolean).join(" ");
+  return <div className={combined}>{children}</div>;
+}
+
+export function Tag({
   children,
   marginBottom,
   hero,
@@ -20,7 +65,7 @@ export function SectionTag({
   );
 }
 
-export function HeroTitle({ children }: { children: React.ReactNode }) {
+export function PageTitle({ children }: { children: React.ReactNode }) {
   return (
     <h1 className="hero-title mb-3" data-aos="fade-up" data-aos-delay="100">
       {children}
@@ -43,7 +88,7 @@ export function CardTitle({ children, className }: { children: React.ReactNode, 
   );
 }
 
-export function SubHeading({ children, className }: { children: React.ReactNode; className?: string }) {
+export function Heading({ children, className }: { children: React.ReactNode; className?: string }) {
   const combined = [className].filter(Boolean).join(" ") || undefined;
   return (
     <h4 className={combined} data-aos="fade-up" data-aos-delay="300">
@@ -52,7 +97,7 @@ export function SubHeading({ children, className }: { children: React.ReactNode;
   );
 }
 
-export function SubTitle({ children, className, noAnimation }: { children: React.ReactNode; className?: string; noAnimation?: boolean }) {
+export function SubHeading({ children, className, noAnimation }: { children: React.ReactNode; className?: string; noAnimation?: boolean }) {
   const combined = [className].filter(Boolean).join(" ") || undefined;
   return (
     <h5 className={combined} {...(!noAnimation && { "data-aos": "fade-up", "data-aos-delay": "300" })}>
@@ -61,7 +106,7 @@ export function SubTitle({ children, className, noAnimation }: { children: React
   );
 }
 
-export function SmallHeading({ children, className, noAnimation }: { children: React.ReactNode; className?: string; noAnimation?: boolean }) {
+export function Caption({ children, className, noAnimation }: { children: React.ReactNode; className?: string; noAnimation?: boolean }) {
   const combined = [className].filter(Boolean).join(" ") || undefined;
   return (
     <h6 className={combined} {...(!noAnimation && { "data-aos": "fade-up", "data-aos-delay": "300" })}>

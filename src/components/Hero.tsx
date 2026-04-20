@@ -1,17 +1,17 @@
 import "./Hero.css";
 import Marquee from "react-fast-marquee";
-import { Button, SectionTag, HeroTitle, Description } from "./Typography";
+import { Button, Section, Container, Tag, PageTitle, Description } from "./Typography";
 
 export default function Hero() {
   return (
-    <section className="hero__v6 section" id="home">
-      <div className="container">
+    <Section className="hero__v6" id="home">
+      <Container>
         <div className="row">
           <div className="col-lg-6 mb-4 mb-lg-0">
             <div className="row">
               <div className="col-lg-11">
-                <SectionTag hero>Software Consultancy &amp; Development</SectionTag>
-                <HeroTitle>Agile and innovative software solutions with excellence</HeroTitle>
+                <Tag hero>Software Consultancy &amp; Development</Tag>
+                <PageTitle>Agile and innovative software solutions with excellence</PageTitle>
                 <Description hero aos="fade-up" delay={200}>Empowering your business to thrive in the digital era. We engineer world-class
                   software solutions that simplify complexities and unlock your full potential.</Description>
                 <div className="cta d-flex gap-2 mb-4 mb-lg-5" data-aos="fade-up" data-aos-delay="300">
@@ -78,7 +78,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }
