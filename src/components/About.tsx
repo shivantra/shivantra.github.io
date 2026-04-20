@@ -1,3 +1,4 @@
+import "./About.css";
 import { Description, FeatureItem, SubHeading, SectionTag, CardTitle } from "./Typography";
 
 export default function About() {

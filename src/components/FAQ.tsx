@@ -1,3 +1,4 @@
+import "./FAQ.css";
 import { SectionTitle, SectionTag, Description } from "./Typography";
 
 const faqs = [

@@ -1,3 +1,4 @@
+import "./Services.css";
 import { SectionTitle, SectionTag, Description, CardTitle } from "./Typography";
 
 const services = [

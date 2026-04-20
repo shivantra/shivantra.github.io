@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "./careers.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button, SectionTag, SectionTitle, SubHeading, CardTitle, FeatureItem, Description } from "@/components/Typography";
@@ -151,24 +152,6 @@ export default function Careers() {
           <Footer />
         </main>
       </div>
-      <div className="whatsapp-float-container" id="whatsapp-connect">
-        <a
-          href="https://wa.me/919023364417?text=Hello,%20I%20am%20interested%20in%20your%20software%20consultancy%20services.%20Can%20we%20discuss%20a%20project?"
-          className="whatsapp-icon-link"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Chat on WhatsApp"
-        >
-          <img
-            src="/assets/images/whatsapp.svg"
-            alt="Chat on WhatsApp"
-            className="whatsapp-icon"
-          />
-        </a>
-      </div>
-      <button id="back-to-top" aria-label="Back to top">
-        <i className="bi bi-arrow-up-short" aria-hidden="true"></i>
-      </button>
     </>
   );
 }

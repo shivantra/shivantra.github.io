@@ -1,5 +1,6 @@
 "use client";
 
+import "./Contact.css";
 import { useState } from "react";
 import { Button, SectionTag, Description } from "./Typography";
 

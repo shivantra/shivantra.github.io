@@ -86,6 +86,24 @@ export default function RootLayout({
       </head>
       <body>
         {children}
+        <div className="whatsapp-float-container" id="whatsapp-connect">
+          <a
+            href="https://wa.me/919023364417?text=Hello,%20I%20am%20interested%20in%20your%20software%20consultancy%20services.%20Can%20we%20discuss%20a%20project?"
+            className="whatsapp-icon-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat on WhatsApp"
+          >
+            <img
+              src="/assets/images/whatsapp.svg"
+              alt="Chat on WhatsApp"
+              className="whatsapp-icon"
+            />
+          </a>
+        </div>
+        <button id="back-to-top" aria-label="Back to top">
+          <i className="bi bi-arrow-up-short" aria-hidden="true"></i>
+        </button>
         <Script src="/assets/vendors/bootstrap/bootstrap.bundle.min.js" strategy="afterInteractive" />
         <Script src="/assets/vendors/aos/aos.js" strategy="afterInteractive" />
         <Script src="/assets/vendors/gsap/gsap.min.js" strategy="afterInteractive" />

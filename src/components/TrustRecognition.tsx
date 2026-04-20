@@ -1,3 +1,4 @@
+import "./TrustRecognition.css";
 import { SectionTag, Description, SubTitle, SmallHeading } from "./Typography";
 
 export default function TrustRecognition() {

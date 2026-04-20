@@ -1,5 +1,6 @@
 "use client";
 
+import "./Navbar.css";
 import Link from "next/link";
 import { Button } from "./Typography";
 

@@ -1,3 +1,4 @@
+import "./Stats.css";
 import { CardTitle } from "./Typography";
 
 export default function Stats() {

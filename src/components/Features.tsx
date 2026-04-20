@@ -1,3 +1,4 @@
+import "./Features.css";
 import { SectionTag, Description, CardTitle } from "./Typography";
 
 export default function Features() {

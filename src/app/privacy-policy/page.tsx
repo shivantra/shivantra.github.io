@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "../legal.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { SubTitle, SmallHeading, Description } from "@/components/Typography";

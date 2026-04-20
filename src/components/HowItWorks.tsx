@@ -1,3 +1,4 @@
+import "./HowItWorks.css";
 import { SectionTag, Description, CardTitle } from "./Typography";
 
 export default function HowItWorks() {

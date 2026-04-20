@@ -1,3 +1,4 @@
+import "./Hero.css";
 import Marquee from "react-fast-marquee";
 import { Button, SectionTag, HeroTitle, Description } from "./Typography";
 
