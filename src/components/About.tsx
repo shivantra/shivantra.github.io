@@ -1,4 +1,4 @@
-import { Description, FeatureItem, ForthTitle, SubTitle, ThirdTitle } from "./Typography";
+import { Description, FeatureItem, SubHeading, SectionTag, CardTitle } from "./Typography";
 
 export default function About() {
   return (
@@ -8,7 +8,7 @@ export default function About() {
           <div className="col-md-6 order-md-2">
             <div className="row justify-content-end">
               <div className="col-md-11 mb-4 mb-md-0">
-                <SubTitle marginBottom>About us</SubTitle>
+                <SectionTag marginBottom>About us</SectionTag>
                 <div data-aos="fade-up" data-aos-delay="200">
                   <Description><b>Shivantra Solutions Private Limited</b> is a software consultancy and
                     development organisation, delivering customised software development and
@@ -20,7 +20,7 @@ export default function About() {
                     expertise and resources to deliver results. From simple websites to complex
                     applications, we have the skills and experience to bring your ideas to life.</Description>
                 </div>
-                <ForthTitle className="small fw-bold mt-4 mb-3">Key Values and Vision</ForthTitle>
+                <SubHeading className="small fw-bold mt-4 mb-3">Key Values and Vision</SubHeading>
                 <ul
                   className="d-flex flex-row flex-wrap list-unstyled gap-3 features"
                   data-aos="fade-up"
@@ -58,7 +58,7 @@ export default function About() {
                   <i className="bi bi-bullseye fs-4" aria-hidden="true"></i>
                 </div>
                 <div>
-                  <ThirdTitle className="text-uppercase fw-bold">Mission Statement</ThirdTitle>
+                  <CardTitle className="text-uppercase fw-bold">Mission Statement</CardTitle>
                   <Description className="fs-5 mb-0">
                     Offering world class technology solutions for complex business requirements and
                     challenges, empowering organizations &amp; individuals across all industries to

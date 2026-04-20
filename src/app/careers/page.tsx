@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Button, SubTitle, SectionTitle, ForthTitle, ThirdTitle, FeatureItem, Description } from "@/components/Typography";
+import { Button, SectionTag, SectionTitle, SubHeading, CardTitle, FeatureItem, Description } from "@/components/Typography";
 
 export const metadata: Metadata = {
   title: "Careers at Shivantra - Join Our Team",
@@ -42,15 +42,15 @@ export default function Careers() {
                 <div className="col-md-6 order-md-2">
                   <div className="row justify-content-end">
                     <div className="col-md-11 mb-4 mb-md-0">
-                      <SubTitle marginBottom>Careers at Shivantra</SubTitle>
+                      <SectionTag marginBottom>Careers at Shivantra</SectionTag>
                       <Description aos="fade-up" delay={200}>
                         Be part of a team that thrives on innovation, collaboration, and
                         excellence. Together, we build solutions that empower businesses across
                         the globe.
                       </Description>
-                      <ForthTitle className="small fw-bold mt-4 mb-3">
+                      <SubHeading className="small fw-bold mt-4 mb-3">
                         Why join Shivantra?
-                      </ForthTitle>
+                      </SubHeading>
                       <ul
                         className="d-flex flex-column list-unstyled gap-3 features"
                         data-aos="fade-up"
@@ -108,13 +108,13 @@ export default function Careers() {
                       data-aos-delay="100"
                     >
                       <div className="stat-item">
-                        <ThirdTitle className="fs-3 fs-md-2 fw-bold text-white">
+                        <CardTitle className="fs-3 fs-md-2 fw-bold text-white">
                           <span>
                             Empowering people.
                             <br />
                             Transforming possibilities.
                           </span>
-                        </ThirdTitle>
+                        </CardTitle>
                       </div>
                     </div>
                   </div>
@@ -127,7 +127,7 @@ export default function Careers() {
             <div className="container">
               <div className="row mb-5">
                 <div className="col-md-8 mx-auto text-center">
-                  <SubTitle marginBottom>Current openings</SubTitle>
+                  <SectionTag marginBottom>Current openings</SectionTag>
                   <SectionTitle>Discover roles where your talent thrives.</SectionTitle>
                 </div>
               </div>

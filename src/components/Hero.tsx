@@ -1,5 +1,5 @@
 import Marquee from "react-fast-marquee";
-import { Button, SubTitle, MainTitle, Description } from "./Typography";
+import { Button, SectionTag, HeroTitle, Description } from "./Typography";
 
 export default function Hero() {
   return (
@@ -9,8 +9,8 @@ export default function Hero() {
           <div className="col-lg-6 mb-4 mb-lg-0">
             <div className="row">
               <div className="col-lg-11">
-                <SubTitle hero>Software Consultancy &amp; Development</SubTitle>
-                <MainTitle>Agile and innovative software solutions with excellence</MainTitle>
+                <SectionTag hero>Software Consultancy &amp; Development</SectionTag>
+                <HeroTitle>Agile and innovative software solutions with excellence</HeroTitle>
                 <Description hero aos="fade-up" delay={200}>Empowering your business to thrive in the digital era. We engineer world-class
                   software solutions that simplify complexities and unlock your full potential.</Description>
                 <div className="cta d-flex gap-2 mb-4 mb-lg-5" data-aos="fade-up" data-aos-delay="300">

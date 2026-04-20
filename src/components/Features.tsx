@@ -1,4 +1,4 @@
-import { SubTitle, Description, ThirdTitle } from "./Typography";
+import { SectionTag, Description, CardTitle } from "./Typography";
 
 export default function Features() {
   return (
@@ -13,7 +13,7 @@ export default function Features() {
                     <div className="col-lg-11">
                       <div className="h-100 flex-column justify-content-between d-flex">
                         <div>
-                          <SubTitle marginBottom>Why Choose us?</SubTitle>
+                          <SectionTag marginBottom>Why Choose us?</SectionTag>
                           <Description className="mb-5">
                             Our guiding principles are founded on three key pillars:{" "}
                             <b>agility, innovation, and excellence</b>. We pride ourselves on our
@@ -41,7 +41,7 @@ export default function Features() {
                           <div className="icon text-center mb-4">
                             <i className="bi bi-briefcase-fill fs-4"></i>
                           </div>
-                          <ThirdTitle className="fs-6 fw-bold mb-3">Agile Expertise &amp; Rapid Response</ThirdTitle>
+                          <CardTitle className="fs-6 fw-bold mb-3">Agile Expertise &amp; Rapid Response</CardTitle>
                           <Description>
                             We use agile methods, rapid responses, and proactive communication to
                             adapt quickly, work efficiently, and deliver on time
@@ -51,7 +51,7 @@ export default function Features() {
                           <div className="icon text-center mb-4">
                             <i className="bi bi-buildings-fill fs-4"></i>
                           </div>
-                          <ThirdTitle className="fs-6 fw-bold mb-3">World-Class Technical Proficiency</ThirdTitle>
+                          <CardTitle className="fs-6 fw-bold mb-3">World-Class Technical Proficiency</CardTitle>
                           <Description>
                             Our expert team combines deep technical mastery with innovation to tackle
                             complex challenges and deliver robust, future-proof digital products.
@@ -61,7 +61,7 @@ export default function Features() {
                           <div className="icon text-center mb-4">
                             <i className="bi bi-speedometer fs-4"></i>
                           </div>
-                          <ThirdTitle className="fs-6 fw-bold mb-3">Strategic Partnership with Speed &amp; Professionalism</ThirdTitle>
+                          <CardTitle className="fs-6 fw-bold mb-3">Strategic Partnership with Speed &amp; Professionalism</CardTitle>
                           <Description>
                             We match your business pace with top-tier professionalism, serving as
                             your dedicated, efficient, and reliable partner from concept to
@@ -72,7 +72,7 @@ export default function Features() {
                           <div className="icon text-center mb-4">
                             <i className="bi bi-sliders fs-4"></i>
                           </div>
-                          <ThirdTitle className="fs-6 fw-bold mb-3">Tailored Solutions for Tangible Impact</ThirdTitle>
+                          <CardTitle className="fs-6 fw-bold mb-3">Tailored Solutions for Tangible Impact</CardTitle>
                           <Description>
                             We craft bespoke software tailored to your workflows and goals,
                             delivering measurable improvements and a clear competitive edge.

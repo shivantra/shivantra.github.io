@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { FifthTitle, SixthTitle, Description } from "@/components/Typography";
+import { SubTitle, SmallHeading, Description } from "@/components/Typography";
 
 export const metadata: Metadata = {
   title: "Refund and Cancellations | Shivantra - Software Consultancy & Development",
@@ -32,7 +32,7 @@ export default function RefundCancellations() {
                 Effective: <strong className="text-primary">25th October 2024</strong>
               </small>
 
-              <FifthTitle className="mt-5 fw-semibold" noAnimation>Introduction</FifthTitle>
+              <SubTitle className="mt-5 fw-semibold" noAnimation>Introduction</SubTitle>
               <Description className="justify-content">
                 At Shivantra Solutions Private Limited (&quot;we&quot;, &quot;us&quot;,
                 &quot;our&quot;), we strive to provide the highest quality software consultancy
@@ -41,8 +41,8 @@ export default function RefundCancellations() {
                 terms regarding refunds and cancellations.
               </Description>
 
-              <FifthTitle className="mt-5 fw-semibold" noAnimation>Cancellation Policy</FifthTitle>
-              <SixthTitle className="fw-semibold" noAnimation>Service Cancellation</SixthTitle>
+              <SubTitle className="mt-5 fw-semibold" noAnimation>Cancellation Policy</SubTitle>
+              <SmallHeading className="fw-semibold" noAnimation>Service Cancellation</SmallHeading>
               <Description className="justify-content">
                 You may cancel a service at any time prior to its commencement. To initiate a
                 cancellation, please contact us via email at{" "}
@@ -50,15 +50,15 @@ export default function RefundCancellations() {
                 service before work has commenced, you will not incur any charges.
               </Description>
 
-              <SixthTitle className="fw-semibold" noAnimation>Post-Commencement Cancellation</SixthTitle>
+              <SmallHeading className="fw-semibold" noAnimation>Post-Commencement Cancellation</SmallHeading>
               <Description className="justify-content">
                 If you wish to cancel a service after work has started, please note that charges
                 may apply based on the work completed up to the cancellation date. We will provide
                 a detailed invoice outlining the services rendered and applicable fees.
               </Description>
 
-              <FifthTitle className="mt-5 fw-semibold" noAnimation>Refund Policy</FifthTitle>
-              <SixthTitle className="fw-semibold" noAnimation>Eligibility for Refunds</SixthTitle>
+              <SubTitle className="mt-5 fw-semibold" noAnimation>Refund Policy</SubTitle>
+              <SmallHeading className="fw-semibold" noAnimation>Eligibility for Refunds</SmallHeading>
               <Description className="justify-content">
                 Refunds may be granted under specific circumstances, including but not limited to:
               </Description>
@@ -67,21 +67,21 @@ export default function RefundCancellations() {
                 <li>Significant delays in project delivery without prior communication.</li>
               </ul>
 
-              <SixthTitle className="fw-semibold" noAnimation>Requesting a Refund</SixthTitle>
+              <SmallHeading className="fw-semibold" noAnimation>Requesting a Refund</SmallHeading>
               <Description className="justify-content">
                 To request a refund, please submit a written request to{" "}
                 <a href="mailto:contact@shivantra.com">contact@shivantra.com</a> within 14 days
                 of the service completion date, clearly outlining the reason for your request.
               </Description>
 
-              <SixthTitle className="fw-semibold" noAnimation>Refund Process</SixthTitle>
+              <SmallHeading className="fw-semibold" noAnimation>Refund Process</SmallHeading>
               <Description className="justify-content">
                 Upon receiving your request, we will review it and respond within 10 business
                 days. If approved, refunds will be processed using the original payment method
                 within 14 business days.
               </Description>
 
-              <FifthTitle className="mt-5 fw-semibold" noAnimation>Non-Refundable Services</FifthTitle>
+              <SubTitle className="mt-5 fw-semibold" noAnimation>Non-Refundable Services</SubTitle>
               <Description className="justify-content">
                 Certain services may be non-refundable, including:
               </Description>
@@ -94,14 +94,14 @@ export default function RefundCancellations() {
                 </li>
               </ul>
 
-              <FifthTitle className="mt-5 fw-semibold" noAnimation>Changes to the Policy</FifthTitle>
+              <SubTitle className="mt-5 fw-semibold" noAnimation>Changes to the Policy</SubTitle>
               <Description className="justify-content">
                 We reserve the right to modify this Refund and Cancellation Policy at any time.
                 Any changes will be effective immediately upon posting on our website. We encourage
                 you to review this policy periodically.
               </Description>
 
-              <FifthTitle className="mt-5 fw-semibold" noAnimation>Contact Us</FifthTitle>
+              <SubTitle className="mt-5 fw-semibold" noAnimation>Contact Us</SubTitle>
               <Description className="justify-content">
                 For any questions regarding this policy or to initiate a cancellation or refund
                 request, please contact us at:

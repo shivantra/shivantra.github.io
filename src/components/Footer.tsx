@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button, ThirdTitle, Description, SocialLink } from "./Typography";
+import { Button, CardTitle, Description, SocialLink } from "./Typography";
 
 export default function Footer() {
   return (
@@ -41,7 +41,7 @@ export default function Footer() {
           <div className="col-md-7">
             <div className="row g-2">
               <div className="col-md-6 col-lg-4 mb-4 mb-lg-0">
-                <ThirdTitle className="mb-3">Company</ThirdTitle>
+                <CardTitle className="mb-3">Company</CardTitle>
                 <ul className="list-unstyled">
                   <li>
                     <Link href="/careers">
@@ -60,7 +60,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="col-md-6 col-lg-4 mb-4 mb-lg-0">
-                <ThirdTitle className="mb-3">Follow Us</ThirdTitle>
+                <CardTitle className="mb-3">Follow Us</CardTitle>
                 <ul className="list-unstyled">
                   <li><SocialLink href="https://www.linkedin.com/company/shivantra" icon="linkedin" alt="LinkedIn" label="LinkedIN" /></li>
                   <li><SocialLink href="https://www.instagram.com/shivantra/#" icon="instagram" alt="Instagram" label="Instagram" /></li>
@@ -71,7 +71,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="col-md-6 col-lg-4 mb-4 mb-lg-0 quick-contact">
-                <ThirdTitle className="mb-3">Contact</ThirdTitle>
+                <CardTitle className="mb-3">Contact</CardTitle>
                 <p className="d-flex mb-3">
                   <i className="bi bi-geo-alt-fill me-3" aria-hidden="true"></i>
                   <span>

@@ -1,4 +1,4 @@
-import { SectionTitle, SubTitle, Description } from "./Typography";
+import { SectionTitle, SectionTag, Description } from "./Typography";
 
 const faqs = [
   {
@@ -65,7 +65,7 @@ export default function FAQ() {
       <div className="container">
         <div className="row mb-4">
           <div className="col-md-6 col-lg-7 mx-auto text-center">
-            <SubTitle marginBottom>FAQ</SubTitle>
+            <SectionTag marginBottom>FAQ</SectionTag>
             <SectionTitle>Frequently Asked Questions</SectionTitle>
             <Description aos="fade-up" delay={100}>
               Everything You Need to Know.

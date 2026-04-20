@@ -1,4 +1,4 @@
-import { ThirdTitle } from "./Typography";
+import { CardTitle } from "./Typography";
 
 export default function Stats() {
   return (
@@ -22,12 +22,12 @@ export default function Stats() {
                 data-aos-delay="100"
               >
                 <div className="stat-item">
-                  <ThirdTitle className="fs-3 fs-md-2 fw-bold text-white">
+                  <CardTitle className="fs-3 fs-md-2 fw-bold text-white">
                     <span>
                       Your Vision. Our Process. <br />
                       Together we succeed.
                     </span>
-                  </ThirdTitle>
+                  </CardTitle>
                 </div>
               </div>
             </div>

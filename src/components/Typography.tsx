@@ -1,6 +1,6 @@
 import React from "react";
 
-export function SubTitle({
+export function SectionTag({
   children,
   marginBottom,
   hero,
@@ -20,7 +20,7 @@ export function SubTitle({
   );
 }
 
-export function MainTitle({ children }: { children: React.ReactNode }) {
+export function HeroTitle({ children }: { children: React.ReactNode }) {
   return (
     <h1 className="hero-title mb-3" data-aos="fade-up" data-aos-delay="100">
       {children}
@@ -36,14 +36,14 @@ export function SectionTitle({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function ThirdTitle({ children, className }: { children: React.ReactNode, className?: string }) {
+export function CardTitle({ children, className }: { children: React.ReactNode, className?: string }) {
   const combined = [className].filter(Boolean).join(" ") || undefined;
   return (
     <h3 className={combined}>{children}</h3>
   );
 }
 
-export function ForthTitle({ children, className }: { children: React.ReactNode, className?: string; }) {
+export function SubHeading({ children, className }: { children: React.ReactNode; className?: string }) {
   const combined = [className].filter(Boolean).join(" ") || undefined;
   return (
     <h4 className={combined} data-aos="fade-up" data-aos-delay="300">
@@ -52,7 +52,7 @@ export function ForthTitle({ children, className }: { children: React.ReactNode,
   );
 }
 
-export function FifthTitle({ children, className, noAnimation }: { children: React.ReactNode; className?: string; noAnimation?: boolean }) {
+export function SubTitle({ children, className, noAnimation }: { children: React.ReactNode; className?: string; noAnimation?: boolean }) {
   const combined = [className].filter(Boolean).join(" ") || undefined;
   return (
     <h5 className={combined} {...(!noAnimation && { "data-aos": "fade-up", "data-aos-delay": "300" })}>
@@ -61,7 +61,7 @@ export function FifthTitle({ children, className, noAnimation }: { children: Rea
   );
 }
 
-export function SixthTitle({ children, className, noAnimation }: { children: React.ReactNode; className?: string; noAnimation?: boolean }) {
+export function SmallHeading({ children, className, noAnimation }: { children: React.ReactNode; className?: string; noAnimation?: boolean }) {
   const combined = [className].filter(Boolean).join(" ") || undefined;
   return (
     <h6 className={combined} {...(!noAnimation && { "data-aos": "fade-up", "data-aos-delay": "300" })}>

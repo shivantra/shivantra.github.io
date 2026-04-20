@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Button, SubTitle, Description } from "./Typography";
+import { Button, SectionTag, Description } from "./Typography";
 
 const GOOGLE_FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSeUsJRCZVyWolcbIz4NLB4nsW_M88eVSfYzxt5T3HrI5Rz5AA/formResponse";
@@ -81,7 +81,7 @@ export default function Contact() {
       <div className="container">
         <div className="row mb-5">
           <div className="col-md-6 col-lg-7 mx-auto text-center">
-            <SubTitle marginBottom>Contact Us</SubTitle>
+            <SectionTag marginBottom>Contact Us</SectionTag>
             <Description aos="fade-up" delay={100}>
               Let&apos;s make something great together!
             </Description>

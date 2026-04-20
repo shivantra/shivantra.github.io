@@ -1,4 +1,4 @@
-import { SubTitle, Description, ThirdTitle } from "./Typography";
+import { SectionTag, Description, CardTitle } from "./Typography";
 
 export default function HowItWorks() {
   return (
@@ -6,7 +6,7 @@ export default function HowItWorks() {
       <div className="container">
         <div className="row mb-5">
           <div className="col-md-6 text-center mx-auto">
-            <SubTitle marginBottom>How it works</SubTitle>
+            <SectionTag marginBottom>How it works</SectionTag>
             <Description aos="fade-up" delay={200}>
               At Shivantra, we transform your vision into a robust digital solution through a
               proven, client-centric process. Our agile methodology ensures a swift, collaborative,
@@ -31,7 +31,7 @@ export default function HowItWorks() {
               </div>
               <span className="step-number rounded-circle text-center fw-bold mb-5 mx-auto">1</span>
               <div>
-                <ThirdTitle className="fs-5 mb-4">Strategize &amp; Define</ThirdTitle>
+                <CardTitle className="fs-5 mb-4">Strategize &amp; Define</CardTitle>
                 <Description>
                   We start with an in-depth consultation to understand your business and goals. Our
                   experts then craft a detailed roadmap, defining project scope, technology stack,
@@ -51,7 +51,7 @@ export default function HowItWorks() {
                 />
               </div>
               <span className="step-number rounded-circle text-center fw-bold mb-5 mx-auto">2</span>
-              <ThirdTitle className="fs-5 mb-4">Innovate &amp; Develop</ThirdTitle>
+              <CardTitle className="fs-5 mb-4">Innovate &amp; Develop</CardTitle>
               <Description>
                 Leveraging our agile approach, we begin development with a focus on speed and
                 quality. We work collaboratively, providing regular updates and incorporating your
@@ -70,7 +70,7 @@ export default function HowItWorks() {
                 />
               </div>
               <span className="step-number rounded-circle text-center fw-bold mb-5 mx-auto">3</span>
-              <ThirdTitle className="fs-5 mb-4">Test &amp; Deliver</ThirdTitle>
+              <CardTitle className="fs-5 mb-4">Test &amp; Deliver</CardTitle>
               <Description>
                 Before launch, every solution undergoes rigorous quality assurance and testing to
                 ensure it&apos;s robust, secure, and performs flawlessly. We handle the seamless
@@ -82,7 +82,7 @@ export default function HowItWorks() {
             <div className="step-card last text-center h-100 d-flex flex-column justify-content-start position-relative">
               <span className="step-number rounded-circle text-center fw-bold mb-5 mx-auto">4</span>
               <div>
-                <ThirdTitle className="fs-5 mb-4">Support &amp; Evolve</ThirdTitle>
+                <CardTitle className="fs-5 mb-4">Support &amp; Evolve</CardTitle>
                 <Description>
                   Our commitment extends beyond the launch. We provide ongoing support and
                   maintenance to ensure your software remains relevant and performs optimally,
