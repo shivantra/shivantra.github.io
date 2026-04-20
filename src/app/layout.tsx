@@ -75,11 +75,9 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
           rel="stylesheet"
         />
-        <link href="/assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet" />
-        <link href="/assets/vendors/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+<link href="/assets/vendors/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
         <link href="/assets/vendors/aos/aos.css" rel="stylesheet" />
-        <link href="/assets/css/style.css" rel="stylesheet" />
-        <Script
+<Script
           src="https://www.google.com/recaptcha/api.js"
           strategy="lazyOnload"
         />
