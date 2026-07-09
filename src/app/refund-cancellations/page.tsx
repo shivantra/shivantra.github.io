@@ -7,7 +7,7 @@ import { Section, Container, SubHeading, Caption, Description } from "@/componen
 export const metadata: Metadata = {
   title: "Refund and Cancellations | Shivantra - Software Consultancy & Development",
   description:
-    "Shivantra Solutions Private Limited refund and cancellation policy — learn about our terms for cancellations and refund eligibility.",
+    "Shivantra Solutions Private Limited offers expert software consultancy, customized software development, web & mobile app development, ERP & CRM solutions, SaaS & MVP development.",
 };
 
 export default function RefundCancellations() {

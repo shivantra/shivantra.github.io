@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: "Careers at Shivantra – Join Our Team of Innovators",
     description:
       "Explore exciting career opportunities at Shivantra Solutions. Join a team of innovators, developers, and creators building world-class software solutions that empower businesses worldwide.",
-    url: "https://shivantra.com/careers",
+    url: "https://shivantra.com/",
     siteName: "Shivantra - Software Consultancy & Development",
     locale: "en_US",
     type: "website",

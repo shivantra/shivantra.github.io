@@ -7,7 +7,7 @@ import { Section, Container, SubHeading, Description } from "@/components/Typogr
 export const metadata: Metadata = {
   title: "Terms and Conditions | Shivantra - Software Consultancy & Development",
   description:
-    "Shivantra Solutions Private Limited terms and conditions — read our terms of service before using our software consultancy and development services.",
+    "Shivantra Solutions Private Limited offers expert software consultancy, customized software development, web & mobile app development, ERP & CRM solutions, SaaS & MVP development.",
 };
 
 export default function TermsConditions() {

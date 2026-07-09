@@ -7,7 +7,7 @@ import { Section, Container, SubHeading, Caption, Description } from "@/componen
 export const metadata: Metadata = {
   title: "Privacy Policy | Shivantra - Software Consultancy & Development",
   description:
-    "Shivantra Solutions Private Limited privacy policy — learn how we collect, use, and protect your personal data.",
+    "Shivantra Solutions Private Limited offers expert software consultancy, customized software development, web & mobile app development, ERP & CRM solutions, SaaS & MVP development.",
 };
 
 export default function PrivacyPolicy() {
