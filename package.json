@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "deploy": "next build && gh-pages -d out",
+    "deploy": "next build && gh-pages -d out --dotfiles",
     "lint": "next lint",
     "format": "prettier --write \"**/*.{ts,tsx,css,json}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,css,json}\""
