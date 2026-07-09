@@ -73,24 +73,24 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
                 <a
                   className={`nav-link scroll-link${isHome ? " active" : ""}`}
                   aria-current={isHome ? "page" : undefined}
-                  href={isHome ? "#home" : "/#home"}
+                  href={isHome ? "#home" : `${basePath}/#home`}
                   onClick={closeOffcanvas}
                 >
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link scroll-link" href={isHome ? "#about" : "/#about"} onClick={closeOffcanvas}>
+                <a className="nav-link scroll-link" href={isHome ? "#about" : `${basePath}/#about`} onClick={closeOffcanvas}>
                   About
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link scroll-link" href={isHome ? "#services" : "/#services"} onClick={closeOffcanvas}>
+                <a className="nav-link scroll-link" href={isHome ? "#services" : `${basePath}/#services`} onClick={closeOffcanvas}>
                   Services
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link scroll-link" href={isHome ? "#contact" : "/#contact"} onClick={closeOffcanvas}>
+                <a className="nav-link scroll-link" href={isHome ? "#contact" : `${basePath}/#contact`} onClick={closeOffcanvas}>
                   Contact
                 </a>
               </li>
@@ -110,7 +110,7 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
 
         <div className="ms-auto w-auto">
           <div className="header-social d-flex align-items-center gap-1">
-            <Button href={isHome ? "#contact" : "/#contact"} className="btn-primary py-2" onClick={closeOffcanvas}>
+            <Button href={isHome ? "#contact" : `${basePath}/#contact`} className="btn-primary py-2" onClick={closeOffcanvas}>
               Contact Now
             </Button>
 
