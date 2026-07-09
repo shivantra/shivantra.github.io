@@ -68,3 +68,21 @@
 .openings .service-card {
   border: 1px solid rgba(var(--inverse-color-rgb), 0.2);
 }
+
+@media screen and (max-width: 980px) {
+  .careers {
+    padding: 5rem 0 !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .careers {
+    padding: 3rem 0 !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .careers {
+    padding: 3rem 0 !important;
+  }
+}
