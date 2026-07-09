@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://shivantra.com/assets/images/og.png",
+        secureUrl: "https://shivantra.com/assets/images/og.png",
         type: "image/png",
         width: 1920,
         height: 1080,
