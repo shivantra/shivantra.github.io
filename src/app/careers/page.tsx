@@ -24,6 +24,8 @@ export const metadata: Metadata = {
       {
         url: "https://shivantra.com/assets/images/og.png",
         type: "image/png",
+        width: 1920,
+        height: 1080,
         alt: "Image of Shivantra",
       },
     ],
