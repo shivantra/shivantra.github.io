@@ -1,5 +1,6 @@
 import "./About.css";
 import { Section, Container, Description, FeatureItem, Heading, Tag, CardTitle } from "./Typography";
+import { basePath } from "@/lib/basePath";
 
 export default function About() {
   return (
@@ -45,7 +46,7 @@ export default function About() {
             <div className="img-wrap position-relative">
               <img
                 className="img-fluid rounded-4"
-                src="/assets/images/about-hero.png"
+                src={`${basePath}/assets/images/about-hero.png`}
                 alt="About shivantra"
                 data-aos="fade-up"
                 data-aos-delay="0"

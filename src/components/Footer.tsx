@@ -1,6 +1,7 @@
 import "./Footer.css";
 import Link from "next/link";
 import { Button, Container, CardTitle, Description, SocialLink } from "./Typography";
+import { basePath } from "@/lib/basePath";
 
 export default function Footer() {
   return (
@@ -27,7 +28,7 @@ export default function Footer() {
           <div className="col-md-4 mb-5 mb-lg-0">
             <img
               className="logo dark mb-2"
-              src="/assets/images/footer-logo.png"
+              src={`${basePath}/assets/images/footer-logo.png`}
               alt="Shivantra footer logo"
               height="40"
             />

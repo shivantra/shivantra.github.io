@@ -1,6 +1,7 @@
 import "./HowItWorks.css";
 import { steps } from "./DataListing";
 import { Section, Container, SectionHeader, Description, CardTitle } from "./Typography";
+import { basePath } from "@/lib/basePath";
 
 function StepCard({
   number,
@@ -34,8 +35,8 @@ function StepCard({
               className={`arch-line${archLine === "reverse" ? " reverse" : ""}`}
               src={
                 archLine === "reverse"
-                  ? "/assets/images/arch-line-reverse.svg"
-                  : "/assets/images/arch-line.svg"
+                  ? `${basePath}/assets/images/arch-line-reverse.svg`
+                  : `${basePath}/assets/images/arch-line.svg`
               }
               alt=""
               role="presentation"

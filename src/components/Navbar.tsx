@@ -3,6 +3,7 @@
 import "./Navbar.css";
 import Link from "next/link";
 import { Button, Container } from "./Typography";
+import { basePath } from "@/lib/basePath";
 
 interface NavbarProps {
   activePage?: "home" | "careers" | "legal";
@@ -28,12 +29,12 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
         <Link className="navbar-brand w-auto" href="/">
           <img
             className="logo dark img-fluid"
-            src="/assets/images/logo-dark.svg"
+            src={`${basePath}/assets/images/logo-dark.svg`}
             alt="Shivantra dark logo"
           />
           <img
             className="logo light img-fluid"
-            src="/assets/images/logo-light.svg"
+            src={`${basePath}/assets/images/logo-light.svg`}
             alt="Shivantra light logo"
           />
         </Link>
@@ -48,12 +49,12 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
               <Link className="logo-link" id="fbs__net-navbarsLabel" href="/">
                 <img
                   className="logo dark img-fluid"
-                  src="/assets/images/logo-dark.svg"
+                  src={`${basePath}/assets/images/logo-dark.svg`}
                   alt="Shivantra Logo"
                 />
                 <img
                   className="logo light img-fluid"
-                  src="/assets/images/logo-light.svg"
+                  src={`${basePath}/assets/images/logo-light.svg`}
                   alt="Shivantra Logo"
                 />
               </Link>

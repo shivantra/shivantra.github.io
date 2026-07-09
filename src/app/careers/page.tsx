@@ -3,6 +3,7 @@ import "./careers.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button, Section, Container, Tag, SectionHeader, Heading, CardTitle, FeatureItem, Description } from "@/components/Typography";
+import { basePath } from "@/lib/basePath";
 
 export const metadata: Metadata = {
   title: "Careers at Shivantra - Join Our Team",
@@ -78,7 +79,7 @@ export default function Careers() {
                   <div className="img-wrap position-relative">
                     <img
                       className="img-fluid rounded-4"
-                      src="/assets/images/careers-hero.png"
+                      src={`${basePath}/assets/images/careers-hero.png`}
                       alt="Careers shivantra"
                       data-aos="fade-up"
                       data-aos-delay="0"

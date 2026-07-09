@@ -1,5 +1,6 @@
 import "./TrustRecognition.css";
 import { Section, Container, SectionHeader, Description, SubHeading, Caption } from "./Typography";
+import { basePath } from "@/lib/basePath";
 
 export default function TrustRecognition() {
   return (
@@ -19,7 +20,7 @@ export default function TrustRecognition() {
               <div className="col-md-2 col-6 mb-3 mb-md-0">
                 <a href="https://axelor.com" target="_blank" rel="noreferrer noopener">
                   <img
-                    src="/assets/images/axelor-logo.svg"
+                    src={`${basePath}/assets/images/axelor-logo.svg`}
                     alt="Axelor ERP"
                     className="img-fluid"
                     style={{ maxHeight: "40px" }}
@@ -43,7 +44,7 @@ export default function TrustRecognition() {
               <div className="col-md-2 col-6 mb-3 mb-md-0">
                 <a href="https://www.designrush.com/" target="_blank" rel="noreferrer noopener">
                   <img
-                    src="/assets/images/designrush-recognition.png"
+                    src={`${basePath}/assets/images/designrush-recognition.png`}
                     alt="Top Web Development 2025 Recognition"
                     className="img-fluid"
                     style={{ maxHeight: "100px" }}

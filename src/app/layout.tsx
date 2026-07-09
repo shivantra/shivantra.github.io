@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
+import { basePath } from "@/lib/basePath";
 
 export const metadata: Metadata = {
   title: "Shivantra - Software Consultancy & Development",
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    icon: "/assets/images/favicon.ico",
+    icon: `${basePath}/assets/images/favicon.ico`,
   },
   other: {
     category:
@@ -75,8 +76,8 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
           rel="stylesheet"
         />
-<link href="/assets/vendors/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
-        <link href="/assets/vendors/aos/aos.css" rel="stylesheet" />
+<link href={`${basePath}/assets/vendors/bootstrap-icons/font/bootstrap-icons.min.css`} rel="stylesheet" />
+        <link href={`${basePath}/assets/vendors/aos/aos.css`} rel="stylesheet" />
 <Script
           src="https://www.google.com/recaptcha/api.js"
           strategy="lazyOnload"
@@ -93,7 +94,7 @@ export default function RootLayout({
             aria-label="Chat on WhatsApp"
           >
             <img
-              src="/assets/images/whatsapp.svg"
+              src={`${basePath}/assets/images/whatsapp.svg`}
               alt="Chat on WhatsApp"
               className="whatsapp-icon"
             />
@@ -102,11 +103,11 @@ export default function RootLayout({
         <button id="back-to-top" aria-label="Back to top">
           <i className="bi bi-arrow-up-short" aria-hidden="true"></i>
         </button>
-        <Script src="/assets/vendors/bootstrap/bootstrap.bundle.min.js" strategy="afterInteractive" />
-        <Script src="/assets/vendors/aos/aos.js" strategy="afterInteractive" />
-        <Script src="/assets/vendors/gsap/gsap.min.js" strategy="afterInteractive" />
-        <Script src="/assets/js/custom.js" strategy="afterInteractive" />
-        <Script src="/assets/js/form.js" strategy="afterInteractive" />
+        <Script src={`${basePath}/assets/vendors/bootstrap/bootstrap.bundle.min.js`} strategy="afterInteractive" />
+        <Script src={`${basePath}/assets/vendors/aos/aos.js`} strategy="afterInteractive" />
+        <Script src={`${basePath}/assets/vendors/gsap/gsap.min.js`} strategy="afterInteractive" />
+        <Script src={`${basePath}/assets/js/custom.js`} strategy="afterInteractive" />
+        <Script src={`${basePath}/assets/js/form.js`} strategy="afterInteractive" />
       </body>
     </html>
   );

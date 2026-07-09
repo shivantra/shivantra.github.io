@@ -1,4 +1,5 @@
 import React from "react";
+import { basePath } from "@/lib/basePath";
 
 export function SectionHeader({
   tag,
@@ -195,7 +196,7 @@ export function SocialLink({
 }) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className="social-link">
-      <img src={`/assets/images/${icon}.svg`} alt={alt} className="social-icon" />
+      <img src={`${basePath}/assets/images/${icon}.svg`} alt={alt} className="social-icon" />
       {label}
     </a>
   );

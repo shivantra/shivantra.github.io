@@ -1,6 +1,7 @@
 import "./Hero.css";
 import Marquee from "react-fast-marquee";
 import { Button, Section, Container, Tag, PageTitle, Description } from "./Typography";
+import { basePath } from "@/lib/basePath";
 
 export default function Hero() {
   return (
@@ -41,25 +42,25 @@ export default function Hero() {
                   </span>
                   <Marquee speed={40} gradient={false} pauseOnHover className="logo-carousel-wrapper">
                     <a href="https://axelor.com/" target="_blank" rel="noopener noreferrer" className="logo-carousel-item">
-                      <img src="/assets/images/axelor-logo.svg" alt="Axelor ERP" />
+                      <img src={`${basePath}/assets/images/axelor-logo.svg`} alt="Axelor ERP" />
                     </a>
                     <span className="logo-carousel-item">
-                      <img src="/assets/images/palisa-studio-logo.svg" alt="Palisa Studio" />
+                      <img src={`${basePath}/assets/images/palisa-studio-logo.svg`} alt="Palisa Studio" />
                     </span>
                     <a href="https://www.elementsimpact.com/en" target="_blank" rel="noopener noreferrer" className="logo-carousel-item">
-                      <img src="/assets/images/elements-impact-logo.png" alt="Elements Impact" />
+                      <img src={`${basePath}/assets/images/elements-impact-logo.png`} alt="Elements Impact" />
                     </a>
                     <a href="https://goovee.com/" target="_blank" rel="noopener noreferrer" className="logo-carousel-item">
-                      <img src="/assets/images/goovee-logo.svg" alt="Goovee" />
+                      <img src={`${basePath}/assets/images/goovee-logo.svg`} alt="Goovee" />
                     </a>
                     <span className="logo-carousel-item">
-                      <img src="/assets/images/adconseils.png" alt="AdConseils" />
+                      <img src={`${basePath}/assets/images/adconseils.png`} alt="AdConseils" />
                     </span>
                     <a href="https://erp-axenr.fr/" target="_blank" rel="noopener noreferrer" className="logo-carousel-item">
-                      <img src="/assets/images/axenr-logo.png" alt="Axenr" />
+                      <img src={`${basePath}/assets/images/axenr-logo.png`} alt="Axenr" />
                     </a>
                     <span className="logo-carousel-item">
-                      <img src="/assets/images/fnx.png" alt="FNX" />
+                      <img src={`${basePath}/assets/images/fnx.png`} alt="FNX" />
                     </span>
                   </Marquee>
                 </div>
@@ -70,7 +71,7 @@ export default function Hero() {
             <div className="hero-img">
               <img
                 className="img-main img-fluid rounded-4"
-                src="/assets/images/hero.svg"
+                src={`${basePath}/assets/images/hero.svg`}
                 alt="Hero Image"
                 data-aos="fade-in"
                 data-aos-delay="500"
