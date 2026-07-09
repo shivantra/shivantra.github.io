@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./careers.css";
+import "@/components/Stats.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button, Section, Container, Tag, SectionHeader, Heading, CardTitle, FeatureItem, Description } from "@/components/Typography";
