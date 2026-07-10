@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
-import { basePath, siteUrl } from "@/lib/basePath";
+import { basePath } from "@/lib/basePath";
 
 export const metadata: Metadata = {
   title: "Shivantra - Software Consultancy & Development",
@@ -14,14 +14,14 @@ export const metadata: Metadata = {
     title: "Shivantra - Software Consultancy & Development",
     description:
       "Delivering customised software solutions including web, mobile, ERP, CRM, SaaS, and MVP development with over a decade of expertise.",
-    url: `${siteUrl}/`,
+    url: "https://shivantra.com/",
     siteName: "Shivantra - Software Consultancy & Development",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: `${siteUrl}/assets/images/og.png`,
-        secureUrl: `${siteUrl}/assets/images/og.png`,
+        url: "https://shivantra.com/assets/images/og.png",
+        secureUrl: "https://shivantra.com/assets/images/og.png",
         type: "image/png",
         width: 1920,
         height: 1080,
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       "Software Consultancy & Development including custom software, web, mobile, ERP, CRM, SaaS, and MVP solutions.",
     images: [
       {
-        url: `${siteUrl}/assets/images/og.png`,
+        url: "https://shivantra.com/assets/images/og.png",
         type: "image/png",
         width: 1920,
         height: 1080,

@@ -4,7 +4,7 @@ import "@/components/Stats.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button, Section, Container, Tag, SectionHeader, Heading, CardTitle, FeatureItem, Description } from "@/components/Typography";
-import { basePath, siteUrl } from "@/lib/basePath";
+import { basePath } from "@/lib/basePath";
 
 export const metadata: Metadata = {
   title: "Careers at Shivantra - Join Our Team",
@@ -16,14 +16,14 @@ export const metadata: Metadata = {
     title: "Careers at Shivantra – Join Our Team of Innovators",
     description:
       "Explore exciting career opportunities at Shivantra Solutions. Join a team of innovators, developers, and creators building world-class software solutions that empower businesses worldwide.",
-    url: `${siteUrl}/`,
+    url: "https://shivantra.com/",
     siteName: "Shivantra - Software Consultancy & Development",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: `${siteUrl}/assets/images/og.png`,
-        secureUrl: `${siteUrl}/assets/images/og.png`,
+        url: "https://shivantra.com/assets/images/og.png",
+        secureUrl: "https://shivantra.com/assets/images/og.png",
         type: "image/png",
         width: 1920,
         height: 1080,
