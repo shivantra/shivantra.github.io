@@ -4,6 +4,7 @@ import "./globals.css";
 import { basePath, siteUrl } from "@/lib/basePath";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Shivantra - Software Consultancy & Development",
   description:
     "Shivantra Solutions Private Limited offers expert software consultancy, customized software development, web & mobile app development, ERP & CRM solutions, SaaS & MVP development.",
