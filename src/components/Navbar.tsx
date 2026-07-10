@@ -98,6 +98,7 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
             alt="Shivantra light logo"
           />
         </Link>
+
         <div
           className="offcanvas offcanvas-start w-75"
           id="fbs__net-navbars"

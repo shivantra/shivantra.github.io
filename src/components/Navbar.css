@@ -10,6 +10,15 @@
   padding-bottom: 10px;
   -webkit-box-shadow: 0 0.1875rem 0.375rem rgba(var(--bs-black-rgb), 0.05);
   box-shadow: 0 0.1875rem 0.375rem rgba(var(--bs-black-rgb), 0.05);
+  /* Works around a well-known iOS WebKit bug (affects Safari and all
+     iOS browsers, since Apple requires them to use WebKit) where
+     position:fixed elements can visually detach or mis-position during
+     scroll/address-bar transitions. Deliberately NOT using transform or
+     will-change:transform here — either would create a new containing
+     block, which would hijack the offcanvas menu's own position:fixed
+     (it's a descendant of this element) and break it. */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .fbs__net-navbar-spacer {
   height: 70px;
