@@ -1,4 +1,8 @@
 .fbs__net-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
   width: 100%;
   background-color: white !important;
   border: none;
@@ -7,16 +11,16 @@
   -webkit-box-shadow: 0 0.1875rem 0.375rem rgba(var(--bs-black-rgb), 0.05);
   box-shadow: 0 0.1875rem 0.375rem rgba(var(--bs-black-rgb), 0.05);
 }
-.fbs__net-navbar.fixed-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99999;
+.fbs__net-navbar-spacer {
+  height: 70px;
 }
 @media (min-width: 992px) {
   .fbs__net-navbar {
     padding-top: 0;
     padding-bottom: 0;
+  }
+  .fbs__net-navbar-spacer {
+    height: 69px;
   }
 }
 .fbs__net-navbar > .container {

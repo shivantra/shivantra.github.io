@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, type MouseEvent } from "react";
+import type { MouseEvent } from "react";
 import "./Navbar.css";
 import Link from "next/link";
 import { Button, Container } from "./Typography";
@@ -21,6 +21,35 @@ function closeOffcanvas() {
   getOffcanvasInstance()?.hide();
 }
 
+// Below-the-fold images/content can still be loading when a section link
+// is clicked, especially on a long page — that shifts the page's total
+// height *after* the initial scroll, so a one-shot jump (or a jump plus a
+// fixed-delay correction) can land short or overshoot depending on how
+// long things take to settle. Poll the target's actual document position
+// every frame and keep re-scrolling until it stops moving.
+function scrollToSection(sectionId: string) {
+  let lastTop = Number.NaN;
+  let stableFrames = 0;
+  let totalFrames = 0;
+
+  function tick() {
+    const el = document.getElementById(sectionId);
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.scrollY;
+    const isStable = Math.abs(top - lastTop) < 1;
+    stableFrames = isStable ? stableFrames + 1 : 0;
+    lastTop = top;
+    totalFrames += 1;
+
+    el.scrollIntoView({ behavior: totalFrames === 1 ? "smooth" : "instant", block: "start" });
+
+    if (stableFrames < 5 && totalFrames < 120) {
+      requestAnimationFrame(tick);
+    }
+  }
+  requestAnimationFrame(tick);
+}
+
 // On mobile/tablet, nav links live inside an offcanvas that sets
 // overflow:hidden on <body> while open. Clicking a section link tries to
 // scroll while that's still in effect, so the scroll silently fails or
@@ -29,50 +58,31 @@ function closeOffcanvas() {
 function handleSectionLinkClick(sectionId: string, isHome: boolean) {
   return (e: MouseEvent<HTMLAnchorElement>) => {
     if (!isHome) return;
-    const el = document.getElementById("fbs__net-navbars");
-    if (!el?.classList.contains("show")) return;
-
     e.preventDefault();
-    const onHidden = () => {
-      el.removeEventListener("hidden.bs.offcanvas", onHidden);
-      document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    const el = document.getElementById("fbs__net-navbars");
+    if (el?.classList.contains("show")) {
+      const onHidden = () => {
+        el.removeEventListener("hidden.bs.offcanvas", onHidden);
+        history.pushState(null, "", `#${sectionId}`);
+        scrollToSection(sectionId);
+      };
+      el.addEventListener("hidden.bs.offcanvas", onHidden);
+      closeOffcanvas();
+    } else {
       history.pushState(null, "", `#${sectionId}`);
-    };
-    el.addEventListener("hidden.bs.offcanvas", onHidden);
-    closeOffcanvas();
+      scrollToSection(sectionId);
+    }
   };
 }
 
 export default function Navbar({ activePage = "home" }: NavbarProps) {
   const isHome = activePage === "home";
-  const navRef = useRef<HTMLElement>(null);
-  const [isFixed, setIsFixed] = useState(false);
-  const [navHeight, setNavHeight] = useState(0);
-
-  useEffect(() => {
-    if (navRef.current) {
-      setNavHeight(navRef.current.getBoundingClientRect().height);
-    }
-    let ticking = false;
-    function onScroll() {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        setIsFixed(window.scrollY > 0);
-        ticking = false;
-      });
-    }
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <>
-      {isFixed && <div style={{ height: navHeight }} aria-hidden="true" />}
+      <div className="fbs__net-navbar-spacer" aria-hidden="true" />
       <header
-        ref={navRef}
-        className={`fbs__net-navbar navbar navbar-expand-lg dark${isFixed ? " fixed-nav" : ""}`}
+        className="fbs__net-navbar navbar navbar-expand-lg dark"
         aria-label="shivantra.com navbar"
       >
       <Container className="d-flex align-items-center justify-content-between">

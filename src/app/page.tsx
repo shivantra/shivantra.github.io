@@ -13,9 +13,6 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <a href="#main-content" className="skip-link">
-        Skip to main content
-      </a>
       <div className="site-wrap">
         <Navbar activePage="home" />
         <main id="main-content">

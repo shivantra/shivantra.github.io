@@ -13,9 +13,6 @@ export const metadata: Metadata = {
 export default function TermsConditions() {
   return (
     <>
-      <a href="#main-content" className="skip-link">
-        Skip to main content
-      </a>
       <div className="site-wrap">
         <Navbar activePage="legal" />
         <main id="main-content">
