@@ -92,11 +92,6 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
             src={`${basePath}/assets/images/logo-dark.svg`}
             alt="Shivantra dark logo"
           />
-          <img
-            className="logo light img-fluid"
-            src={`${basePath}/assets/images/logo-light.svg`}
-            alt="Shivantra light logo"
-          />
         </Link>
 
         <div
@@ -111,11 +106,6 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
                 <img
                   className="logo dark img-fluid"
                   src={`${basePath}/assets/images/logo-dark.svg`}
-                  alt="Shivantra Logo"
-                />
-                <img
-                  className="logo light img-fluid"
-                  src={`${basePath}/assets/images/logo-light.svg`}
                   alt="Shivantra Logo"
                 />
               </Link>
