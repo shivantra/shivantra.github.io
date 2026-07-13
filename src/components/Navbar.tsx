@@ -64,7 +64,10 @@ function handleSectionLinkClick(sectionId: string, isHome: boolean) {
       const onHidden = () => {
         el.removeEventListener("hidden.bs.offcanvas", onHidden);
         history.pushState(null, "", `#${sectionId}`);
-        scrollToSection(sectionId);
+        // iOS Safari/WebKit needs a moment beyond the close *event* to
+        // actually settle its compositing layers - starting the scroll
+        // immediately can visually glitch on iOS specifically.
+        setTimeout(() => scrollToSection(sectionId), 150);
       };
       el.addEventListener("hidden.bs.offcanvas", onHidden);
       closeOffcanvas();
