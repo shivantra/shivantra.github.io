@@ -1,0 +1,43 @@
+{
+  "name": "shivantra.com",
+  "version": "3.0.0",
+  "description": "Shivantra - Software Consultancy & Development",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "deploy": "NEXT_PUBLIC_BASE_PATH=/shivantra.github.io next build && gh-pages -d out --dotfiles",
+    "deploy:domain": "next build && gh-pages -d out --dotfiles",
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{ts,tsx,css,json}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,css,json}\""
+  },
+  "author": {
+    "name": "Shivantra",
+    "email": "dev@shivantra.com"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shivantra/shivantra.github.io"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
+    "next": "^15.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-fast-marquee": "^1.6.5"
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.7",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "gh-pages": "^6.3.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.0.0"
+  },
+  "packageManager": "pnpm@10.15.0"
+}
