@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+const initScrollSpy = function () {
   const sections = document.querySelectorAll(".section");
   const navLinks = document.querySelectorAll(".fbs__net-navbar .scroll-link");
 
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", updateActiveLink);
 
   const portfolioGrid = document.querySelector("#portfolio-grid");
-  if (portfolioGrid) {
+  if (portfolioGrid && typeof Isotope !== "undefined") {
     var iso = new Isotope("#portfolio-grid", {
       itemSelector: ".portfolio-item",
       layoutMode: "masonry",
@@ -80,19 +80,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updateActiveLink();
   }
-});
-
-const navbarScrollInit = () => {
-  var navbar = document.querySelector(".fbs__net-navbar");
-
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  if (navbar) {
-    if (scrollTop > 0) {
-      navbar.classList.add("active");
-    } else {
-      navbar.classList.remove("active");
-    }
-  }
 };
 
 const navbarInit = () => {
@@ -102,6 +89,7 @@ const navbarInit = () => {
     });
   });
 };
+
 
 // ======= Marquee =======
 const logoMarqueeInit = () => {
@@ -214,14 +202,10 @@ const logoMarqueeInit = () => {
   }
 };
 
-document.addEventListener("DOMContentLoaded", logoMarqueeInit);
-
 // ======= Navbar Scroll =======
-document.addEventListener("DOMContentLoaded", function () {
-  logoMarqueeInit();
-  navbarInit();
-  window.addEventListener("scroll", navbarScrollInit);
-});
+initScrollSpy();
+if (typeof gsap !== "undefined") logoMarqueeInit();
+navbarInit();
 
 // ======= Swiper =======
 const swiperInit = () => {
@@ -286,7 +270,7 @@ const swiperInit = () => {
   }
 };
 
-document.addEventListener("DOMContentLoaded", swiperInit);
+if (typeof Swiper !== "undefined") swiperInit();
 
 // ======= Glightbox =======
 const glightBoxInit = () => {
@@ -296,7 +280,7 @@ const glightBoxInit = () => {
     autoplayVideos: true,
   });
 };
-document.addEventListener("DOMContentLoaded", glightBoxInit);
+if (typeof GLightbox !== "undefined") glightBoxInit();
 
 // ======= BS OffCanvass =======
 const bsOffCanvasInit = () => {
@@ -311,7 +295,7 @@ const bsOffCanvasInit = () => {
     });
   }
 };
-document.addEventListener("DOMContentLoaded", bsOffCanvasInit);
+bsOffCanvasInit();
 
 // ======= Back To Top =======
 const backToTopInit = () => {
@@ -333,7 +317,7 @@ const backToTopInit = () => {
   }
 };
 
-document.addEventListener("DOMContentLoaded", backToTopInit);
+backToTopInit();
 
 // ======= Whatsapp Connect =======
 const whatsappConnectInit = () => {
@@ -346,16 +330,11 @@ const whatsappConnectInit = () => {
         whatsappConnectButton.classList.remove("show");
       }
     });
-    whatsappConnectButton.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    });
   }
 };
 
-document.addEventListener("DOMContentLoaded", whatsappConnectInit);
+whatsappConnectInit();
+
 
 // ======= Inline SVG =======
 const inlineSvgInit = () => {
@@ -391,7 +370,7 @@ const inlineSvgInit = () => {
   }
 };
 
-document.addEventListener("DOMContentLoaded", inlineSvgInit);
+inlineSvgInit();
 
 // ======= AOS =======
 const aosInit = () => {
@@ -401,7 +380,7 @@ const aosInit = () => {
     once: true,
   });
 };
-document.addEventListener("DOMContentLoaded", aosInit);
+aosInit();
 
 // ======= PureCounter =======
 const pureCounterInit = () => {
@@ -409,7 +388,7 @@ const pureCounterInit = () => {
     selector: ".purecounter",
   });
 };
-document.addEventListener("DOMContentLoaded", pureCounterInit);
+if (typeof PureCounter !== "undefined") pureCounterInit();
 
 // ======= Disable Click Navbar Dropdown =======
 const addHoverEvents = (dropdown) => {
@@ -539,4 +518,4 @@ const countdownInit = () => {
     }
   }, 1000);
 };
-document.addEventListener("DOMContentLoaded", countdownInit);
+countdownInit();
