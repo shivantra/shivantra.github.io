@@ -77,19 +77,12 @@ export default function Footer() {
                 <p className="d-flex mb-3">
                   <i className="bi bi-geo-alt-fill me-3" aria-hidden="true"></i>
                   <span>
-                    Block No : 706, <br />
-                    Anandnagar Society, <br />
-                    G.H Board, Bharuch, <br />
-                    Gujarat, India 392001
+                    Gujarat, India
                   </span>
                 </p>
                 <a className="d-flex mb-3" href="mailto:contact@shivantra.com">
                   <i className="bi bi-envelope-fill me-3" aria-hidden="true"></i>
                   <span>contact@shivantra.com</span>
-                </a>
-                <a className="d-flex mb-3" href="tel:+919023364417">
-                  <i className="bi bi-telephone-fill me-3" aria-hidden="true"></i>
-                  <span>+91-9023364417</span>
                 </a>
                 <a className="d-flex mb-3" href="https://shivantra.com">
                   <i className="bi bi-globe me-3" aria-hidden="true"></i>

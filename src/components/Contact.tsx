@@ -88,15 +88,6 @@ export default function Contact() {
         <div className="row">
           <div className="col-md-6">
             <div className="d-flex gap-5 flex-column">
-              <div className="d-flex align-items-start gap-3" data-aos="fade-up" data-aos-delay="0">
-                <div className="icon d-block">
-                  <i className="bi bi-telephone" aria-hidden="true"></i>
-                </div>
-                <span>
-                  <span className="d-block">Phone</span>
-                  <strong><a href="tel:+919023364417" className="text-body text-decoration-none">+91-9023364417</a></strong>
-                </span>
-              </div>
               <div
                 className="d-flex align-items-start gap-3"
                 data-aos="fade-up"
@@ -121,12 +112,7 @@ export default function Contact() {
                 <span>
                   <span className="d-block">Address</span>
                   <address className="fw-bold">
-                    Block No : 706, <br />
-                    Anandnagar Society,
-                    <br />
-                    G.H Board, Bharuch,
-                    <br />
-                    Gujarat, India 392001
+                    Gujarat, India
                   </address>
                 </span>
               </div>
