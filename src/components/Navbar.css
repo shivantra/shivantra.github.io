@@ -37,6 +37,17 @@
   width: 100%;
   max-width: 1140px;
 }
+/* Matches the fluid tablet width set globally for .container in
+   globals.css - this selector is more specific, so without a matching
+   override here the navbar stays pinned to the narrow 1140px column
+   while the rest of the page content below it runs wider. */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .fbs__net-navbar .container {
+    max-width: 100% !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
 
 .fbs__net-navbar .navbar-brand {
   display: inline-flex;
@@ -187,6 +198,14 @@
   margin-left: auto;
   margin-right: auto;
   flex-shrink: 0;
+}
+/* The toggler that opens this dialog stays visible up to 991.98px, so
+   tablet uses this same panel - the 640px cap above is sized for
+   phones and leaves a large empty margin on a 768-991px screen. */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .fbs__net-mobile-panel > * {
+    max-width: 100%;
+  }
 }
 
 .fbs__net-mobile-panel-header {

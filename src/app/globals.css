@@ -120,6 +120,19 @@ h6 {
     padding-right: 1rem !important;
   }
 }
+/* Bootstrap's own tablet breakpoint (768-991px) caps .container at
+   720px, which leaves a very wide empty margin on either side of an
+   actual tablet viewport (iPad portrait is 768-834px, landscape up to
+   1024px). Letting the container run fluid here, with a comfortable
+   gutter instead of a fixed narrow column, fixes that only in this
+   range - phones and desktop keep their existing widths. */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    max-width: 100% !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
 
 .section {
   padding: 70px 0;
