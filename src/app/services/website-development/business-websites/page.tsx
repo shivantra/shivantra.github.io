@@ -302,7 +302,6 @@ const faqs = [
 const relatedServices = [
   { label: "Website Development", href: "/services/website-development" },
   { label: "Custom Website Development", href: "/services/website-development/custom-websites" },
-  { label: "Website Redesign", href: "/services/website-development/website-redesign" },
   { label: "CMS Development", href: "/services/cms-development" },
   { label: "Website Integrations", href: "/services/website-integrations" },
   { label: "Website Maintenance", href: "/services/website-maintenance" },
