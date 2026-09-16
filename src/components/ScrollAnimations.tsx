@@ -21,6 +21,7 @@ export default function ScrollAnimations() {
     if (process.env.NODE_ENV !== "production") return;
 
     let cancelled = false;
+    let safetyTimer: ReturnType<typeof setTimeout>;
 
     import("aos").then(({ default: AOS }) => {
       if (cancelled) return;
@@ -34,10 +35,32 @@ export default function ScrollAnimations() {
         initialized = true;
       } else {
         AOS.refreshHard();
+        // AOS recalculates each element's position against the current
+        // scroll offset to decide what's already "in view" and should
+        // be revealed immediately. On a client-side navigation, this
+        // can race the router's scroll-to-top reset - if AOS checks
+        // before the scroll position has actually settled at 0, it can
+        // decide the new page's content isn't in view yet and never
+        // reveal it, since data-aos elements are opacity:0 by default
+        // until AOS adds .aos-animate. `once: true` means re-revealing
+        // something already shown is a no-op, so unconditionally
+        // force-revealing anything AOS hasn't marked shortly after
+        // refresh is a pure safety net - it guarantees a page can never
+        // get stuck blank, at the cost of a below-the-fold element
+        // occasionally appearing without its scroll-in animation.
+        safetyTimer = setTimeout(() => {
+          if (cancelled) return;
+          document.querySelectorAll("[data-aos]:not(.aos-animate)").forEach((el) => {
+            el.classList.add("aos-animate");
+          });
+        }, 400);
       }
     });
 
-    return () => { cancelled = true; };
+    return () => {
+      cancelled = true;
+      clearTimeout(safetyTimer);
+    };
   }, []);
 
   return null;
