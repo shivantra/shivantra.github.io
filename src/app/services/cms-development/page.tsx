@@ -466,7 +466,7 @@ export default function CmsDevelopment() {
 
           <Section className="section-muted" id="content-modeling">
             <Container>
-              <SectionHeader tag="Content modeling" title="Good content structure makes the CMS easier to use later" colClass="col-lg-9">
+              <SectionHeader tag="Content modeling" title="Good content structure makes the CMS easier to use later" tight colClass="col-lg-9">
                 <Description aos="fade-up" delay={100} className="mb-0">
                   A website page is usually made of smaller pieces of information. For example, a
                   service may have:
