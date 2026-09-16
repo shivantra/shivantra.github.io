@@ -139,6 +139,26 @@ h6 {
   }
 }
 
+/* Homepage sections in a row: Hero through Services are all plain
+   white with no section-level background of their own (the colored
+   boxes inside Stats/About are decorative cards, not the section's
+   background), and Trust Recognition/Contact are white again after
+   FAQ. Each .section carries its own top+bottom padding, so every
+   white-on-white pair here doubles into a much bigger gap than any
+   other section boundary on the page - with no color change to signal
+   it, it just reads as an oddly large empty gap. Dropping the top
+   padding on the second section of each same-background pair brings
+   every boundary on the page to the same size. Bootstrap's own utility
+   classes are !important, so this has to be too to reliably win. */
+.hero__v6 + .about__v4,
+.about__v4 + .features__v2,
+.features__v2 + .howitworks__v1,
+.howitworks__v1 + .stats__v3,
+.stats__v3 + .services__v3,
+.trust-recognition + .contact__v2 {
+  padding-top: 0 !important;
+}
+
 .text-heading-color {
   color: var(--bs-heading-color);
 }

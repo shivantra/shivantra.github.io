@@ -47,8 +47,40 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
     window.addEventListener("hashchange", syncHash);
     window.addEventListener("popstate", syncHash);
     window.addEventListener("scroll", syncScroll, { passive: true });
+
+    // Arrived here via a hash link from another page (e.g. clicking
+    // "About" while on /careers navigates to /#about). The browser's own
+    // one-shot hash-scroll runs immediately on load, before the home
+    // page's images and below-the-fold content have finished loading -
+    // as that content settles in, the page can grow or shift and leave
+    // the viewport looking at the wrong spot. Poll the target's actual
+    // position every frame and keep re-correcting until it stops moving,
+    // the same approach used for the same-page click case above.
+    const initialHash = window.location.hash.slice(1);
+    let stabilizeFrame = 0;
+    if (navLinks.some((link) => link.id === initialHash)) {
+      let lastTop = NaN;
+      let stableFrames = 0;
+      let totalFrames = 0;
+      const stabilize = () => {
+        const el = document.getElementById(initialHash);
+        if (!el) return;
+        const top = el.getBoundingClientRect().top + window.scrollY;
+        const stable = Math.abs(top - lastTop) < 1;
+        stableFrames = stable ? stableFrames + 1 : 0;
+        lastTop = top;
+        totalFrames += 1;
+        el.scrollIntoView({ behavior: "instant", block: "start" });
+        if (stableFrames < 5 && totalFrames < 120) {
+          stabilizeFrame = requestAnimationFrame(stabilize);
+        }
+      };
+      stabilizeFrame = requestAnimationFrame(stabilize);
+    }
+
     return () => {
       cancelAnimationFrame(frame);
+      cancelAnimationFrame(stabilizeFrame);
       window.removeEventListener("hashchange", syncHash);
       window.removeEventListener("popstate", syncHash);
       window.removeEventListener("scroll", syncScroll);
