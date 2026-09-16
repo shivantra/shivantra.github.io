@@ -519,7 +519,7 @@ export default function BusinessWebsiteDevelopment() {
           <Section id="what-we-build">
             <Container>
               <SectionHeader tag="What we build" title="Business websites for different requirements" colClass="col-lg-9">
-                <Description aos="fade-up" delay={100}>
+                <Description aos="fade-up" delay={100} className="mb-0">
                   Not every company needs the same website.
                 </Description>
               </SectionHeader>
@@ -551,7 +551,7 @@ export default function BusinessWebsiteDevelopment() {
               <div className="row g-4 align-items-center">
                 <div className="col-lg-6">
                   <SectionHeader tag="Website structure" title="The structure matters before the visual design" tight colClass="col-12">
-                    <Description aos="fade-up" delay={100}>
+                    <Description aos="fade-up" delay={100} className="mb-0">
                       A website can look polished and still be difficult to use. Before designing
                       pages, we define what information belongs on the site and how it should be
                       organized. This can include:
@@ -577,7 +577,7 @@ export default function BusinessWebsiteDevelopment() {
           <Section id="what-your-website-can-include">
             <Container>
               <SectionHeader tag="What your website can include" title="What your business website can include" colClass="col-lg-9">
-                <Description aos="fade-up" delay={100}>
+                <Description aos="fade-up" delay={100} className="mb-0">
                   The scope should match what your business actually needs.
                 </Description>
               </SectionHeader>
@@ -608,7 +608,7 @@ export default function BusinessWebsiteDevelopment() {
                     tight
                     colClass="col-12"
                   >
-                    <Description aos="fade-up" delay={100}>
+                    <Description aos="fade-up" delay={100} className="mb-0">
                       Business websites change. You may introduce a new service, change a phone
                       number, add a team member, publish an article or update a capability. Where
                       regular editing is expected, we implement a CMS that gives your team
@@ -649,7 +649,7 @@ export default function BusinessWebsiteDevelopment() {
                     tight
                     colClass="col-12"
                   >
-                    <Description aos="fade-up" delay={100}>
+                    <Description aos="fade-up" delay={100} className="mb-0">
                       A contact form does not have to end in a shared email inbox. Depending on your
                       process, a website enquiry can:
                     </Description>
@@ -704,7 +704,7 @@ export default function BusinessWebsiteDevelopment() {
               <div className="row">
                 <div className="col-lg-9">
                   <SectionHeader tag="Who this is for" title="Is this the right type of website for your business?" tight colClass="col-12">
-                    <Description aos="fade-up" delay={100} className="fw-semibold mb-2">
+                    <Description aos="fade-up" delay={100} className="fw-semibold mb-0">
                       Business Website Development is a strong fit when:
                     </Description>
                   </SectionHeader>

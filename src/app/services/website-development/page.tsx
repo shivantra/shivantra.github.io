@@ -510,7 +510,7 @@ export default function WebsiteDevelopment() {
           <Section className="section-muted" id="website-development-services">
             <Container>
               <SectionHeader tag="Website Development Services" title="Website Development Services" colClass="col-lg-9">
-                <Description aos="fade-up" delay={100}>
+                <Description aos="fade-up" delay={100} className="mb-0">
                   Different websites solve different problems. We do not approach every project
                   with the same template or technology.
                 </Description>
@@ -538,7 +538,7 @@ export default function WebsiteDevelopment() {
           <Section id="built-for-users">
             <Container>
               <SectionHeader tag="Built for real users" title="Built for the people who use it" colClass="col-lg-9">
-                <Description aos="fade-up" delay={100}>
+                <Description aos="fade-up" delay={100} className="mb-0">
                   The success of a website is not determined by how impressive it looks in a
                   presentation. It is determined by what happens when real people use it.
                 </Description>
@@ -566,7 +566,7 @@ export default function WebsiteDevelopment() {
                     tight
                     colClass="col-12"
                   >
-                    <Description aos="fade-up" delay={100}>
+                    <Description aos="fade-up" delay={100} className="mb-0">
                       A website often sits at the beginning of a larger business process. Someone
                       submits an enquiry. Then what? The information may need to reach your CRM,
                       notify a salesperson, trigger an email, create a record in another
@@ -634,7 +634,7 @@ export default function WebsiteDevelopment() {
               <div className="row g-4 align-items-center">
                 <div className="col-lg-7">
                   <SectionHeader tag="Technology" title="Technology should fit the requirement" tight colClass="col-12">
-                    <Description aos="fade-up" delay={100}>
+                    <Description aos="fade-up" delay={100} className="mb-0">
                       There is no single platform that is right for every website. A straightforward
                       business website has very different requirements from a multilingual corporate
                       website, a content-heavy publication or a website with custom business
@@ -668,7 +668,7 @@ export default function WebsiteDevelopment() {
           <Section id="project-scope">
             <Container>
               <SectionHeader tag="Project scope" title="What your website project can include" colClass="col-lg-9">
-                <Description aos="fade-up" delay={100}>
+                <Description aos="fade-up" delay={100} className="mb-0">
                   The exact scope depends on your requirements, but a website-development
                   engagement may include:
                 </Description>
@@ -693,7 +693,7 @@ export default function WebsiteDevelopment() {
           <Section className="section-muted" id="solutions">
             <Container>
               <SectionHeader tag="Solutions" title="Websites for different stages of business" colClass="col-lg-9">
-                <Description aos="fade-up" delay={100}>
+                <Description aos="fade-up" delay={100} className="mb-0">
                   We work with organizations whose website needs can be very different.
                 </Description>
               </SectionHeader>

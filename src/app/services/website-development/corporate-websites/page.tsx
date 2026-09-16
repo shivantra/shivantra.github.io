@@ -504,7 +504,7 @@ export default function CorporateWebsiteDevelopment() {
           <Section id="system">
             <Container>
               <SectionHeader tag="A corporate website is a system, not just a collection of pages" tight colClass="col-lg-9">
-                <Description aos="fade-up" delay={100}>
+                <Description aos="fade-up" delay={100} className="mb-0">
                   A corporate site may be used by customers, prospects, partners, employees,
                   candidates, investors, media and suppliers. Each group may need different
                   information.
@@ -564,7 +564,7 @@ export default function CorporateWebsiteDevelopment() {
               <div className="row align-items-center">
                 <div className="col-lg-7">
                   <SectionHeader tag="Governance" title="Give teams the right amount of control" tight colClass="col-12">
-                    <Description aos="fade-up" delay={100}>
+                    <Description aos="fade-up" delay={100} className="mb-0">
                       The challenge is not simply making content editable. It is making the right
                       content editable by the right people in the right way. A corporate CMS may
                       need:
@@ -605,7 +605,7 @@ export default function CorporateWebsiteDevelopment() {
                     tight
                     colClass="col-12"
                   >
-                    <Description aos="fade-up" delay={100}>
+                    <Description aos="fade-up" delay={100} className="mb-0">
                       International websites may require differences in:
                     </Description>
                   </SectionHeader>
@@ -633,7 +633,7 @@ export default function CorporateWebsiteDevelopment() {
                     tight
                     colClass="col-12"
                   >
-                    <Description aos="fade-up" delay={100}>
+                    <Description aos="fade-up" delay={100} className="mb-0">
                       Corporate websites often involve many page authors over several years.
                       Without reusable patterns, each new page can slowly introduce:
                     </Description>
@@ -655,7 +655,7 @@ export default function CorporateWebsiteDevelopment() {
           <Section id="capabilities">
             <Container>
               <SectionHeader tag="Capabilities" title="A corporate website can bring many functions together" colClass="col-lg-9">
-                <Description aos="fade-up" delay={100}>
+                <Description aos="fade-up" delay={100} className="mb-0">
                   Depending on scope, the website can include:
                 </Description>
               </SectionHeader>
@@ -682,7 +682,7 @@ export default function CorporateWebsiteDevelopment() {
                     tight
                     colClass="col-12"
                   >
-                    <Description aos="fade-up" delay={100}>
+                    <Description aos="fade-up" delay={100} className="mb-0">
                       The website does not need to duplicate data already managed in another
                       system. Where appropriate, integrations can allow the site to receive or
                       send data to:
@@ -712,7 +712,7 @@ export default function CorporateWebsiteDevelopment() {
                     tight
                     colClass="col-12"
                   >
-                    <Description aos="fade-up" delay={100}>
+                    <Description aos="fade-up" delay={100} className="mb-0">
                       A redesign or replatform should account for what the current website has
                       already accumulated:
                     </Description>
@@ -756,7 +756,7 @@ export default function CorporateWebsiteDevelopment() {
               <div className="row">
                 <div className="col-lg-9">
                   <SectionHeader tag="Quality requirements" title="Performance and accessibility are part of the foundation" tight colClass="col-12">
-                    <Description aos="fade-up" delay={100}>
+                    <Description aos="fade-up" delay={100} className="mb-0">
                       Large sites can accumulate heavy scripts, media and third-party tools over
                       time. We consider:
                     </Description>

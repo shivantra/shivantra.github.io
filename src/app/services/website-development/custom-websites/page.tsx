@@ -425,7 +425,7 @@ export default function CustomWebsiteDevelopment() {
           <Section id="when-not-enough">
             <Container>
               <SectionHeader tag="When standard features are not enough" title="A website can be part content, part business tool" tight colClass="col-lg-9">
-                <Description aos="fade-up" delay={100}>
+                <Description aos="fade-up" delay={100} className="mb-0">
                   A standard website is often the right answer when the goal is to publish
                   information and generate enquiries. But sometimes the website also needs to
                   perform a job. A visitor may need to:
@@ -475,7 +475,7 @@ export default function CustomWebsiteDevelopment() {
                     tight
                     colClass="col-12"
                   >
-                    <Description aos="fade-up" delay={100}>
+                    <Description aos="fade-up" delay={100} className="mb-0">
                       Custom code creates flexibility, but it also creates something that needs to
                       be maintained. So the first question should not be:
                     </Description>
@@ -516,7 +516,7 @@ export default function CustomWebsiteDevelopment() {
                     tight
                     colClass="col-12"
                   >
-                    <Description aos="fade-up" delay={100}>
+                    <Description aos="fade-up" delay={100} className="mb-0">
                       Custom website functionality often depends on data that already exists
                       elsewhere. Shivantra can connect the website with systems such as:
                     </Description>
@@ -544,7 +544,7 @@ export default function CustomWebsiteDevelopment() {
                     tight
                     colClass="col-12"
                   >
-                    <Description aos="fade-up" delay={100}>
+                    <Description aos="fade-up" delay={100} className="mb-0">
                       A custom website does not mean everything needs to be hard-coded. Public
                       content such as:
                     </Description>
@@ -570,7 +570,7 @@ export default function CustomWebsiteDevelopment() {
           <Section className="section-muted" id="architecture">
             <Container>
               <SectionHeader tag="Architecture" title="Technology decisions follow the requirement" colClass="col-lg-9">
-                <Description aos="fade-up" delay={100}>
+                <Description aos="fade-up" delay={100} className="mb-0">
                   A custom website may involve several technical layers.
                 </Description>
               </SectionHeader>
@@ -639,7 +639,7 @@ export default function CustomWebsiteDevelopment() {
               <div className="row">
                 <div className="col-lg-9">
                   <SectionHeader tag="Maintainability" title="Custom should not mean fragile" tight colClass="col-12">
-                    <Description aos="fade-up" delay={100}>
+                    <Description aos="fade-up" delay={100} className="mb-0">
                       Custom functionality should remain understandable after launch. Depending on
                       scope, maintainability can include:
                     </Description>
