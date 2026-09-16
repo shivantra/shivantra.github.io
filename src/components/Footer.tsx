@@ -30,7 +30,9 @@ export default function Footer() {
               className="logo dark mb-2"
               src={`${basePath}/assets/images/footer-logo.png`}
               alt="Shivantra footer logo"
+              width="109"
               height="40"
+              loading="lazy"
             />
             <Description className="mb-4">
               <b>Shivantra Solutions Private Limited</b> is your trusted partner for world-class
