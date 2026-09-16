@@ -246,3 +246,16 @@
 .business-website-page .section-muted {
   background-color: rgba(var(--inverse-color-rgb), 0.02);
 }
+
+/* FAQ and Related services share this same muted background back-to-back.
+   Each .section carries its own top+bottom padding, so without this the
+   shared boundary between two same-color sections doubles up into a much
+   bigger gap than the one between any other two sections on the page.
+   Dropping the top padding on the second section of a same-background
+   pair brings that gap back down to a single section's worth, matching
+   the rest of the page. */
+.business-website-page .section-muted + .section-muted,
+.business-website-page .section-muted + .faq__v2,
+.business-website-page .faq__v2 + .section-muted {
+  padding-top: 0;
+}

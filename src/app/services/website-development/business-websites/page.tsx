@@ -447,7 +447,7 @@ export default function BusinessWebsiteDevelopment() {
       <div className="site-wrap business-website-page">
         <Navbar activePage="services" />
         <main id="main-content">
-          <Section className="first-section">
+          <Section>
             <Container>
               <BreadcrumbNav />
               <div className="row align-items-center">

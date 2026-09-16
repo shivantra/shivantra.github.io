@@ -449,7 +449,7 @@ export default function WebsiteDevelopment() {
       <div className="site-wrap webdev-pillar-page">
         <Navbar activePage="services" />
         <main id="main-content">
-          <Section className="first-section">
+          <Section>
             <Container>
               <BreadcrumbNav />
               <div className="row align-items-center">
