@@ -7,7 +7,7 @@ import { Button, Container } from "./Typography";
 import { basePath } from "@/lib/basePath";
 
 interface NavbarProps {
-  activePage?: "home" | "careers" | "legal";
+  activePage?: "home" | "careers" | "legal" | "services";
 }
 
 function getOffcanvasInstance() {
