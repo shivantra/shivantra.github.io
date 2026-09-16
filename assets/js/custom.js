@@ -203,7 +203,7 @@ const logoMarqueeInit = () => {
 };
 
 // ======= Navbar Scroll =======
-initScrollSpy();
+// Navbar.tsx keeps desktop and mobile active links in sync.
 if (typeof gsap !== "undefined") logoMarqueeInit();
 navbarInit();
 
@@ -372,15 +372,7 @@ const inlineSvgInit = () => {
 
 inlineSvgInit();
 
-// ======= AOS =======
-const aosInit = () => {
-  AOS.init({
-    duration: 800,
-    easing: "slide",
-    once: true,
-  });
-};
-aosInit();
+// ScrollAnimations.tsx initializes AOS after React hydration.
 
 // ======= PureCounter =======
 const pureCounterInit = () => {
