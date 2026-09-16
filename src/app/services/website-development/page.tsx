@@ -565,13 +565,14 @@ export default function WebsiteDevelopment() {
                     title="Your website does not have to be an isolated system"
                     tight
                     colClass="col-12"
-                  />
-                  <Description aos="fade-up" delay={100}>
-                    A website often sits at the beginning of a larger business process. Someone
-                    submits an enquiry. Then what? The information may need to reach your CRM,
-                    notify a salesperson, trigger an email, create a record in another
-                    application, feed an analytics platform or start an internal workflow.
-                  </Description>
+                  >
+                    <Description aos="fade-up" delay={100}>
+                      A website often sits at the beginning of a larger business process. Someone
+                      submits an enquiry. Then what? The information may need to reach your CRM,
+                      notify a salesperson, trigger an email, create a record in another
+                      application, feed an analytics platform or start an internal workflow.
+                    </Description>
+                  </SectionHeader>
                   <Description aos="fade-up" delay={150}>
                     Shivantra is a software consultancy and development company, so we can look
                     beyond the website itself when the project requires it. We can connect
@@ -632,15 +633,16 @@ export default function WebsiteDevelopment() {
             <Container>
               <div className="row g-4 align-items-center">
                 <div className="col-lg-7">
-                  <SectionHeader tag="Technology" title="Technology should fit the requirement" tight colClass="col-12" />
-                  <Description aos="fade-up" delay={100}>
-                    There is no single platform that is right for every website. A straightforward
-                    business website has very different requirements from a multilingual corporate
-                    website, a content-heavy publication or a website with custom business
-                    functionality. Depending on the project, we can work with modern frontend
-                    frameworks, traditional or headless content-management systems, APIs and
-                    custom backend services.
-                  </Description>
+                  <SectionHeader tag="Technology" title="Technology should fit the requirement" tight colClass="col-12">
+                    <Description aos="fade-up" delay={100}>
+                      There is no single platform that is right for every website. A straightforward
+                      business website has very different requirements from a multilingual corporate
+                      website, a content-heavy publication or a website with custom business
+                      functionality. Depending on the project, we can work with modern frontend
+                      frameworks, traditional or headless content-management systems, APIs and
+                      custom backend services.
+                    </Description>
+                  </SectionHeader>
                   <div className="quote-block" data-aos="fade-up" data-aos-delay="150">
                     <p className="mb-0">&ldquo;What does the business need the website to do, who needs to manage it and what will it need to become later?&rdquo;</p>
                   </div>

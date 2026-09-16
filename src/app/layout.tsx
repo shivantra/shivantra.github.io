@@ -62,7 +62,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={process.env.NODE_ENV !== "production" ? "dev-no-aos" : undefined}>
       <head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-17380738140"

@@ -6,6 +6,19 @@ html {
   overflow-x: hidden;
 }
 
+/* ScrollAnimations.tsx skips AOS's JS entirely in development (it directly
+   mutates the DOM in a way that conflicts with React's dev-only hydration
+   diagnostics). AOS's own CSS still hides every [data-aos] element by
+   default and relies on that JS to reveal them - without this override,
+   skipping the JS in dev leaves the whole page permanently invisible.
+   This class is set server-side in layout.tsx from NODE_ENV, so it's
+   identical in the server-rendered and initial client output - no
+   hydration risk, unlike toggling it from a client effect would be. */
+html.dev-no-aos [data-aos^="fade"] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 :root {
   --topbar-height: 40px;
 }

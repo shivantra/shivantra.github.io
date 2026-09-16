@@ -247,15 +247,28 @@
   background-color: rgba(var(--inverse-color-rgb), 0.02);
 }
 
-/* FAQ and Related services share this same muted background back-to-back.
-   Each .section carries its own top+bottom padding, so without this the
-   shared boundary between two same-color sections doubles up into a much
-   bigger gap than the one between any other two sections on the page.
-   Dropping the top padding on the second section of a same-background
-   pair brings that gap back down to a single section's worth, matching
-   the rest of the page. */
+/* Any two adjacent sections with the same background - including plain
+   white next to plain white, e.g. the hero followed directly by "Why
+   this matters" - each carry their own top+bottom .section padding, so
+   the shared boundary between them doubles up into a much bigger gap
+   than the one between any other two sections on the page. A plain
+   section has no color to signal that visually, so it just reads as an
+   oddly large empty gap. Dropping the top padding on the second section
+   of a same-background pair (colored or not) brings every boundary on
+   the page to the same size. */
 .business-website-page .section-muted + .section-muted,
 .business-website-page .section-muted + .faq__v2,
-.business-website-page .faq__v2 + .section-muted {
+.business-website-page .faq__v2 + .section-muted,
+.business-website-page .section:not(.section-muted):not(.faq__v2) + .section:not(.section-muted):not(.faq__v2) {
   padding-top: 0;
+}
+
+/* "Why this matters" is only a SectionHeader (tag + paragraphs) with
+   nothing else in the section after it. SectionHeader's wrapping row
+   always carries mb-5 (meant to separate it from a grid/list that
+   follows it), so with no such content here it's pure trailing space
+   stacking on top of the section's own bottom padding. Bootstrap's
+   .mb-5 utility itself is !important, so the override has to be too. */
+#context > .container > .row {
+  margin-bottom: 0 !important;
 }
