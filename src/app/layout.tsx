@@ -110,7 +110,6 @@ export default function RootLayout({
           <i className="bi bi-arrow-up-short" aria-hidden="true"></i>
         </button>
         <Script src={`${basePath}/assets/vendors/bootstrap/bootstrap.bundle.min.js`} strategy="afterInteractive" />
-        <Script src={`${basePath}/assets/vendors/aos/aos.js`} strategy="afterInteractive" />
         <Script src={`${basePath}/assets/vendors/gsap/gsap.min.js`} strategy="afterInteractive" />
         <Script src={`${basePath}/assets/js/custom.js`} strategy="afterInteractive" />
         <Script src={`${basePath}/assets/js/form.js`} strategy="afterInteractive" />

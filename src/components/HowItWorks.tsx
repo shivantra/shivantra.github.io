@@ -66,7 +66,7 @@ export default function HowItWorks() {
             professional journey from concept to deployment.
           </Description>
         </SectionHeader>
-        <div className="row g-md-5">
+        <div className="row gy-md-5 gx-lg-5">
           {steps.map((step) => (
             <StepCard key={step.number} {...step} />
           ))}

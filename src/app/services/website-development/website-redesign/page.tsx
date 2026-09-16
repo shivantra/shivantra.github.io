@@ -605,7 +605,7 @@ export default function WebsiteRedesign() {
 
           <Section className="section-muted" id="migration">
             <Container>
-              <div className="row g-5 align-items-start">
+              <div className="row g-4 align-items-start">
                 <div className="col-lg-6">
                   <SectionHeader tag="Migration" title="URL changes need a plan" tight colClass="col-12" />
                   <Description aos="fade-up" delay={100}>
@@ -630,7 +630,7 @@ export default function WebsiteRedesign() {
 
           <Section id="search-expectations">
             <Container>
-              <div className="row g-5 align-items-start">
+              <div className="row g-4 align-items-start">
                 <div className="col-lg-6">
                   <SectionHeader
                     tag="Search expectations"

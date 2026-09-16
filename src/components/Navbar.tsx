@@ -1,6 +1,6 @@
 "use client";
 
-import type { MouseEvent } from "react";
+import { useEffect, useLayoutEffect, useRef, useState, type MouseEvent } from "react";
 import "./Navbar.css";
 import Link from "next/link";
 import { Button, Container } from "./Typography";
@@ -10,210 +10,225 @@ interface NavbarProps {
   activePage?: "home" | "careers" | "legal" | "services";
 }
 
-function getOffcanvasInstance() {
-  const el = document.getElementById("fbs__net-navbars");
-  if (!el) return null;
-  const w = window as typeof window & { bootstrap?: { Offcanvas: { getInstance: (el: Element) => { hide: () => void } | null } } };
-  return w.bootstrap?.Offcanvas.getInstance(el) ?? null;
-}
-
-function closeOffcanvas() {
-  getOffcanvasInstance()?.hide();
-}
-
-// Below-the-fold images/content can still be loading when a section link
-// is clicked, especially on a long page — that shifts the page's total
-// height *after* the initial scroll, so a one-shot jump (or a jump plus a
-// fixed-delay correction) can land short or overshoot depending on how
-// long things take to settle. Poll the target's actual document position
-// every frame and keep re-scrolling until it stops moving.
-function scrollToSection(sectionId: string) {
-  let lastTop = Number.NaN;
-  let stableFrames = 0;
-  let totalFrames = 0;
-
-  function tick() {
-    const el = document.getElementById(sectionId);
-    if (!el) return;
-    const top = el.getBoundingClientRect().top + window.scrollY;
-    const isStable = Math.abs(top - lastTop) < 1;
-    stableFrames = isStable ? stableFrames + 1 : 0;
-    lastTop = top;
-    totalFrames += 1;
-
-    el.scrollIntoView({ behavior: totalFrames === 1 ? "smooth" : "instant", block: "start" });
-
-    if (stableFrames < 5 && totalFrames < 120) {
-      requestAnimationFrame(tick);
-    }
-  }
-  requestAnimationFrame(tick);
-}
-
-// On mobile/tablet, nav links live inside an offcanvas that sets
-// overflow:hidden on <body> while open. Clicking a section link tries to
-// scroll while that's still in effect, so the scroll silently fails or
-// lands in the wrong place. Wait for the offcanvas's close transition to
-// actually finish before scrolling.
-function handleSectionLinkClick(sectionId: string, isHome: boolean) {
-  return (e: MouseEvent<HTMLAnchorElement>) => {
-    if (!isHome) return;
-    e.preventDefault();
-    const el = document.getElementById("fbs__net-navbars");
-    if (el?.classList.contains("show")) {
-      const onHidden = () => {
-        el.removeEventListener("hidden.bs.offcanvas", onHidden);
-        history.pushState(null, "", `#${sectionId}`);
-        // iOS Safari/WebKit needs a moment beyond the close *event* to
-        // actually settle its compositing layers - starting the scroll
-        // immediately can visually glitch on iOS specifically.
-        setTimeout(() => scrollToSection(sectionId), 150);
-      };
-      el.addEventListener("hidden.bs.offcanvas", onHidden);
-      closeOffcanvas();
-    } else {
-      history.pushState(null, "", `#${sectionId}`);
-      scrollToSection(sectionId);
-    }
-  };
-}
+const navLinks = [
+  { id: "home", label: "Home" },
+  { id: "about", label: "About" },
+  { id: "services", label: "Services" },
+  { id: "contact", label: "Contact" },
+];
 
 export default function Navbar({ activePage = "home" }: NavbarProps) {
   const isHome = activePage === "home";
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+  const selectedSection = isHome ? activeSection : activePage;
+
+  useEffect(() => {
+    if (!isHome) return;
+    let frame = 0;
+    const syncHash = () => {
+      const id = window.location.hash.slice(1);
+      if (navLinks.some((link) => link.id === id)) setActiveSection(id);
+    };
+    const syncScroll = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        const threshold = Math.max(180, window.innerHeight * 0.25);
+        let current = "home";
+        for (const link of navLinks) {
+          const section = document.getElementById(link.id);
+          if (section && section.getBoundingClientRect().top <= threshold) current = link.id;
+        }
+        setActiveSection(current);
+      });
+    };
+    syncHash();
+    window.addEventListener("hashchange", syncHash);
+    window.addEventListener("popstate", syncHash);
+    window.addEventListener("scroll", syncScroll, { passive: true });
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("hashchange", syncHash);
+      window.removeEventListener("popstate", syncHash);
+      window.removeEventListener("scroll", syncScroll);
+    };
+  }, [isHome]);
+
+
+  function closeMenu() {
+    dialogRef.current?.close();
+    setMenuOpen(false);
+  }
+
+  // A native modal owns focus and sits above the page without translating
+  // any page elements or changing the body's position and scroll offset.
+  useLayoutEffect(() => {
+    if (!menuOpen) return;
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+    dialog.showModal();
+    return () => {
+      dialog.close();
+    };
+  }, [menuOpen]);
+
+  useEffect(() => {
+    const desktop = window.matchMedia("(min-width: 992px)");
+    const onResize = () => {
+      if (desktop.matches) closeMenu();
+    };
+    desktop.addEventListener("change", onResize);
+    return () => desktop.removeEventListener("change", onResize);
+  }, []);
+
+  function handleSectionLinkClick(sectionId: string) {
+    return (e: MouseEvent<HTMLAnchorElement>) => {
+      closeMenu();
+      if (!isHome) return;
+      e.preventDefault();
+      setActiveSection(sectionId);
+      history.pushState(null, "", `#${sectionId}`);
+      // One intentional scroll after React has closed the modal.
+      requestAnimationFrame(() => {
+        document.getElementById(sectionId)?.scrollIntoView({
+          behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
+          block: "start",
+        });
+      });
+    };
+  }
 
   return (
     <>
       <div className="fbs__net-navbar-spacer" aria-hidden="true" />
-      <header
-        className="fbs__net-navbar navbar navbar-expand-lg dark"
-        aria-label="shivantra.com navbar"
-      >
-      <Container className="d-flex align-items-center justify-content-between">
-        <Link className="navbar-brand w-auto" href="/">
-          <img
-            className="logo dark img-fluid"
-            src={`${basePath}/assets/images/logo-dark.svg`}
-            alt="Shivantra dark logo"
-          />
-        </Link>
+      <header className="fbs__net-navbar navbar" aria-label="shivantra.com navbar">
+        <Container className="d-flex align-items-center justify-content-between">
+          <Link className="navbar-brand" href="/" onClick={closeMenu}>
+            <img
+              className="logo img-fluid"
+              src={`${basePath}/assets/images/logo-dark.svg`}
+              alt="Shivantra logo"
+            />
+          </Link>
 
-        <div
-          className="offcanvas offcanvas-start w-75"
-          id="fbs__net-navbars"
-          tabIndex={-1}
-          aria-labelledby="fbs__net-navbarsLabel"
-        >
-          <div className="offcanvas-header">
-            <div className="offcanvas-header-logo">
-              <Link className="logo-link" id="fbs__net-navbarsLabel" href="/">
-                <img
-                  className="logo dark img-fluid"
-                  src={`${basePath}/assets/images/logo-dark.svg`}
-                  alt="Shivantra Logo"
-                />
-              </Link>
-            </div>
-            <button
-              className="btn-close btn-close-black"
-              type="button"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-
-          <div className="offcanvas-body align-items-lg-center">
-            <ul className="navbar-nav nav me-auto ps-lg-5 mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a
-                  className={`nav-link scroll-link${isHome ? " active" : ""}`}
-                  aria-current={isHome ? "page" : undefined}
-                  href={isHome ? "#home" : `${basePath}/#home`}
-                  onClick={handleSectionLinkClick("home", isHome)}
-                >
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link scroll-link" href={isHome ? "#about" : `${basePath}/#about`} onClick={handleSectionLinkClick("about", isHome)}>
-                  About
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link scroll-link" href={isHome ? "#services" : `${basePath}/#services`} onClick={handleSectionLinkClick("services", isHome)}>
-                  Services
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link scroll-link" href={isHome ? "#contact" : `${basePath}/#contact`} onClick={handleSectionLinkClick("contact", isHome)}>
-                  Contact
-                </a>
-              </li>
-              <li className="nav-item">
+          <nav className="fbs__net-nav-desktop" aria-label="Primary">
+            <ul className="fbs__net-nav-list">
+              {navLinks.map((link) => (
+                <li key={link.id}>
+                  <a
+                    className={`nav-link scroll-link${link.id === selectedSection ? " active" : ""}`}
+                    aria-current={link.id === selectedSection ? "page" : undefined}
+                    href={isHome ? `#${link.id}` : `${basePath}/#${link.id}`}
+                    onClick={handleSectionLinkClick(link.id)}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+              <li>
                 <Link
-                  className={`nav-link scroll-link${activePage === "careers" ? " active" : ""}`}
+                  className={`nav-link${activePage === "careers" ? " active" : ""}`}
                   aria-current={activePage === "careers" ? "page" : undefined}
                   href="/careers"
-                  onClick={closeOffcanvas}
                 >
                   Careers
                 </Link>
               </li>
             </ul>
-          </div>
-        </div>
+          </nav>
 
-        <div className="ms-auto w-auto">
-          <div className="header-social d-flex align-items-center gap-1">
-            <Button href={isHome ? "#contact" : `${basePath}/#contact`} className="btn-primary py-2" onClick={handleSectionLinkClick("contact", isHome)}>
+          <div className="fbs__net-nav-actions">
+            <Button
+              href={isHome ? "#contact" : `${basePath}/#contact`}
+              className="btn-primary py-2 d-none d-sm-inline-flex"
+              onClick={handleSectionLinkClick("contact")}
+            >
               Contact Now
             </Button>
 
             <button
-              className="fbs__net-navbar-toggler justify-content-center align-items-center ms-auto"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#fbs__net-navbars"
-              aria-controls="fbs__net-navbars"
-              aria-label="Toggle navigation"
-              aria-expanded="false"
+              type="button"
+              className="fbs__net-navbar-toggler"
+              aria-label="Open navigation menu"
+              aria-controls="fbs__net-mobile-menu"
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen(true)}
             >
-              <svg
-                className="fbs__net-icon-menu"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
+              <svg className="fbs__net-navbar-toggler-icon-menu" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="21" x2="3" y1="6" y2="6"></line>
                 <line x1="15" x2="3" y1="12" y2="12"></line>
                 <line x1="17" x2="3" y1="18" y2="18"></line>
               </svg>
-              <svg
-                className="fbs__net-icon-close"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M18 6 6 18"></path>
-                <path d="m6 6 12 12"></path>
-              </svg>
             </button>
           </div>
-        </div>
-      </Container>
+        </Container>
       </header>
+
+      <dialog
+        ref={dialogRef}
+        id="fbs__net-mobile-menu"
+        className="fbs__net-mobile-panel"
+        aria-label="Navigation menu"
+        onCancel={closeMenu}
+        onClose={() => {
+          // A queued close event can arrive after the dialog has reopened.
+          if (!dialogRef.current?.open) setMenuOpen(false);
+        }}
+      >
+        <div className="fbs__net-mobile-panel-header">
+          <Link href="/" onClick={closeMenu}>
+            <img
+              className="logo img-fluid"
+              src={`${basePath}/assets/images/logo-dark.svg`}
+              alt="Shivantra logo"
+            />
+          </Link>
+          <button type="button" autoFocus onClick={closeMenu} className="fbs__net-mobile-panel-close" aria-label="Close navigation menu">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <p className="fbs__net-mobile-eyebrow">Explore Shivantra</p>
+        <ul className="fbs__net-mobile-nav-list">
+          {navLinks.map((link) => (
+            <li key={link.id}>
+              <a
+                className={`nav-link scroll-link${link.id === selectedSection ? " active" : ""}`}
+                aria-current={link.id === selectedSection ? "page" : undefined}
+                href={isHome ? `#${link.id}` : `${basePath}/#${link.id}`}
+                onClick={handleSectionLinkClick(link.id)}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+          <li>
+            <Link
+              className={`nav-link${activePage === "careers" ? " active" : ""}`}
+              aria-current={activePage === "careers" ? "page" : undefined}
+              href="/careers"
+              onClick={closeMenu}
+            >
+              Careers
+            </Link>
+          </li>
+        </ul>
+        <div className="fbs__net-mobile-contact">
+          <p className="fbs__net-mobile-contact-title">Have a project in mind?</p>
+          <p className="fbs__net-mobile-contact-copy">Let’s build something great together.</p>
+          <Button
+            href={isHome ? "#contact" : `${basePath}/#contact`}
+            className="btn-primary w-100 d-flex align-items-center justify-content-between"
+            onClick={handleSectionLinkClick("contact")}
+          >
+            Contact Now
+            <span aria-hidden="true">↗</span>
+          </Button>
+        </div>
+      </dialog>
     </>
   );
 }
