@@ -1,10 +1,22 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 let initialized = false;
 
 export default function ScrollAnimations() {
+  const pathname = usePathname();
+
+  // template.tsx is supposed to remount this component on every
+  // navigation, which is what `initialized` below assumes - but
+  // verified against the live site, a client-side link click never
+  // re-ran this effect at all (confirmed with headless Chrome: every
+  // [data-aos] element on the destination page stayed hidden
+  // indefinitely, not even self-correcting after 2s, way past the
+  // 400ms safety net below). Depending on pathname as an explicit
+  // effect dependency instead guarantees a rerun on every route
+  // change, regardless of whether the component instance remounts.
   useEffect(() => {
     // AOS adds aos-init/aos-animate classes straight to the DOM,
     // bypassing React entirely - a form of direct DOM mutation that
@@ -64,7 +76,7 @@ export default function ScrollAnimations() {
       cancelled = true;
       clearTimeout(safetyTimer);
     };
-  }, []);
+  }, [pathname]);
 
   return null;
 }
