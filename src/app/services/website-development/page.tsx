@@ -109,6 +109,14 @@ const services = [
     href: "/services/website-development/corporate-websites",
   },
   {
+    icon: "bi-arrow-repeat",
+    title: "Website Redesign",
+    description:
+      "For businesses with an existing website that needs meaningful improvement. We redesign structure, content experience, design, CMS, performance and technology while accounting for the pages, URLs and systems the existing website already depends on.",
+    cta: "Explore Website Redesign",
+    href: "/services/website-development/website-redesign",
+  },
+  {
     icon: "bi-bullseye",
     title: "Landing Page Development",
     description:

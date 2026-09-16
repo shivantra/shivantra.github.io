@@ -324,6 +324,7 @@ const faqs = [
 
 const relatedServices = [
   { label: "Website Development", href: "/services/website-development" },
+  { label: "Website Redesign", href: "/services/website-development/website-redesign" },
   { label: "CMS Development", href: "/services/cms-development" },
   { label: "Headless CMS", href: "/services/cms-development/headless-cms" },
   { label: "CMS Migration", href: "/services/cms-development/cms-migration" },
