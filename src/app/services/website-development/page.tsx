@@ -566,7 +566,7 @@ export default function WebsiteDevelopment() {
 
           <Section className="section-muted" id="integrations">
             <Container>
-              <div className="row g-4 align-items-start">
+              <div className="row g-4 align-items-stretch">
                 <div className="col-lg-6">
                   <SectionHeader
                     tag="Website Integrations"
@@ -596,9 +596,13 @@ export default function WebsiteDevelopment() {
                     <i className="bi bi-arrow-up-right ms-2" aria-hidden="true"></i>
                   </Button>
                 </div>
-                <div className="col-lg-6">
-                  <div className="flow-card" data-aos="fade-up" data-aos-delay="200">
+                <div className="col-lg-6 d-flex align-items-center">
+                  <div className="flow-card flow-card--lg w-100" data-aos="fade-up" data-aos-delay="200">
+                    <div className="placeholder-icon">
+                      <i className="bi bi-diagram-3" aria-hidden="true"></i>
+                    </div>
                     <span className="flow-step">Website</span>
+                    <div className="flow-arrow"><i className="bi bi-arrow-down" aria-hidden="true"></i></div>
                     <div className="flow-branches">
                       <span className="flow-step">CRM</span>
                       <span className="flow-step">ERP</span>
@@ -606,6 +610,10 @@ export default function WebsiteDevelopment() {
                       <span className="flow-step">Marketing</span>
                       <span className="flow-step">APIs</span>
                     </div>
+                    <Description className="mb-0 mt-3">
+                      A website enquiry can flow directly into the systems your business already
+                      uses
+                    </Description>
                   </div>
                 </div>
               </div>
@@ -639,7 +647,7 @@ export default function WebsiteDevelopment() {
 
           <Section className="section-muted" id="technology">
             <Container>
-              <div className="row g-4 align-items-center">
+              <div className="row g-4 align-items-stretch">
                 <div className="col-lg-7">
                   <SectionHeader tag="Technology" title="Technology should fit the requirement" tight colClass="col-12">
                     <Description aos="fade-up" delay={100} className="mb-0">
@@ -662,12 +670,24 @@ export default function WebsiteDevelopment() {
                     <i className="bi bi-arrow-up-right ms-2" aria-hidden="true"></i>
                   </Button>
                 </div>
-                <div className="col-lg-5">
-                  <PlaceholderVisual
-                    icon="bi-diagram-3"
-                    caption="Website architecture options based on business requirements"
-                    cues={["CMS", "Headless CMS", "Custom Frontend", "API", "Backend"]}
-                  />
+                <div className="col-lg-5 d-flex align-items-center">
+                  <div className="flow-card w-100" data-aos="fade-up" data-aos-delay="200">
+                    <div className="placeholder-icon">
+                      <i className="bi bi-diagram-3" aria-hidden="true"></i>
+                    </div>
+                    <span className="flow-step">Website</span>
+                    <div className="flow-arrow"><i className="bi bi-arrow-down" aria-hidden="true"></i></div>
+                    <div className="flow-branches">
+                      <span className="flow-step">CMS</span>
+                      <span className="flow-step">Headless CMS</span>
+                      <span className="flow-step">Custom Frontend</span>
+                      <span className="flow-step">API</span>
+                      <span className="flow-step">Backend</span>
+                    </div>
+                    <Description className="mb-0 mt-3">
+                      Website architecture options based on business requirements
+                    </Description>
+                  </div>
                 </div>
               </div>
             </Container>

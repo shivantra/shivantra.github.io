@@ -29,7 +29,7 @@
   background-color: rgba(var(--bs-primary-rgb), 0.03);
 }
 
-.custom-website-page .placeholder-visual .placeholder-icon {
+.custom-website-page .placeholder-icon {
   width: 64px;
   height: 64px;
   margin: 0 auto 1rem;
@@ -40,9 +40,41 @@
   background-color: rgba(var(--bs-primary-rgb), 0.08);
 }
 
-.custom-website-page .placeholder-visual .placeholder-icon i {
+.custom-website-page .placeholder-icon i {
   font-size: 28px;
   color: var(--bs-primary);
+}
+
+.custom-website-page .flow-card {
+  border-radius: 1rem;
+  padding: 1.75rem;
+  background-color: rgba(var(--bs-primary-rgb), 0.03);
+  border: 1px solid rgba(var(--bs-primary-rgb), 0.12);
+  text-align: center;
+}
+
+.custom-website-page .flow-step {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  border-radius: 999px;
+  background-color: var(--bs-body-bg);
+  border: 1px solid rgba(var(--inverse-color-rgb), 0.15);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.custom-website-page .flow-arrow {
+  color: var(--bs-primary);
+  font-size: 1.25rem;
+  margin: 0.35rem 0;
+}
+
+.custom-website-page .flow-branches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.75rem;
 }
 
 .custom-website-page .placeholder-visual .cue-list {

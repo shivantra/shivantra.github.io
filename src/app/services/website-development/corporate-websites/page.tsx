@@ -582,6 +582,9 @@ export default function CorporateWebsiteDevelopment() {
                 </div>
                 <div className="col-lg-5 mt-5 mt-lg-0">
                   <div className="flow-card" data-aos="fade-up" data-aos-delay="200">
+                    <div className="placeholder-icon">
+                      <i className="bi bi-person-workspace" aria-hidden="true"></i>
+                    </div>
                     <span className="flow-step">Author</span>
                     <div className="flow-arrow"><i className="bi bi-arrow-down" aria-hidden="true"></i></div>
                     <span className="flow-step">Reviewer</span>
@@ -590,6 +593,9 @@ export default function CorporateWebsiteDevelopment() {
                     <div className="flow-arrow"><i className="bi bi-arrow-down" aria-hidden="true"></i></div>
                     <span className="flow-step">Website</span>
                     <div className="flow-branch">with locale review where required</div>
+                    <Description className="mb-0 mt-3">
+                      Content moves through defined roles before it reaches the live website
+                    </Description>
                   </div>
                 </div>
               </div>

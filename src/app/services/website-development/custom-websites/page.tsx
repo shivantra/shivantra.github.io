@@ -509,7 +509,7 @@ export default function CustomWebsiteDevelopment() {
 
           <Section className="section-muted" id="integration-architecture">
             <Container>
-              <div className="row g-4 align-items-start">
+              <div className="row g-4 align-items-stretch">
                 <div className="col-lg-6">
                   <SectionHeader
                     tag="Integration architecture"
@@ -524,12 +524,27 @@ export default function CustomWebsiteDevelopment() {
                   </SectionHeader>
                   <ChecklistList items={integrationSystems} tight />
                 </div>
-                <div className="col-lg-6">
-                  <PlaceholderVisual
-                    icon="bi-diagram-2"
-                    caption="Custom website architecture connecting frontend, backend, database, CRM, ERP and external APIs"
-                    cues={["Frontend", "API / Backend", "Database", "CRM", "ERP", "External APIs"]}
-                  />
+                <div className="col-lg-6 d-flex align-items-center">
+                  <div className="flow-card w-100" data-aos="fade-up" data-aos-delay="200">
+                    <div className="placeholder-icon">
+                      <i className="bi bi-diagram-2" aria-hidden="true"></i>
+                    </div>
+                    <span className="flow-step">Frontend</span>
+                    <div className="flow-arrow"><i className="bi bi-arrow-down" aria-hidden="true"></i></div>
+                    <span className="flow-step">API / Backend</span>
+                    <div className="flow-arrow"><i className="bi bi-arrow-down" aria-hidden="true"></i></div>
+                    <span className="flow-step">Database</span>
+                    <div className="flow-branches">
+                      <span className="flow-step">CRM</span>
+                      <span className="flow-step">ERP</span>
+                      <span className="flow-step">External APIs</span>
+                      <span className="flow-step">Internal Apps</span>
+                    </div>
+                    <Description className="mb-0 mt-3">
+                      Custom website architecture connecting frontend, backend, database, CRM,
+                      ERP and external APIs
+                    </Description>
+                  </div>
                 </div>
               </div>
             </Container>

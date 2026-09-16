@@ -549,7 +549,7 @@ export default function BusinessWebsiteDevelopment() {
 
           <Section className="section-muted" id="architecture">
             <Container>
-              <div className="row g-4 align-items-center">
+              <div className="row g-4 align-items-stretch">
                 <div className="col-lg-6">
                   <SectionHeader tag="Website structure" title="The structure matters before the visual design" tight colClass="col-12">
                     <Description aos="fade-up" delay={100} className="mb-0">
@@ -564,12 +564,25 @@ export default function BusinessWebsiteDevelopment() {
                     business structure before they can find what they need.
                   </Description>
                 </div>
-                <div className="col-lg-6">
-                  <PlaceholderVisual
-                    icon="bi-diagram-3"
-                    caption="Example information architecture for a business website"
-                    cues={["Home", "About", "Services", "Industries", "Work", "Insights", "Contact"]}
-                  />
+                <div className="col-lg-6 d-flex align-items-center">
+                  <div className="flow-card w-100" data-aos="fade-up" data-aos-delay="200">
+                    <div className="placeholder-icon">
+                      <i className="bi bi-diagram-3" aria-hidden="true"></i>
+                    </div>
+                    <span className="flow-step">Home</span>
+                    <div className="flow-arrow"><i className="bi bi-arrow-down" aria-hidden="true"></i></div>
+                    <div className="flow-branches">
+                      <span className="flow-step">About</span>
+                      <span className="flow-step">Services</span>
+                      <span className="flow-step">Industries</span>
+                      <span className="flow-step">Work</span>
+                      <span className="flow-step">Insights</span>
+                      <span className="flow-step">Contact</span>
+                    </div>
+                    <Description className="mb-0 mt-3">
+                      Example information architecture for a business website
+                    </Description>
+                  </div>
                 </div>
               </div>
             </Container>
@@ -601,7 +614,7 @@ export default function BusinessWebsiteDevelopment() {
 
           <Section className="section-muted" id="cms">
             <Container>
-              <div className="row g-4 align-items-center">
+              <div className="row g-4 align-items-stretch">
                 <div className="col-lg-7">
                   <SectionHeader
                     tag="CMS"
@@ -629,12 +642,23 @@ export default function BusinessWebsiteDevelopment() {
                     <i className="bi bi-arrow-up-right ms-2" aria-hidden="true"></i>
                   </Button>
                 </div>
-                <div className="col-lg-5">
-                  <PlaceholderVisual
-                    icon="bi-layout-text-window"
-                    caption="Structured, editable content without unlimited page-builder control"
-                    cues={["Structured fields", "Editor access", "Reusable sections", "Preview & publish"]}
-                  />
+                <div className="col-lg-5 d-flex align-items-center">
+                  <div className="flow-card w-100" data-aos="fade-up" data-aos-delay="200">
+                    <div className="placeholder-icon">
+                      <i className="bi bi-layout-text-window" aria-hidden="true"></i>
+                    </div>
+                    <span className="flow-step">Content Editor</span>
+                    <div className="flow-arrow"><i className="bi bi-arrow-down" aria-hidden="true"></i></div>
+                    <div className="flow-branches">
+                      <span className="flow-step">Structured Fields</span>
+                      <span className="flow-step">Editor Access</span>
+                      <span className="flow-step">Reusable Sections</span>
+                      <span className="flow-step">Preview &amp; Publish</span>
+                    </div>
+                    <Description className="mb-0 mt-3">
+                      Structured, editable content without unlimited page-builder control
+                    </Description>
+                  </div>
                 </div>
               </div>
             </Container>
@@ -642,7 +666,7 @@ export default function BusinessWebsiteDevelopment() {
 
           <Section id="integrations">
             <Container>
-              <div className="row g-4 align-items-start">
+              <div className="row g-4 align-items-stretch">
                 <div className="col-lg-6">
                   <SectionHeader
                     tag="Connected when needed"
@@ -665,8 +689,11 @@ export default function BusinessWebsiteDevelopment() {
                     <i className="bi bi-arrow-up-right ms-2" aria-hidden="true"></i>
                   </Button>
                 </div>
-                <div className="col-lg-6">
-                  <div className="flow-card" data-aos="fade-up" data-aos-delay="200">
+                <div className="col-lg-6 d-flex align-items-center">
+                  <div className="flow-card w-100" data-aos="fade-up" data-aos-delay="200">
+                    <div className="placeholder-icon">
+                      <i className="bi bi-signpost-split" aria-hidden="true"></i>
+                    </div>
                     <span className="flow-step">Visitor</span>
                     <div className="flow-arrow"><i className="bi bi-arrow-down" aria-hidden="true"></i></div>
                     <span className="flow-step">Website Form</span>
@@ -677,6 +704,9 @@ export default function BusinessWebsiteDevelopment() {
                       <span className="flow-step">Email Confirmation</span>
                       <span className="flow-step">Follow-up Workflow</span>
                     </div>
+                    <Description className="mb-0 mt-3">
+                      A website enquiry can route straight into your CRM and follow-up process
+                    </Description>
                   </div>
                 </div>
               </div>

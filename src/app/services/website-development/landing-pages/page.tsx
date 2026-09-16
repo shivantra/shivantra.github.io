@@ -406,7 +406,7 @@ export default function LandingPageDevelopment() {
 
           <Section className="section-muted" id="message-continuity">
             <Container>
-              <div className="row g-4 align-items-start">
+              <div className="row g-4 align-items-stretch">
                 <div className="col-lg-6">
                   <SectionHeader
                     tag="Message continuity"
@@ -434,12 +434,24 @@ export default function LandingPageDevelopment() {
                     A landing page reduces that friction by keeping the journey coherent.
                   </Description>
                 </div>
-                <div className="col-lg-6">
-                  <PlaceholderVisual
-                    icon="bi-diagram-3"
-                    caption="Consistent message from campaign to landing page and call to action"
-                    cues={["Ad Message", "Headline", "Benefits", "Evidence", "Action"]}
-                  />
+                <div className="col-lg-6 d-flex align-items-center">
+                  <div className="flow-card w-100" data-aos="fade-up" data-aos-delay="200">
+                    <div className="placeholder-icon">
+                      <i className="bi bi-diagram-3" aria-hidden="true"></i>
+                    </div>
+                    <span className="flow-step">Ad Message</span>
+                    <div className="flow-arrow"><i className="bi bi-arrow-down" aria-hidden="true"></i></div>
+                    <span className="flow-step">Landing Page Headline</span>
+                    <div className="flow-arrow"><i className="bi bi-arrow-down" aria-hidden="true"></i></div>
+                    <span className="flow-step">Relevant Benefits</span>
+                    <div className="flow-arrow"><i className="bi bi-arrow-down" aria-hidden="true"></i></div>
+                    <span className="flow-step">Evidence</span>
+                    <div className="flow-arrow"><i className="bi bi-arrow-down" aria-hidden="true"></i></div>
+                    <span className="flow-step">Primary Action</span>
+                    <Description className="mb-0 mt-3">
+                      Consistent message from campaign to landing page and call to action
+                    </Description>
+                  </div>
                 </div>
               </div>
             </Container>

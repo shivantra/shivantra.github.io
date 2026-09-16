@@ -519,7 +519,7 @@ export default function WebsiteRedesign() {
 
           <Section id="two-projects">
             <Container>
-              <div className="row g-4 align-items-start">
+              <div className="row g-4 align-items-stretch">
                 <div className="col-lg-6">
                   <SectionHeader tag="Two projects" title="A responsible redesign is really two projects" tight colClass="col-12">
                     <Description aos="fade-up" delay={100} className="mb-0">
@@ -534,12 +534,39 @@ export default function WebsiteRedesign() {
                     design is excellent.
                   </Description>
                 </div>
-                <div className="col-lg-6">
-                  <PlaceholderVisual
-                    icon="bi-signpost-split"
-                    caption="Website redesign combining experience improvements and migration planning"
-                    cues={["Structure", "UX", "Design", "Content", "URLs", "Redirects", "Analytics"]}
-                  />
+                <div className="col-lg-6 d-flex align-items-center">
+                  <div className="track-diagram w-100" data-aos="fade-up" data-aos-delay="200">
+                    <div className="placeholder-icon">
+                      <i className="bi bi-signpost-split" aria-hidden="true"></i>
+                    </div>
+                    <div className="track-columns">
+                      <div className="track-col">
+                        <span className="track-label">Track A: Experience</span>
+                        <ul className="track-items">
+                          <li>Structure</li>
+                          <li>UX</li>
+                          <li>Design</li>
+                          <li>CMS</li>
+                          <li>Performance</li>
+                        </ul>
+                      </div>
+                      <div className="track-col">
+                        <span className="track-label">Track B: Migration</span>
+                        <ul className="track-items">
+                          <li>Content</li>
+                          <li>URLs</li>
+                          <li>Redirects</li>
+                          <li>Metadata</li>
+                          <li>Analytics</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="flow-arrow"><i className="bi bi-arrow-down" aria-hidden="true"></i></div>
+                    <span className="flow-step">Launch</span>
+                    <Description className="mb-0 mt-3">
+                      Website redesign combining experience improvements and migration planning
+                    </Description>
+                  </div>
                 </div>
               </div>
             </Container>

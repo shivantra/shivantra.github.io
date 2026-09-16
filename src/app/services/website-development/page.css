@@ -29,7 +29,7 @@
   background-color: rgba(var(--bs-primary-rgb), 0.03);
 }
 
-.webdev-pillar-page .placeholder-visual .placeholder-icon {
+.webdev-pillar-page .placeholder-icon {
   width: 64px;
   height: 64px;
   margin: 0 auto 1rem;
@@ -40,7 +40,7 @@
   background-color: rgba(var(--bs-primary-rgb), 0.08);
 }
 
-.webdev-pillar-page .placeholder-visual .placeholder-icon i {
+.webdev-pillar-page .placeholder-icon i {
   font-size: 28px;
   color: var(--bs-primary);
 }
@@ -197,6 +197,39 @@
   justify-content: center;
   gap: 0.5rem;
   margin-top: 0.35rem;
+}
+
+.webdev-pillar-page .flow-card--lg {
+  padding: 2.75rem 2rem;
+}
+
+.webdev-pillar-page .flow-card--lg .placeholder-icon {
+  width: 84px;
+  height: 84px;
+}
+
+.webdev-pillar-page .flow-card--lg .placeholder-icon i {
+  font-size: 36px;
+}
+
+.webdev-pillar-page .flow-card--lg .flow-step {
+  padding: 0.85rem 1.6rem;
+  font-size: 1.05rem;
+}
+
+.webdev-pillar-page .flow-card--lg .flow-arrow {
+  font-size: 1.6rem;
+  margin: 0.6rem 0;
+}
+
+.webdev-pillar-page .flow-card--lg .flow-branches {
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.webdev-pillar-page .flow-card--lg p {
+  font-size: 1rem;
+  margin-top: 1.25rem !important;
 }
 
 .webdev-pillar-page .process-card {
