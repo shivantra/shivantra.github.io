@@ -1,0 +1,199 @@
+.marketing-analytics-page .breadcrumb-nav {
+  font-size: 0.85rem;
+}
+
+.marketing-analytics-page .breadcrumb-nav ol {
+  flex-wrap: wrap;
+}
+
+.marketing-analytics-page .breadcrumb-nav a {
+  text-decoration: none;
+  color: var(--bs-secondary);
+}
+
+.marketing-analytics-page .breadcrumb-nav a:hover {
+  color: var(--bs-primary);
+  text-decoration: underline;
+}
+
+.marketing-analytics-page .breadcrumb-nav .current {
+  color: var(--bs-heading-color);
+  font-weight: 600;
+}
+
+.marketing-analytics-page .placeholder-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(var(--bs-primary-rgb), 0.08);
+}
+
+.marketing-analytics-page .placeholder-icon i {
+  font-size: 28px;
+  color: var(--bs-primary);
+}
+
+.marketing-analytics-page .checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.marketing-analytics-page .checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.marketing-analytics-page .checklist li i {
+  color: var(--bs-primary);
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.marketing-analytics-page .checklist--avoid li i {
+  color: var(--bs-danger, #dc3545);
+}
+
+.marketing-analytics-page .checklist--tight li {
+  font-size: 0.9rem;
+}
+
+.marketing-analytics-page .flow-card {
+  border-radius: 1rem;
+  padding: 1.75rem;
+  background-color: rgba(var(--bs-primary-rgb), 0.03);
+  border: 1px solid rgba(var(--bs-primary-rgb), 0.12);
+  text-align: center;
+}
+
+.marketing-analytics-page .flow-step {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  border-radius: 999px;
+  background-color: var(--bs-body-bg);
+  border: 1px solid rgba(var(--inverse-color-rgb), 0.15);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.marketing-analytics-page .flow-arrow {
+  color: var(--bs-primary);
+  font-size: 1.25rem;
+  margin: 0.35rem 0;
+}
+
+.marketing-analytics-page .flow-branches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+/* Plain HTML table for the measurement plan: a table communicates
+   the business-action -> event -> parameters mapping far better than
+   cards would, since the point is to read across a row. Wrapped in a
+   scroll container since three columns don't fit a phone width. */
+.marketing-analytics-page .plan-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(var(--inverse-color-rgb), 0.12);
+  border-radius: 1rem;
+}
+
+.marketing-analytics-page .plan-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+.marketing-analytics-page .plan-table th,
+.marketing-analytics-page .plan-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  font-size: 0.92rem;
+  border-bottom: 1px solid rgba(var(--inverse-color-rgb), 0.1);
+  vertical-align: top;
+}
+
+.marketing-analytics-page .plan-table thead th {
+  background-color: rgba(var(--bs-primary-rgb), 0.04);
+  font-weight: 700;
+  color: var(--bs-heading-color);
+  white-space: nowrap;
+}
+
+.marketing-analytics-page .plan-table tbody td:nth-child(2) code {
+  font-size: 0.85rem;
+  background-color: rgba(var(--bs-primary-rgb), 0.08);
+  color: var(--bs-primary);
+  padding: 0.15rem 0.45rem;
+  border-radius: 0.3rem;
+}
+
+.marketing-analytics-page .plan-table tbody tr:last-child th,
+.marketing-analytics-page .plan-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.marketing-analytics-page .process-card {
+  border-radius: 1rem;
+  padding: 1.75rem 1.5rem;
+  height: 100%;
+  background-color: rgba(var(--bs-primary-rgb), 0.02);
+  border: 1px solid rgba(var(--inverse-color-rgb), 0.1);
+}
+
+.marketing-analytics-page .process-card .step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--bs-primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.marketing-analytics-page .related-services ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem 1.5rem;
+}
+
+@media (max-width: 575.98px) {
+  .marketing-analytics-page .related-services ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+.marketing-analytics-page .related-services a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.marketing-analytics-page .section-muted {
+  background-color: rgba(var(--inverse-color-rgb), 0.02);
+}
+
+.marketing-analytics-page .section-muted + .section-muted,
+.marketing-analytics-page .section-muted + .faq__v2,
+.marketing-analytics-page .faq__v2 + .section-muted,
+.marketing-analytics-page .section:not(.section-muted):not(.faq__v2) + .section:not(.section-muted):not(.faq__v2) {
+  padding-top: 0;
+}
