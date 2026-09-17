@@ -18,18 +18,18 @@ import {
 } from "@/components/Typography";
 import { basePath, siteUrl } from "@/lib/basePath";
 
-const pageUrl = `${siteUrl}/solutions/dropshipping-websites`;
+const pageUrl = `${siteUrl}/solutions/real-estate-websites`;
 
 export const metadata: Metadata = {
-  title: "Dropshipping Product Websites | Shivantra",
+  title: "Real Estate Websites | Shivantra",
   description:
-    "Dropshipping website development for focused product stores, mobile shopping, supplier integrations, campaign landing pages, tracking and fulfillment workflows.",
+    "Real estate website development for listings, projects, locations, filters, enquiries, CRM, maps and campaign landing pages.",
   alternates: {
     canonical: pageUrl,
   },
   openGraph: {
-    title: "Dropshipping Product Websites | Shivantra",
-    description: "Dropshipping website development for focused product stores, mobile shopping, supplier integrations, campaign landing pages, tracking and fulfillment workflows.",
+    title: "Real Estate Websites | Shivantra",
+    description: "Real estate website development for listings, projects, locations, filters, enquiries, CRM, maps and campaign landing pages.",
     url: pageUrl,
     siteName: "Shivantra - Software Consultancy & Development",
     locale: "en_US",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
 const breadcrumbTrail = [
   { label: "Home", href: "/" },
   { label: "Solutions", href: null },
-  { label: "Dropshipping Product Websites", href: null },
+  { label: "Real Estate Websites", href: null },
 ];
 
 const structuredData = {
@@ -58,7 +58,7 @@ const structuredData = {
   "@graph": [
     {
       "@type": "Service",
-      name: "Dropshipping Product Websites",
+      name: "Real Estate Websites",
       serviceType: "Website Development",
       provider: {
         "@type": "Organization",
@@ -68,7 +68,7 @@ const structuredData = {
       areaServed: "Worldwide",
       url: pageUrl,
       description:
-        "Dropshipping website development for focused product stores, mobile shopping, supplier integrations, campaign landing pages, tracking and fulfillment workflows.",
+        "Real estate website development for listings, projects, locations, filters, enquiries, CRM, maps and campaign landing pages.",
     },
     {
       "@type": "BreadcrumbList",
@@ -78,7 +78,7 @@ const structuredData = {
           "@type": "ListItem",
           position: index + 1,
           name: crumb.label,
-          item: `${siteUrl}${crumb.href ?? "/solutions/dropshipping-websites"}`,
+          item: `${siteUrl}${crumb.href ?? "/solutions/real-estate-websites"}`,
         })),
     },
   ],
@@ -87,25 +87,25 @@ const structuredData = {
 const balanceFactors = ["clear information", "credibility", "useful navigation", "mobile usability", "appropriate calls to action", "operational integration where it adds value"];
 
 const commonProblems = [
-  "Generic supplier product copy",
-  "Weak trust and brand differentiation",
-  "Long or variable shipping expectations",
-  "Campaign traffic lands on generic pages",
-  "Manual order/supplier workflows",
-  "Poor tracking between ad and sale",
+  "Listings become outdated",
+  "Property data is hard to filter",
+  "Campaign leads lose project context",
+  "Location information is fragmented",
+  "Sales teams manually copy leads",
+  "Mobile browsing is poor",
 ];
 
 const capabilities = [
-  "Focused product pages",
-  "Mobile-first buying",
-  "Shipping/returns clarity",
-  "FAQ and trust content",
-  "Campaign landing pages",
-  "Supplier/order integrations",
-  "Conversion tracking",
-  "Email flows",
-  "Upsell/cross-sell only where appropriate",
-  "Performance optimization",
+  "Property/project listings",
+  "Filters",
+  "Maps",
+  "Gallery/media",
+  "Availability/status integration where possible",
+  "Project landing pages",
+  "CRM routing",
+  "WhatsApp/call actions",
+  "Campaign attribution",
+  "Location pages",
 ];
 
 const contentTypes = [
@@ -138,36 +138,36 @@ const processSteps = [
 
 const faqs = [
   {
-    id: "dropship-supplier-import",
-    question: "Can you import supplier products automatically?",
-    answer: "Potentially, if the supplier provides an API, feed or supported integration. Product data should still be reviewed rather than published blindly.",
+    id: "realestate-listings-sync",
+    question: "Can listings be updated from another system?",
+    answer: "Yes, if the source system offers an API or feed.",
     open: true,
   },
   {
-    id: "dropship-one-product",
-    question: "Can you build one-product stores?",
-    answer: "Yes. A focused product website can be appropriate when the business is testing or scaling one core offer.",
+    id: "realestate-campaign-pages",
+    question: "Can you build project-specific campaign pages?",
+    answer: "Yes. Dedicated pages can preserve campaign message and project context.",
     open: false,
   },
   {
-    id: "dropship-ad-tracking",
-    question: "Can you connect ad tracking?",
-    answer: "Yes. Analytics and conversion tracking can be implemented around purchases and meaningful funnel actions.",
+    id: "realestate-lead-routing",
+    question: "Can leads be routed by project or location?",
+    answer: "Yes. CRM routing can use project, city, property type or other structured fields.",
     open: false,
   },
   {
-    id: "dropship-guarantee",
-    question: "Can you guarantee a winning product or conversion rate?",
-    answer: "No. Product demand, pricing, creative, shipping, competition and traffic quality are outside the website's control.",
+    id: "realestate-maps",
+    question: "Can you integrate maps?",
+    answer: "Yes. Mapping and geocoding APIs can support location and nearby-context experiences.",
     open: false,
   },
 ];
 
 const relatedServices = [
+  { label: "Custom Website Development", href: "/services/website-development/custom-websites" },
   { label: "Landing Page Development", href: "/services/website-development/landing-pages" },
-  { label: "Marketing & Analytics Integration", href: "/services/website-integrations/marketing-analytics" },
+  { label: "CRM Integration", href: "/services/website-integrations/crm" },
   { label: "API Integration", href: "/services/website-integrations/api" },
-  { label: "Website Performance", href: "/services/website-performance" },
   { label: "Website Development", href: "/services/website-development" },
   { label: "Website Maintenance", href: "/services/website-maintenance" },
 ];
@@ -233,14 +233,14 @@ function ChecklistList({ items, tight }: { items: string[]; tight?: boolean }) {
   );
 }
 
-export default function DropshippingWebsites() {
+export default function RealEstateWebsites() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <div className="site-wrap dropshipping-websites-page">
+      <div className="site-wrap real-estate-websites-page">
         <Navbar activePage="services" />
         <main id="main-content">
           <Section>
@@ -249,9 +249,9 @@ export default function DropshippingWebsites() {
               <div className="row align-items-center">
                 <div className="col-lg-6 mb-5 mb-lg-0">
                   <Tag hero marginBottom>
-                    Dropshipping Product Websites
+                    Real Estate Websites
                   </Tag>
-                  <PageTitle>Build the Store Around Trust, Product Clarity and Operations</PageTitle>
+                  <PageTitle>Make Properties Easier to Discover, Compare and Enquire About</PageTitle>
                   <Description hero aos="fade-up" delay={200}>
                     A strong website for this market has to reflect how people actually discover,
                     evaluate and act. Shivantra plans the website around the information users
@@ -259,16 +259,16 @@ export default function DropshippingWebsites() {
                     need to work behind the interface.
                   </Description>
                   <div className="cta d-flex flex-wrap gap-2" data-aos="fade-up" data-aos-delay="300">
-                    <Button href={`${basePath}/contact/?solution=dropshipping-websites`} className="btn-primary">
-                      Discuss Your Dropshipping Store
+                    <Button href={`${basePath}/contact/?solution=real-estate-websites`} className="btn-primary">
+                      Discuss Your Real Estate Website
                     </Button>
                   </div>
                 </div>
                 <div className="col-lg-6">
                   <PlaceholderVisual
-                    icon="bi-box-seam"
-                    caption="Ad/social discovery to focused product page to order and supplier fulfillment"
-                    cues={["Discovery", "Product Page", "Order", "Fulfillment"]}
+                    icon="bi-buildings"
+                    caption="Property discovery through filters and map into project enquiry and CRM"
+                    cues={["Filters", "Map", "Enquiry", "CRM"]}
                   />
                 </div>
               </div>
@@ -424,7 +424,7 @@ export default function DropshippingWebsites() {
               />
               <div className="row">
                 <div className="col-md-8 mx-auto" data-aos="fade-up" data-aos-delay="200">
-                  <div className="accordion custom-accordion" id="dropshipping-websites-faq-accordion">
+                  <div className="accordion custom-accordion" id="real-estate-websites-faq-accordion">
                     {faqs.map((faq) => (
                       <FAQItem key={faq.id} {...faq} />
                     ))}
@@ -460,8 +460,8 @@ export default function DropshippingWebsites() {
                     the implementation.
                   </Description>
                   <div className="cta d-flex flex-wrap justify-content-center gap-2 mt-4" data-aos="fade-up" data-aos-delay="200">
-                    <Button href={`${basePath}/contact/?solution=dropshipping-websites`} className="btn-primary">
-                      Discuss Your Dropshipping Store
+                    <Button href={`${basePath}/contact/?solution=real-estate-websites`} className="btn-primary">
+                      Discuss Your Real Estate Website
                     </Button>
                   </div>
                 </div>

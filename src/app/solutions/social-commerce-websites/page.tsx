@@ -319,7 +319,7 @@ export default function SocialCommerceWebsites() {
 
           <Section className="section-muted" id="content-architecture">
             <Container>
-              <SectionHeader tag="Recommended Content Architecture" colClass="col-lg-9" />
+              <SectionHeader tag="Recommended Content Architecture" tight colClass="col-lg-9" />
               <ChecklistList items={contentTypes} />
               <div className="row mt-5">
                 <div className="col-lg-7 mx-auto">
