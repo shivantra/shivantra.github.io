@@ -370,6 +370,7 @@ const relatedServices = [
   { label: "Restaurant & Food Brand Websites", href: "/solutions/restaurant-websites" },
   { label: "Education & Coaching Websites", href: "/solutions/education-coaching-websites" },
   { label: "Local Service Business Websites", href: "/solutions/local-service-business-websites" },
+  { label: "Hospitality Websites", href: "/solutions/hospitality-websites" },
 ];
 
 function BreadcrumbNav() {
