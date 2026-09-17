@@ -367,6 +367,7 @@ const relatedServices = [
   { label: "Social Commerce & Creator-Led Brand Websites", href: "/solutions/social-commerce-websites" },
   { label: "SaaS & Software Product Websites", href: "/solutions/saas-websites" },
   { label: "Real Estate Websites", href: "/solutions/real-estate-websites" },
+  { label: "Restaurant & Food Brand Websites", href: "/solutions/restaurant-websites" },
 ];
 
 function BreadcrumbNav() {
