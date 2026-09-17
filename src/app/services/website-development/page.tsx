@@ -368,6 +368,7 @@ const relatedServices = [
   { label: "SaaS & Software Product Websites", href: "/solutions/saas-websites" },
   { label: "Real Estate Websites", href: "/solutions/real-estate-websites" },
   { label: "Restaurant & Food Brand Websites", href: "/solutions/restaurant-websites" },
+  { label: "Education & Coaching Websites", href: "/solutions/education-coaching-websites" },
 ];
 
 function BreadcrumbNav() {
