@@ -1,0 +1,307 @@
+.api-integration-page .breadcrumb-nav {
+  font-size: 0.85rem;
+}
+
+.api-integration-page .breadcrumb-nav ol {
+  flex-wrap: wrap;
+}
+
+.api-integration-page .breadcrumb-nav a {
+  text-decoration: none;
+  color: var(--bs-secondary);
+}
+
+.api-integration-page .breadcrumb-nav a:hover {
+  color: var(--bs-primary);
+  text-decoration: underline;
+}
+
+.api-integration-page .breadcrumb-nav .current {
+  color: var(--bs-heading-color);
+  font-weight: 600;
+}
+
+.api-integration-page .placeholder-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(var(--bs-primary-rgb), 0.08);
+}
+
+.api-integration-page .placeholder-icon i {
+  font-size: 28px;
+  color: var(--bs-primary);
+}
+
+.api-integration-page .info-card {
+  border: 1px solid rgba(var(--inverse-color-rgb), 0.15);
+  border-radius: 1rem;
+  padding: 1.75rem;
+  height: 100%;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.api-integration-page .info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(var(--bs-black-rgb), 0.08);
+  border-color: rgba(var(--bs-primary-rgb), 0.25);
+}
+
+.api-integration-page .info-card .icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: rgba(var(--bs-primary-rgb), 0.07);
+  margin-bottom: 1.25rem;
+}
+
+.api-integration-page .info-card .icon-badge i {
+  font-size: 22px;
+  color: var(--bs-primary);
+}
+
+.api-integration-page .decision-card {
+  border: 1px solid rgba(var(--inverse-color-rgb), 0.15);
+  border-radius: 1rem;
+  padding: 1.75rem;
+  height: 100%;
+  background-color: rgba(var(--bs-primary-rgb), 0.02);
+}
+
+.api-integration-page .checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.api-integration-page .checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.api-integration-page .checklist li i {
+  color: var(--bs-primary);
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.api-integration-page .checklist--tight li {
+  font-size: 0.9rem;
+}
+
+.api-integration-page .numbered-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: step;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.api-integration-page .numbered-list li {
+  counter-increment: step;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.api-integration-page .numbered-list li::before {
+  content: counter(step);
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: rgba(var(--bs-primary-rgb), 0.08);
+  color: var(--bs-primary);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.api-integration-page .flow-card {
+  border-radius: 1rem;
+  padding: 1.75rem;
+  background-color: rgba(var(--bs-primary-rgb), 0.03);
+  border: 1px solid rgba(var(--bs-primary-rgb), 0.12);
+  text-align: center;
+}
+
+.api-integration-page .flow-step {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  border-radius: 999px;
+  background-color: var(--bs-body-bg);
+  border: 1px solid rgba(var(--inverse-color-rgb), 0.15);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.api-integration-page .flow-arrow {
+  color: var(--bs-primary);
+  font-size: 1.25rem;
+  margin: 0.35rem 0;
+}
+
+.api-integration-page .flow-branches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+/* Mapping example: two labeled columns of field names side by side
+   with a connecting arrow, standing in for the "Website fields vs CRM
+   API fields" code block in the spec. */
+.api-integration-page .mapping-card {
+  border-radius: 1rem;
+  padding: 1.75rem;
+  background-color: rgba(var(--bs-primary-rgb), 0.03);
+  border: 1px solid rgba(var(--bs-primary-rgb), 0.12);
+}
+
+.api-integration-page .mapping-columns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.api-integration-page .mapping-col {
+  flex: 1 1 200px;
+  max-width: 260px;
+  border: 1px solid rgba(var(--inverse-color-rgb), 0.12);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  background-color: var(--bs-body-bg);
+  text-align: center;
+}
+
+.api-integration-page .mapping-col .mapping-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--bs-primary);
+  margin-bottom: 0.75rem;
+}
+
+.api-integration-page .mapping-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  font-family: var(--bs-font-monospace, monospace);
+}
+
+.api-integration-page .mapping-arrow {
+  color: var(--bs-primary);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.api-integration-page .process-card {
+  border-radius: 1rem;
+  padding: 1.75rem 1.5rem;
+  height: 100%;
+  background-color: rgba(var(--bs-primary-rgb), 0.02);
+  border: 1px solid rgba(var(--inverse-color-rgb), 0.1);
+}
+
+.api-integration-page .process-card .step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--bs-primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* Masonry for the "What an API integration can do" grid: Read/Send/
+   Trigger carry a nested example list while Receive events is one
+   sentence, so a fixed-height grid row would leave a large gap under
+   the shorter card. Each card's height is estimated from its content
+   and greedily packed into whichever column is currently shortest
+   (computed in page.tsx), then rendered here as independent flex
+   columns so each one stacks tightly. */
+.api-integration-page .masonry-grid {
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.api-integration-page .masonry-col {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.api-integration-page .masonry-card-wrap {
+  width: 100%;
+}
+
+.api-integration-page .masonry-card {
+  border: 1px solid rgba(var(--inverse-color-rgb), 0.15);
+  border-radius: 1rem;
+  padding: 1.75rem;
+}
+
+.api-integration-page .related-services ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem 1.5rem;
+}
+
+@media (max-width: 575.98px) {
+  .api-integration-page .related-services ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+.api-integration-page .related-services a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.api-integration-page .section-muted {
+  background-color: rgba(var(--inverse-color-rgb), 0.02);
+}
+
+.api-integration-page .section-muted + .section-muted,
+.api-integration-page .section-muted + .faq__v2,
+.api-integration-page .faq__v2 + .section-muted,
+.api-integration-page .section:not(.section-muted):not(.faq__v2) + .section:not(.section-muted):not(.faq__v2) {
+  padding-top: 0;
+}
