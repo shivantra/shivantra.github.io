@@ -150,6 +150,10 @@
   border: none;
   flex-shrink: 0;
   cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 @media (min-width: 992px) {
   .fbs__net-navbar-toggler {
@@ -232,6 +236,10 @@
   color: var(--inverse-color);
   border: none;
   cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .fbs__net-mobile-nav-list {
