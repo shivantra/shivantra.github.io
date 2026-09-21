@@ -1,21 +1,17 @@
-.portfolio-page .portfolio-hero .stat-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem 2.5rem;
-  margin-top: 1.75rem;
+.portfolio-page .portfolio-hero {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
-.portfolio-page .portfolio-hero .stat-item .stat-number {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--bs-primary);
-  line-height: 1.1;
+@media (max-width: 767.98px) {
+  .portfolio-page .portfolio-hero {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 }
 
-.portfolio-page .portfolio-hero .stat-item .stat-label {
-  font-size: 0.85rem;
-  color: var(--inverse-color);
-  opacity: 0.7;
+.portfolio-page .portfolio-hero .hero-title {
+  margin-bottom: 0 !important;
 }
 
 .portfolio-page .portfolio-grid {
@@ -136,15 +132,6 @@
 
 .portfolio-page .portfolio-card:hover .portfolio-card-title {
   color: var(--bs-primary);
-}
-
-.portfolio-page .portfolio-card-domain {
-  font-size: 0.82rem;
-  color: var(--bs-primary);
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  word-break: break-word;
-  margin-bottom: 0.4rem;
 }
 
 .portfolio-page .portfolio-card-description {

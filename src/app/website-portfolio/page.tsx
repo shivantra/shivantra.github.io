@@ -80,8 +80,6 @@ const flagEmoji: Record<Project["countryCode"], string> = {
   FR: "🇫🇷",
 };
 
-const countryCount = new Set(projects.map((p) => p.countryCode)).size;
-
 const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -118,21 +116,6 @@ export default function Portfolio() {
                 <div className="col-lg-8">
                   <Tag marginBottom>Our Work</Tag>
                   <PageTitle>Website Portfolio</PageTitle>
-                  <Description hero aos="fade-up" delay={200}>
-                    A selection of live websites we have designed and developed for clients —
-                    spanning business sites, personal brands, financial services and campaign
-                    landing pages.
-                  </Description>
-                  <div className="stat-row" data-aos="fade-up" data-aos-delay="300">
-                    <div className="stat-item">
-                      <div className="stat-number">{projects.length}</div>
-                      <div className="stat-label">Live Websites</div>
-                    </div>
-                    <div className="stat-item">
-                      <div className="stat-number">{countryCount}</div>
-                      <div className="stat-label">Countries Served</div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </Container>
@@ -172,7 +155,6 @@ export default function Portfolio() {
                           {project.countryName}
                         </span>
                         <div className="portfolio-card-title">{project.name}</div>
-                        <div className="portfolio-card-domain">{project.domain}</div>
                         <p className="portfolio-card-description">{project.description}</p>
                         <Button
                           href={project.url}
@@ -196,7 +178,7 @@ export default function Portfolio() {
               <div className="portfolio-about" data-aos="fade-up" data-aos-delay="100">
                 <Tag marginBottom>About Shivantra</Tag>
                 <Description>
-                  <b>Shivantra Solutions Private Limited</b> is a software consultancy and
+                  <b>Shivantra</b> is a software consultancy and
                   development organisation, delivering customised software development and
                   integrations of existing systems. Our passion for technology drives us to
                   continuously learn and grow, staying ahead of the curve in an ever-changing
