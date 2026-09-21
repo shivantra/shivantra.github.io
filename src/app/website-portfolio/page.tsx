@@ -74,11 +74,65 @@ const projects: Project[] = [
   { slug: "atmatex", name: "Atmatex", url: "https://shivantra-atmatex.vercel.app/", domain: "shivantra-atmatex.vercel.app", description: "A heritage textile manufacturer site showcasing woven fabrics, silk and zari craftsmanship since 1956.", countryCode: "IN", countryName: "India" },
 ];
 
-const flagEmoji: Record<Project["countryCode"], string> = {
-  IN: "🇮🇳",
-  CA: "🇨🇦",
-  FR: "🇫🇷",
-};
+function FlagIcon({ countryCode }: { countryCode: Project["countryCode"] }) {
+  const common = {
+    width: 20,
+    height: 14,
+    viewBox: "0 0 24 16",
+    className: "portfolio-flag-icon",
+    role: "img" as const,
+    "aria-hidden": true,
+  };
+
+  if (countryCode === "IN") {
+    const center = { x: 12, y: 8 };
+    const spokes = [0, 45, 90, 135, 180, 225, 270, 315].map((deg) => {
+      const rad = (deg * Math.PI) / 180;
+      const ox = center.x + 2.1 * Math.cos(rad);
+      const oy = center.y + 2.1 * Math.sin(rad);
+      const ix = center.x + 0.5 * Math.cos(rad);
+      const iy = center.y + 0.5 * Math.sin(rad);
+      return { ox, oy, ix, iy };
+    });
+    return (
+      <svg {...common}>
+        <rect width="24" height="16" fill="#F0F0F0" />
+        <rect width="24" height="5.33" fill="#FF9933" />
+        <rect y="10.67" width="24" height="5.33" fill="#138808" />
+        <circle cx={center.x} cy={center.y} r="2.1" fill="none" stroke="#000080" strokeWidth="0.35" />
+        {spokes.map((s, i) => (
+          <line key={i} x1={s.ix} y1={s.iy} x2={s.ox} y2={s.oy} stroke="#000080" strokeWidth="0.3" />
+        ))}
+        <circle cx={center.x} cy={center.y} r="0.4" fill="#000080" />
+      </svg>
+    );
+  }
+
+  if (countryCode === "CA") {
+    return (
+      <svg {...common}>
+        <rect width="24" height="16" fill="#FFFFFF" />
+        <rect width="6" height="16" fill="#D52B1E" />
+        <rect x="18" width="6" height="16" fill="#D52B1E" />
+        <path
+          d="M12,2.2 L13.3,4.3 L16,3.6 L14.6,5.6 L17.6,6.6 L15.3,7.3 L17,9.6 L14.7,9.3 L15.6,12 L12.8,11 L12,14 L11.2,11 L8.4,12 L9.3,9.3 L7,9.6 L8.7,7.3 L6.4,6.6 L9.4,5.6 L8,3.6 L10.7,4.3 Z"
+          fill="#D52B1E"
+          stroke="#D52B1E"
+          strokeWidth="0.3"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+
+  return (
+    <svg {...common}>
+      <rect width="24" height="16" fill="#ED2939" />
+      <rect width="16" height="16" fill="#FFFFFF" />
+      <rect width="8" height="16" fill="#002395" />
+    </svg>
+  );
+}
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -151,7 +205,7 @@ export default function Portfolio() {
                       </a>
                       <div className="portfolio-card-content">
                         <span className="portfolio-card-flag">
-                          <span aria-hidden="true">{flagEmoji[project.countryCode]}</span>
+                          <FlagIcon countryCode={project.countryCode} />
                           {project.countryName}
                         </span>
                         <div className="portfolio-card-title">{project.name}</div>
