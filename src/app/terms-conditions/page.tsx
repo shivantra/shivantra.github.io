@@ -5,6 +5,9 @@ import Footer from "@/components/Footer";
 import { Section, Container, SubHeading, Description } from "@/components/Typography";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/terms-conditions",
+  },
   title: "Terms and Conditions | Shivantra - Software Consultancy & Development",
   description:
     "Shivantra Solutions Private Limited offers expert software consultancy, customized software development, web & mobile app development, ERP & CRM solutions, SaaS & MVP development.",

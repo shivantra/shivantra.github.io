@@ -5,6 +5,9 @@ import Footer from "@/components/Footer";
 import { Section, Container, SubHeading, Caption, Description } from "@/components/Typography";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/privacy-policy",
+  },
   title: "Privacy Policy | Shivantra - Software Consultancy & Development",
   description:
     "Shivantra Solutions Private Limited offers expert software consultancy, customized software development, web & mobile app development, ERP & CRM solutions, SaaS & MVP development.",

@@ -7,6 +7,9 @@ import { Button, Section, Container, Tag, SectionHeader, Heading, CardTitle, Fea
 import { basePath, siteUrl } from "@/lib/basePath";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/careers",
+  },
   title: "Careers at Shivantra - Join Our Team",
   description:
     "Discover career opportunities at Shivantra Solutions. Join a passionate team building innovative software solutions that empower businesses worldwide.",
