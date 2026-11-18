@@ -136,7 +136,7 @@ export default function Careers() {
                 <div className="col text-center" data-aos="fade-up" data-aos-delay="0">
                   <Button
                     className="btn-primary py-2"
-                    href="https://www.notion.so/shivantra/Careers-24dd744ec4ad803bac5ec34906ae0df3"
+                    href="https://www.linkedin.com/company/shivantra/jobs"
                     target="_blank"
                     rel="noopener noreferrer"
                     referrerPolicy="no-referrer"
